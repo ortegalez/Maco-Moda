@@ -1,0 +1,697 @@
+/* DISENO MOBILE  */
+* {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.body {
+    background-color: rgb (119, 119, 141);
+}
+
+
+/*------------------------------ Cabecera de la pagina  ---------------------------------*/
+.header {
+    width: 100%;
+    grid-area: header;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgb(0, 0, 0);
+    text-align: center;
+    z-index: 100;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.header-navbar {
+    display: none;
+}
+
+.header-navbar ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}  
+
+.header-navbar ul li {
+    display: inline-block; 
+    padding: 0px 05px 0px 05px;
+    margin: 2px;
+}
+
+.header-navbar ul li a {
+    text-decoration-line: none;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+}
+
+.header-navbar ul li a:hover, .lista-secudaria li a:hover   {
+    color: #beb441;
+}
+
+.logo-principal { 
+    width: 25%; 
+}
+
+/* ----------------- Fin Cabecera de la pagina --------------------- */
+
+/* ---------------------- Contenido Principal -----------------------*/
+
+
+.grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr, 4fr, 4fr, 1fr;
+    grid-template-areas:  
+        "header"
+        "principal"
+        "subtitulo-enlace"    
+        "footer";
+}
+
+.imagen-fondo {
+    display: none; }
+
+.principal {
+    grid-area: principal;
+    background-color: rgb(86, 86, 89);
+}
+
+.principal p {
+    font-size: 25px;
+    color: rgb(255,255,255);
+}
+
+
+.formulario {
+    grid-area: formulario;
+    background-color:rgb(86, 86, 89);
+    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
+    margin-left: 10px;
+    padding: 5px 2px 5px 2px;
+    display: grid;
+    grid-template-areas: 
+        "titulo-comun   titulo-comun    titulo-comun    titulo-comun"
+        "nombre         nombre          apellido        apellido"
+        "info-nombre    info-nombre     info-apellido   info-apellido"
+        "telefono       telefono        correo          correo"
+        "info-telefono  info-telefono   info-correo     info-correo"
+        "provincia      provincia       postal          postal"
+        "info-provincia info-provincia  info-postal     info-postal"
+        "comentarios    comentarios     comentarios     comentarios"
+        "info-comentarios info-comentarios info-comentarios info-comentarios"
+        "tyc-1          tyc-1           tyc-1           tyc-check"
+        "tyc-2          tyc-2           span-si          span-no"
+        "tyc-2          tyc-2           opcion-si        opcion-no"
+        "boton-aceptar  boton-aceptar   boton-cancelar  boton-cancelar"; 
+    }
+
+
+.titulo-comun { grid-area: titulo-comun ;}
+.nombre { grid-area: nombre; }
+.info-nombre {  grid-area: info-nombre; }
+.apellido {  grid-area: apellido; }
+.info-apellido {  grid-area: info-apellido; }
+.telefono {  grid-area: telefono; }
+.correo {  grid-area: correo; }
+.info-correo {  grid-area: info-correo; }
+.provincia {  grid-area: provincia; }
+.info-provincia {  grid-area: info-provincia; }
+.postal { grid-area: postal; }
+.info-postal { grid-area: info-postal;}
+.comentarios { grid-area: comentarios;}
+.info-comentarios { grid-area: info-comentarios; }
+.tyc-1 { grid-area: tyc-1 ; }
+.tyc-2 { grid-area: tyc-2 ; }
+.opcion-si { grid-area: opcion-si ; }
+.opcion-no { grid-area:opcion-no ; }
+.span-si { grid-area:span-si ;}
+.span-no { grid-area:span-no ; }
+.boton-cancelar { grid-area: boton-cancelar;}
+.boton-aceptar {  grid-area: boton-aceptar;}
+
+.titulo-comun,
+.nombre, 
+.apellido,
+.telefono,
+.correo,
+.dni,
+.provincia,
+.postal,
+.comentarios, 
+.tyc-1, 
+.tyc-2, 
+.opcion-si,
+.opcion-no, 
+.span-si, 
+.span-no,
+.boton-cancelar,
+.boton-aceptar {  
+    display: flex;
+    align-items: end;
+    margin-left: 0.3em;
+    justify-content: flex-start;
+    height: 2em;
+    color: rgb(255,255,255);
+}
+
+.info-nombre, 
+.info-apellido, 
+.info-telefono, 
+.info-correo, 
+.info-dni, 
+.info-provincia, 
+.info-postal, 
+.info-comentarios {
+    box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    border-radius: 0.5em;
+    margin: 0.3em;
+    height: 2em;  
+}
+
+.info-nombre, 
+.info-apellido, 
+.info-telefono, 
+.info-correo, 
+.info-dni, 
+.info-provincia, 
+.info-postal, 
+.info-comentarios {
+    box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    border-radius: 0.5em;
+    margin: 0.3em;
+    height: 2em;  
+    transition: 1s;
+}
+
+.info-nombre:hover, 
+.info-apellido:hover, 
+.info-telefono:hover, 
+.info-correo:hover, 
+.info-dni:hover, 
+.info-provincia:hover, 
+.info-postal:hover, 
+.info-comentarios:hover {
+    border-color: rgb(35, 119, 245);
+}
+  
+
+
+
+
+
+.tyc-check { grid-area: tyc-check;
+    height: 1.5em;
+    width: 1.5em;}
+
+.titulo-comun, 
+.boton-aceptar, 
+.boton-cancelar, 
+.tyc-check, 
+.opcion-si, .opcion-no, 
+.span-si, .span-no  { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-comentarios { grid-area: info-comentarios; 
+    resize: none;
+    margin: 5px;
+    min-height: 5em;
+}
+
+.boton-cancelar [type="reset"], .boton-aceptar [type="submit"] {
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    padding: 5px;
+    border-radius: 2px;
+    border: 1px solid rgb(255, 255, 255);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    } 
+
+.boton-aceptar [type="submit"]:hover, .boton-cancelar [type="reset"]:hover {
+    color: rgb(255, 208, 0); 
+    background-color: rgb(119, 119, 141);
+    }
+
+.titulo-destacado {
+    margin-top: 70px;    
+    background-color: rgb(119, 119, 141);
+    font-size: 20px;
+    text-align: center ;
+}
+
+.seccion-promo {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    color: rgb(0, 0, 0);
+
+}
+
+.seccion-promo p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center ;
+}
+
+.contenido-promo {
+    display: inline-block;
+    margin-top: 40px;
+    margin-left: 33%;
+    margin-right: 33%;
+}
+
+
+.contenido-promo img {
+    border: 1px solid rgb(0, 0, 0);
+    margin-top: 10px;
+    margin-bottom: 5px;
+    width: 300px; 
+    height: 300px;
+    Transition: all 0.4s ease-in-out;
+}
+
+ 
+.contenido-promo img:hover {
+    width: 330px; 
+    height: 330px;
+}
+  
+
+.descripcion-promo {
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: rgb(241, 241, 241);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 5px;
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.descripcion-promo p {
+    display: block;
+    color: rgb(0, 0, 0);
+}
+
+#subtitulo-enlace {
+    grid-area: subtitulo-enlace;
+    display: inline-block;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+}
+
+#subtitulo-enlace a {
+    position: relative;
+    display: inline-block;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 3px;
+    background-color:  rgb(119, 119, 141);
+    font-size: 18px;
+    text-align: center ;
+    padding: 10px;
+    text-decoration-line: none;
+    color: rgb(255,255,255);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+#subtitulo-enlace a:hover {
+    background-color: rgb(49, 49, 49);
+    color: rgb(255, 208, 0);
+}
+
+
+/*------------------------ Fin Contenido Principal ----------------------------*/
+
+/*---------------------------- Productos  ----------------------------------*/
+
+.productos {
+    display: flex;
+    flex-flow: column wrap;
+    position: relative;
+    color: rgb(0, 0, 0);
+    align-items: center;
+}
+
+.productos p {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: bold;
+    text-align: center ;
+}
+
+.contenido-productos {
+    display:flex;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.descripcion-productos {
+    background-color: rgb(253, 253, 253);
+    border: 1px solid rgb(0, 0, 0);
+    margin: 10px 0px 10px 0px;
+    padding: 10px;
+
+}
+
+.descripcion-productos img {
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+.descripcion-productos p {
+    color: rgb(0, 0, 0);
+    font-size: 12px;
+}
+
+.descripcion-productos, .precio {
+    font-size: 16px;
+    font-weight: 600;
+}
+
+/* --------------------------- Fin Productos ----------------------------- */
+
+/* --------------------------- imagenenes ----------------------------------*/
+.fotos-talles, .descripcion-productos img {
+    width: 300px; 
+    height: 300px;
+}
+
+.fotos-catalogo { 
+    width: 150px; 
+    height: 150px;
+}
+/* ------------------------ fin imagenes ---------------------------*/
+
+/*---------------------------- Footer ------------------------------ */
+
+#beneficios {
+    display: none;
+}
+
+.footer {
+    grid-area: footer;
+    background-color:rgb(0,0,0);
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    color: rgb(255,255,255);
+}
+
+.footer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 3fr, 3fr, 1fr;
+    grid-template-areas: 
+        "div-navegacion"  
+        "div-redes"
+        "copyright";
+    justify-items: center;
+    align-items: start;
+}
+
+.div-navegacion {
+    display: inline-block;
+    grid-area: div-navegacion;
+}
+
+.div-redes {
+    width: 250px;
+    display: flex;
+    flex-flow: column wrap;
+    grid-area: div-redes;
+    align-content: center;
+}
+
+.div-redes ul li{
+    display: inline-block;
+}
+
+.div-medios {
+    display:none;
+}
+
+.subtitulos-footer {
+    color: rgb(255, 255, 255);
+    margin-top: 8px;
+    margin-bottom: 0px;
+    text-align: center;
+    font-size: 18px;
+}
+
+.lista-secudaria {
+    display: inline-block;
+    margin-top: 5px;
+    list-style: none;
+    font-size: 10px;
+    padding-left: 0px;
+    font-weight: 700;
+}
+
+.lista-secudaria li a {
+    color: rgb(255, 255, 255);
+    text-decoration-line: none;
+}
+
+.icono {
+    margin: 15px 7px 15px 10px;
+    width: 50px; 
+    height: 50px;
+}
+
+.copyright {
+    grid-area: copyright;
+    font-size: 20px;
+}
+
+@media screen and (max-width: 599px) and (orientation: landscape){
+    
+}
+
+/* fin Diseno Mobile */
+
+
+/* Diseno Tablet */
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .grid {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:  
+        "header             header          header"
+        "imagen-fondo       imagen-fondo    imagen-fondo"
+        "principal          principal       principal"
+        "subtitulo-enlace subtitulo-enlace  subtitulo-enlace"    
+        "beneficios         beneficios      beneficios"
+        "footer             footer          footer";
+    }
+
+    body {
+        background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
+        background-size: 300% 300%;
+    } 
+
+    .header-navbar {
+        display: contents;
+        text-align: center;
+        border-bottom: 2px solid #4182be;
+    }
+
+    .imagen-fondo {
+        margin-top: 120px;
+        grid-area: imagen-fondo;
+        display: flex;     
+        justify-content: center; 
+        align-items: center; 
+    } 
+    
+    .imagen-fondo img {
+        display: inline-block;
+        width: 75%;
+        border: 2px solid rgb(255,255,255);
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        
+    }
+    
+    .logo-principal { 
+        width: 15%; 
+    }    
+
+    .subtitulo-imagen-fondo {
+        border-color: black ;
+        width: 80%;
+        padding: 40px;
+        position: absolute;
+        text-align: center;
+        background-color: black;
+        color: rgb(255, 255, 255);
+        font-style: italic;
+        font-size: 40px;
+        opacity: .5;
+    }
+
+    .seccion-promo {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+    
+    .principal {
+    background-color: rgba(0, 0, 0, 0);
+    margin-top: 4rem;
+    }
+
+    .titulo-destacado p {
+        margin-top: 50px;
+    }
+    .section-contacto {
+        margin-top: 60px;
+        display: grid;
+        grid-template-columns: 2fr 1fr 2fr;
+        grid-template-areas: 
+        "formulario agradecimiento ubicacion";
+    }
+    
+    .ubicacion {
+        grid-area: ubicacion;
+        margin-right: 10px;
+        padding: 5px 5px 5px 5px;
+        background-color:rgb(86, 86, 89);
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    
+    .lista-ubicacion li {
+        list-style: none;
+        font-size: 16px;
+        margin-top: 10px;
+    }
+
+    .ubicacion iframe {
+        box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
+    }
+
+    .agradecimiento {
+        grid-area: agradecimiento;
+        background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
+        background-size: cover;       
+    }
+
+    .agradecimiento div {
+       background-color: rgba(34, 58, 215, 0.32);
+       opacity: 0.7;
+       height: 100%;
+       width: auto;
+       display: flex;
+       justify-content: center;
+       align-items: center;  
+    }
+
+    .agradecimiento div p  {
+        padding: 2em;
+        opacity: 1;
+        color: rgb(255, 255, 255); 
+    }
+
+    .section-productos {
+        margin-top: 150px;
+    }
+
+    .productos {
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+    }
+
+    .contenido-promo {
+        margin-left: auto;
+        margin-right: auto;
+       
+    }
+
+    #subtitulo-enlace a {      
+        font-size: 12px;
+    }
+
+    #beneficios {
+        grid-area: beneficios;
+        display: flex;
+        justify-content: space-evenly;
+        position: relative;
+        background-color: rgb(117, 112, 112) ;
+        margin-top: 20px;
+        color: rgb(255, 255, 255); 
+        text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    #beneficios p {
+        position: relative;
+        display: inline-block;
+        border-radius: 3px;
+        width: 200px;
+        font-size: 12px;
+        text-align: center ;
+        padding: 10px;
+        text-decoration-line: none;
+        color: rgb(255,255,255);
+    }
+
+    .footer {
+        display: grid;
+        grid-template-columns: 30% 40% 30%;
+        grid-template-rows: 1fr 1fr;
+        grid-template-areas: 
+            "div-navegacion    div-redes    div-medios"
+            "div-navegacion    div-redes    div-medios "
+            "copyright         copyright    copyright";
+        justify-items: center;
+        align-items: start;
+        }
+
+    .subtitulos-footer {
+        font-size: 12px;
+    }
+
+
+    .div-medios {
+        display: inline-block;
+        grid-area: div-medios;
+    }
+
+    .icono {
+        margin: 15px 7px 15px 10px;
+        width: 25px; 
+        height: 25px;
+    }
+    
+    .copyright {
+        grid-area: copyright;
+        font-size: 10px;
+    }
+}
+/* Fin Diseno Desktop  */
+
+/* Para el de aceptar:
+form input [type=“submit”] 
+
+Para el de cancelar:
+form input [type=“reset”] */
