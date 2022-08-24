@@ -10,11 +10,23 @@
 }
 
 
+.carrusel {
+    max-resolution: 2em;
+}
+
+.mt-n1 {
+    margin-top: -0.25rem !important;
+  }
+
+
+
+
+
 /*------------------------------ Cabecera de la pagina  ---------------------------------*/
 .header {
     width: 100%;
-    grid-area: header;
-    position: fixed;
+    /* grid-area: header;
+    position: fixed; */
     left: 0;
     top: 0;
     background-color: rgb(0, 0, 0);
@@ -527,7 +539,8 @@
     }
 
     .imagen-fondo {
-        margin-top: 120px;
+        margin-top: 1em;
+        margin-bottom: 1em;
         grid-area: imagen-fondo;
         display: flex;     
         justify-content: center; 
@@ -542,7 +555,7 @@
     }
     
     .logo-principal { 
-        width: 15%; 
+        width: 10%; 
     }    
 
     .subtitulo-imagen-fondo {
@@ -565,7 +578,7 @@
     
     .principal {
     background-color: rgba(0, 0, 0, 0);
-    margin-top: 4rem;
+    /* margin-top: 4rem; */
     }
 
     /* .titulo-destacado p {
