@@ -53,6 +53,15 @@
     width: 25%; 
 }
 
+
+.mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
+    padding: 0;
+    margin: 0;
+    font-size: 14px;
+}
+
+
+
 /* ----------------- Fin Cabecera de la pagina --------------------- */
 
 /* ---------------------- Contenido Principal -----------------------*/
@@ -66,7 +75,7 @@
     grid-template-areas:  
         "header"
         "principal"
-        "subtitulo-enlace"    
+        "subtitulo-enlace"   
         "footer";
     /* min-height: 100vh;  */
 }
@@ -234,7 +243,7 @@
     }
 
 .titulo-destacado {
-    margin-top: 70px;    
+    margin-top: 4em;    
     background-color: rgb(119, 119, 141);
     font-size: 20px;
     text-align: center ;
@@ -383,7 +392,7 @@
 
 .fotos-catalogo { 
     width: 150px; 
-    height: 150px;
+    height: 150px; 
 }
 /* ------------------------ fin imagenes ---------------------------*/
 
@@ -414,7 +423,7 @@
     align-items: start;
 }
 
-.div-navegacion {
+.div-navegacion {  
     display: inline-block;
     grid-area: div-navegacion;
 }
@@ -443,6 +452,7 @@
     font-size: 18px;
 }
 
+
 .lista-secudaria {
     display: inline-block;
     margin-top: 5px;
@@ -450,11 +460,13 @@
     font-size: 10px;
     padding-left: 0px;
     font-weight: 700;
+
 }
 
 .lista-secudaria li a {
     color: rgb(255, 255, 255);
     text-decoration-line: none;
+    font-size: 20px;
 }
 
 .icono {
@@ -556,9 +568,10 @@
     margin-top: 4rem;
     }
 
-    .titulo-destacado p {
+    /* .titulo-destacado p {
         margin-top: 50px;
     }
+     */
     .section-contacto {
         margin-top: 60px;
         display: grid;
@@ -681,6 +694,7 @@
     .div-medios {
         display: inline-block;
         grid-area: div-medios;
+
     }
 
     .icono {
@@ -693,6 +707,16 @@
         grid-area: copyright;
         font-size: 10px;
     }
+
+    .descripcion-talles {
+        margin:0;
+        padding: 0;
+    }
+
+    .lista-secudaria li a {
+        font-size: 10px;
+    }
+
 }
 /* Fin Diseno Desktop  */
 
