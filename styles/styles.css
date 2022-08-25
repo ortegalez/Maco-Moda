@@ -1,5 +1,5 @@
 /* DISENO MOBILE  */
-* {
+*{
     padding: 0;
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
@@ -9,24 +9,15 @@
     background-color: rgb (119, 119, 141);
 }
 
-
-.carrusel {
-    max-resolution: 2em;
-}
-
 .mt-n1 {
     margin-top: -0.25rem !important;
-  }
-
-
+}
 
 
 
 /*------------------------------ Cabecera de la pagina  ---------------------------------*/
 .header {
     width: 100%;
-    /* grid-area: header;
-    position: fixed; */
     left: 0;
     top: 0;
     background-color: rgb(0, 0, 0);
@@ -51,28 +42,26 @@
     margin: 2px;
 }
 
-.header-navbar ul li a {
+.header ul li a {
     text-decoration-line: none;
     color: rgb(255, 255, 255);
     font-size: 14px;
 }
 
-.header-navbar ul li a:hover, .lista-secudaria li a:hover   {
+.header ul li a:hover, .lista-secudaria li a:hover   {
     color: #beb441;
+    font-weight: 800;
 }
 
 .logo-principal { 
     width: 25%; 
 }
 
-
 .mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
     padding: 0;
     margin: 0;
     font-size: 14px;
 }
-
-
 
 /* ----------------- Fin Cabecera de la pagina --------------------- */
 
@@ -106,122 +95,38 @@
     color: rgb(255,255,255);
 }
 
-
 .formulario {
-    grid-area: formulario;
-    background-color:rgb(86, 86, 89);
-    grid-template-columns: 1fr, 1fr, 1fr, 1fr;
-    margin-left: 10px;
-    padding: 5px 2px 5px 2px;
-    display: grid;
-    grid-template-areas: 
-        "titulo-comun   titulo-comun    titulo-comun    titulo-comun"
-        "nombre         nombre          apellido        apellido"
-        "info-nombre    info-nombre     info-apellido   info-apellido"
-        "telefono       telefono        correo          correo"
-        "info-telefono  info-telefono   info-correo     info-correo"
-        "provincia      provincia       postal          postal"
-        "info-provincia info-provincia  info-postal     info-postal"
-        "comentarios    comentarios     comentarios     comentarios"
-        "info-comentarios info-comentarios info-comentarios info-comentarios"
-        "tyc-1          tyc-1           tyc-1           tyc-check"
-        "tyc-2          tyc-2           span-si          span-no"
-        "tyc-2          tyc-2           opcion-si        opcion-no"
-        "boton-aceptar  boton-aceptar   boton-cancelar  boton-cancelar"; 
+    color: rgb(255,255,255);
+    background-color:rgba(86, 86, 89, 0.5);
+    border: 1px solid black;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    border-radius: 0.5em;
+    margin: 1em;
+    padding: 1em;
     }
 
 
-.titulo-comun { grid-area: titulo-comun ;}
-.nombre { grid-area: nombre; }
-.info-nombre {  grid-area: info-nombre; }
-.apellido {  grid-area: apellido; }
-.info-apellido {  grid-area: info-apellido; }
-.telefono {  grid-area: telefono; }
-.correo {  grid-area: correo; }
-.info-correo {  grid-area: info-correo; }
-.provincia {  grid-area: provincia; }
-.info-provincia {  grid-area: info-provincia; }
-.postal { grid-area: postal; }
-.info-postal { grid-area: info-postal;}
-.comentarios { grid-area: comentarios;}
-.info-comentarios { grid-area: info-comentarios; }
-.tyc-1 { grid-area: tyc-1 ; }
-.tyc-2 { grid-area: tyc-2 ; }
-.opcion-si { grid-area: opcion-si ; }
-.opcion-no { grid-area:opcion-no ; }
-.span-si { grid-area:span-si ;}
-.span-no { grid-area:span-no ; }
-.boton-cancelar { grid-area: boton-cancelar;}
-.boton-aceptar {  grid-area: boton-aceptar;}
-
-.titulo-comun,
-.nombre, 
-.apellido,
-.telefono,
-.correo,
-.dni,
-.provincia,
-.postal,
-.comentarios, 
-.tyc-1, 
-.tyc-2, 
-.opcion-si,
-.opcion-no, 
-.span-si, 
-.span-no,
-.boton-cancelar,
-.boton-aceptar {  
-    display: flex;
-    align-items: end;
-    margin-left: 0.3em;
-    justify-content: flex-start;
-    height: 2em;
-    color: rgb(255,255,255);
+.list-group-numbered li {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
 }
 
-.info-nombre, 
-.info-apellido, 
-.info-telefono, 
-.info-correo, 
-.info-dni, 
-.info-provincia, 
-.info-postal, 
-.info-comentarios {
-    box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
-    border-radius: 0.5em;
-    margin: 0.3em;
-    height: 2em;  
+.list-group-numbered li:hover {
+    background-color: rgb(49, 49, 49);
+    color: rgb(255, 255, 255);
+    font-weight: 600;
 }
 
-.info-nombre, 
-.info-apellido, 
-.info-telefono, 
-.info-correo, 
-.info-dni, 
-.info-provincia, 
-.info-postal, 
-.info-comentarios {
-    box-shadow: inset 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
-    border-radius: 0.5em;
-    margin: 0.3em;
-    height: 2em;  
-    transition: 1s;
+.list-group-numbered a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.list-group-numbered a:hover {
+    color: rgb(255, 208, 0);
+    font-weight: 600;
 }
 
-.info-nombre:hover, 
-.info-apellido:hover, 
-.info-telefono:hover, 
-.info-correo:hover, 
-.info-dni:hover, 
-.info-provincia:hover, 
-.info-postal:hover, 
-.info-comentarios:hover {
-    border-color: rgb(35, 119, 245);
-}
-  
-.tyc-check { grid-area: tyc-check;
-    height: 1.5em;
-    width: 1.5em;}
 
 .titulo-comun, 
 .boton-aceptar, 
@@ -251,38 +156,28 @@
 
 .boton-aceptar [type="submit"]:hover, .boton-cancelar [type="reset"]:hover {
     color: rgb(255, 208, 0); 
-    background-color: rgb(119, 119, 141);
+    background-color: rgb(49, 49, 49);
     }
 
 .titulo-destacado {
-    margin-top: 4em;    
-    background-color: rgb(119, 119, 141);
-    font-size: 20px;
+    color: rgb(255, 255, 255);
+    margin-top: 1em;    
+    background-color: rgb(49, 49, 49);
+    font-size: 24px;
     text-align: center ;
 }
 
 .seccion-promo {
     display: flex;
     flex-flow: column wrap;
-    position: relative;
+    justify-content: center;
+    align-items: center;
     color: rgb(0, 0, 0);
-
 }
 
-.seccion-promo p {
-    font-size: 16px;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center ;
+.seccion-promo .card {
+    margin: 0.5em;
 }
-
-.contenido-promo {
-    display: inline-block;
-    margin-top: 40px;
-    margin-left: 33%;
-    margin-right: 33%;
-}
-
 
 .contenido-promo img {
     border: 1px solid rgb(0, 0, 0);
@@ -293,30 +188,11 @@
     Transition: all 0.4s ease-in-out;
 }
 
- 
-.contenido-promo img:hover {
-    width: 330px; 
-    height: 330px;
-}
-  
-
-.descripcion-promo {
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    background-color: rgb(241, 241, 241);
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 5px;
-    margin: 10px 0px 10px 0px;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    color: rgb(0, 0, 0);
-    align-items: center;
-}
-
 .descripcion-promo p {
     display: block;
     color: rgb(0, 0, 0);
 }
+
 
 #subtitulo-enlace {
     grid-area: subtitulo-enlace;
@@ -325,6 +201,8 @@
     justify-content: center; 
     align-items: center; 
 }
+
+
 
 #subtitulo-enlace a {
     position: relative;
@@ -346,67 +224,38 @@
 }
 
 
+
+
 /*------------------------ Fin Contenido Principal ----------------------------*/
 
 /*---------------------------- Productos  ----------------------------------*/
 
-.productos {
-    display: flex;
-    flex-flow: column wrap;
-    position: relative;
-    color: rgb(0, 0, 0);
-    align-items: center;
-}
-
-.productos p {
-    font-size: 16px;
-    font-style: italic;
-    font-weight: bold;
-    text-align: center ;
-}
-
-.contenido-productos {
-    display:flex;
-    margin-top: 40px;
-    align-items: center;
+.card {
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .descripcion-productos {
-    background-color: rgb(253, 253, 253);
-    border: 1px solid rgb(0, 0, 0);
-    margin: 10px 0px 10px 0px;
-    padding: 10px;
+    background-color: rgb(49, 49, 49);
 
-}
-
-.descripcion-productos img {
-    margin-top: 10px;
-    margin-bottom: 5px;
-}
-
-.descripcion-productos p {
-    color: rgb(0, 0, 0);
-    font-size: 12px;
-}
-
-.descripcion-productos, .precio {
-    font-size: 16px;
     font-weight: 600;
 }
 
+.descripcion-productos p {
+    flex:display;
+    justify-content: center;
+    color: rgb(255, 255, 255);
+    font-size: 14px;
+    font-weight: 600;
+    text-align: center;
+}
+
+
+
+
+
+
 /* --------------------------- Fin Productos ----------------------------- */
 
-/* --------------------------- imagenenes ----------------------------------*/
-.fotos-talles, .descripcion-productos img {
-    width: 300px; 
-    height: 300px;
-}
-
-.fotos-catalogo { 
-    width: 150px; 
-    height: 150px; 
-}
-/* ------------------------ fin imagenes ---------------------------*/
 
 /*---------------------------- Footer ------------------------------ */
 
@@ -448,7 +297,7 @@
     margin-top: 8px;
     margin-bottom: 0px;
     text-align: center;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 
@@ -469,10 +318,16 @@
 }
 
 .icono {
-    /* margin: 15px 7px 15px 10px; */
-    width: 50px; 
-    height: 50px;
+    width: 3em; 
+    height: 3em;
+    background-color: rgb(255, 255, 255);
+    border-radius: 0.5em;
+    border: 1px solid rgb(255, 255, 255);
 }
+
+
+
+
 
 .copyright {
     grid-area: copyright;
@@ -572,19 +427,10 @@
         margin-top: 50px;
     }
      */
-    .section-contacto {
-        margin-top: 60px;
-        display: grid;
-        grid-template-columns: 2fr 1fr 2fr;
-        grid-template-areas: 
-        "formulario agradecimiento ubicacion";
-    }
     
     .ubicacion {
-        grid-area: ubicacion;
         margin-right: 10px;
         padding: 5px 5px 5px 5px;
-        background-color:rgb(86, 86, 89);
         display: flex;
         flex-flow: column wrap;
         align-items: center;
@@ -593,7 +439,7 @@
     
     .lista-ubicacion li {
         list-style: none;
-        font-size: 16px;
+        font-size: 14px;
         margin-top: 10px;
         color: rgb(255,255,255);
         display:flex;
@@ -608,28 +454,16 @@
         width: 1.5em;
         padding-right: 0.5em;
     }
-    
+
+
     .agradecimiento {
-        grid-area: agradecimiento;
-        background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
-        background-size: cover;       
-    }
-
-    .agradecimiento div {
-       background-color: rgba(34, 58, 215, 0.32);
-       opacity: 0.7;
-       height: 100%;
-       width: auto;
-       display: flex;
-       justify-content: center;
-       align-items: center;  
-    }
-
-    .agradecimiento div p  {
-        padding: 2em;
-        opacity: 1;
+        text-align: center;
+        font-size: 3em;
         color: rgb(255, 255, 255); 
     }
+
+    .agradecimiento p
+    {text-shadow: 1px 1px 2px black}
 
     .section-productos {
         margin-top: 100px;
@@ -656,7 +490,7 @@
         display: flex;
         justify-content: space-evenly;
         position: relative;
-        background-color: rgb(117, 112, 112) ;
+        background-color: rgb(49, 49, 49) ;
         margin-top: 20px;
         color: rgb(255, 255, 255); 
         text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
@@ -691,9 +525,9 @@ ma
     }
 
     .div-redes ul {
+        width: 200px;
         display: flex;
         flex-flow: row wrap;
-        grid-area: div-redes;
         justify-content: space-between;
         padding: 0;
     }
@@ -709,8 +543,16 @@ ma
         height: 2em;
         display: inline-block;
         margin: 0.5em;
-
     }
+
+    .icono:hover {
+        width: 2.2em; 
+        height: 2.2em;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+    
+
+
     
     .copyright {
         grid-area: copyright;
@@ -721,6 +563,13 @@ ma
         margin:0;
         padding: 0;
     }
+
+    .mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
+        padding: 0;
+        margin: 0;
+        font-size: 20px;
+    }
+    
 
     .lista-secudaria li a {
         font-size: 10px;
