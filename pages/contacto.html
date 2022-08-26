@@ -10,15 +10,14 @@
     <body>
         <header class="header">
             <img src="../images/maconegro_rectangulo.jpg" alt="Maco Moda" class="logo-principal">      
-            <nav class="navbar navbar-expand-lg bg-black mitexto-bs-navbar">
+            <nav class="navbar navbar-expand-lg bg-dark mitexto-bs-navbar">
                 <div class="container-fluid">
                     <button class="navbar-toggler bg-secondary m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
                     <div class="collapse navbar-collapse header" id="navbarSupportedContent">
                         <ul class="navbar-nav mx-auto text-center mb-2 mb-lg-0 navbar-center" >
-                            <li class="nav-item">
-                                <a class="nav-link" href="../index.html">INICIO</a></li>
+                            <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
                             <li class="nav-item"><a class="nav-link" href="./productos.html">PRODUCTOS</a></li>
                             <li class="nav-item"><a class="nav-link" href="./comprar.html">CÓMO COMPRAR</a></li>
                             <li class="nav-item"><a class="nav-link"href="./talles.html">GUÍA DE TALLES</a></li>
@@ -29,59 +28,58 @@
             </nav>
         </header>
         
-        <main class="container">
+        <main class="container-fluid">
             <section class="row">   
                 
-                <form class="col formulario">
+                <div class="formulario mx-auto col-lg-5 col-sm-11">
                     <h2 class="titulo-comun">Formulario de contacto</h2>
-                    
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Nombre y Apellido:</label>
                         <input type="nombre" class="form-control" placeholder="Ingrese nombre y apellido">
                     </div> 
-
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Correo electrónico:</label>
                         <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su dirección de correo">
                     </div>
-        
                     <div class="mb-3">
                         <label for="exampleFormControlInput1" class="form-label">Teléfono:</label>
                         <input type="number" class="form-control" id="exampleFormControlInput1" placeholder="Ingrese su teléfono">
-                    </div>          
-
+                    </div>         
                     <div class="mb-3">
                         <label for="exampleFormControlTextarea1" class="form-label">Ingrese algún comentario:</label>
                         <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
                     </div>
-            
                     <div class="mb-3 form-check">
                         <input type="checkbox" class="form-check-input" id="exampleCheck1">
                         <label class="form-check-label" for="exampleCheck1">Acepto recibir notificaciones:</label>
                     </div>
-                    
                     <div class="text-center">
                         <input type="submit" class="btn-check" name="options-outlined" id="success-outlined" autocomplete="off" checked>
                         <label class="btn btn-outline-success" for="success-outlined">Aceptar</label>
-
                         <input type="reset" class="btn-check" name="options-outlined" id="danger-outlined" autocomplete="off">
                         <label class="btn btn-outline-danger" for="danger-outlined">Cancelar</label>
                     </div>
-                </form>
+                </div>
 
-                <div class="ubicacion col formulario">
+                <div class="ubicacion formulario mx-auto col-lg-5 col-sm-11 ">
                     <h2 class="titulo-comun">Ubicación</h2>
                     <iframe class="mapa" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.5712697570925!2d-58.41096388550973!3d-34.61500126560075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccaf080a6baf7%3A0xf3774c422fb87e93!2sAv.%20Belgrano%203023%2C%20C1209AAC%20CABA!5e0!3m2!1ses-419!2sar!4v1660179627307!5m2!1ses-419!2sar" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    <ul class="lista-ubicacion"> 
-                        <li><img src="../images/iconos/icono_ubicacion.png" alt="icono ubicacion"> Av. Belgrano 3023 (C.A.B.A)</li>
-                        <li><img src="../images/iconos/icono_telefono.png" alt="icono telefono">11 2389-0281</li>
-                        <li><img src="../images/iconos/icono_correo.png" alt="icono correo"> macoteviste@gmail.com</li>
-                    </ul>
+                    <div  class="icono-ubicacion">
+                        <img src="../images/iconos/icono_ubicacion.png" alt="icono ubicacion"> 
+                        <p>Av. Belgrano 3023 (C.A.B.A)</p> 
+                    </div>
+                    <div class="icono-ubicacion">
+                        <img src="../images/iconos/icono_telefono.png" alt="icono telefono">
+                        <p>011 2389-0281</p>
+                    </div>
+                    <div class="icono-ubicacion">
+                        <img src="../images/iconos/icono_correo.png" alt="icono correo"> 
+                        <p>macoteviste@gmail.com</p>
+                    </div>
                     <div class="agradecimiento">
                         <p>Gracias por visitarnos</p>
                     </div>
                 </div>
-                </section>
             </section>  
         </main>
         
