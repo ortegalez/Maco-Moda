@@ -147,6 +147,11 @@ margin: 0, 1em;
 .card {
     width: 25em;
 }
+
+/* .card-text {
+    font-size: 20px;
+} */
+
 /* Fin Productos */
 
 
@@ -193,19 +198,20 @@ margin: 0, 1em;
 
 
 .card-body {
-    font-weight: 600;
+    /* font-weight: bold; */
     background: rgb(69,73,77);
     background: linear-gradient(0deg, rgba(69,73,77,1) 9%, rgba(14,14,13,1) 100%);
 }
 
-.card-body p {
+.card-text {
     flex:display;
     justify-content: center;
     color: rgb(255, 255, 255);
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-weight: bold;
     text-align: center;
 }
+
 
 /* --------------------------- Fin Productos ----------------------------- */
 
@@ -453,7 +459,7 @@ margin: 0, 1em;
     }
 /* Como Comprar */
 
-    .lista-como-comprar li {
+    .lista-como-comprar li, {
         font-size: 14px;
         padding: 10px;
     }
@@ -477,6 +483,11 @@ margin: 0, 1em;
     .card {
         width: 18em;
     }
+
+    .card-text {
+        font-size: 14px;
+    }
+
 /* -------- Footer ------- */
     .subtitulos-footer {
         font-size: 14px;
