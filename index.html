@@ -4,24 +4,25 @@
     <meta charset="iso-8559-1">
     <title>Maco Moda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="shortcut icon" href="./images/iconomaco.ico">
 </head>
-<body>
-    <header class="header">
-        <img src="./images/maconegro_rectangulo.jpg" alt="Maco Moda" class="logo-principal">      
-        <nav class="navbar navbar-expand-lg bg-dark mitexto-bs-navbar">
+<body class="container-fluid">
+    <header class="row header">
+        <nav class="col navbar navbar-expand-lg navbar-dark">
             <div class="container-fluid">
-                <button class="navbar-toggler bg-secondary prueba" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <a href="../index.html"><img class="logo-principal" src="../images/maconegro_rectangulo.jpg" alt="logo Maco"></a>
+                <button class="hamburguesa navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse header" id="navbarSupportedContent">
-                    <ul class="navbar-nav mx-auto text-center mb-2 mb-lg-0 navbar-center" >
-                        <li class="nav-item"><a class="nav-link" href="./index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/comprar.html">CÓMO COMPRAR</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/productos.html">PRODUCTOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/talles.html">GUÍA DE TALLES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./pages/contacto.html">CONTACTO</a></li>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="lista-navbar navbar-nav ms-auto">
+                        <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./index.html">INICIO</a></li>
+                        <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./pages/comprar.html">CÓMO COMPRAR</a></li>
+                        <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./pages/productos.html">PRODUCTOS</a></li>
+                        <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./pages/talles.html">GUÍA DE TALLES</a></li>
+                        <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./pages/contacto.html">CONTACTO</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,10 +59,19 @@
     <div id="subtitulo-enlace" class="p-3">
         <a href="./pages/productos.html">VER MÁS PRODUCTOS</a>
     </div>
-    <div  id="beneficios">
-        <p class="p-1 m-1"><b>ENVIAMOS TU CUMPRA</b><br>Entregas a todo el país</p>
-        <p class="p-1 m-1"><b>PAGA COMO QUIERAS</b><br>Tarjetas de crédito o transferencias</p>
-        <p class="p-1 m-1"><b>COMPRA CON SEGURIDAD</b><br>Tus datos siempre protegidos</p>
+    <div  class="beneficios">
+        <div>
+            <p><b>ENVIAMOS TU CUMPRA</b><br>Entregas a todo el país</p> 
+            <img data-aos="fade-up" src="./images/iconos/icono_envio.png" alt="">
+        </div>
+        <div>
+            <p><b>PAGA COMO QUIERAS</b><br>Tarjetas de crédito o transferencias</p> 
+            <img data-aos="fade-up" src="./images/iconos/icono_pago.png" alt="">
+        </div>
+        <div>
+            <p><b>COMPRA CON SEGURIDAD</b><br>Tus datos siempre protegidos</p> 
+            <img data-aos="fade-up" src="./images/iconos/icono_seguridad.png" alt="">
+        </div>
     </div>
     <footer class="container-fluid bg-dark">
         <section class="row">
@@ -100,5 +110,9 @@
     </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>

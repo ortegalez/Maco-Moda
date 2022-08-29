@@ -5,91 +5,92 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.body {
+body {
     background-color: rgb (119, 119, 141);
+    background: rgb(38,38,55);
+    background: radial-gradient(circle, rgba(38,38,55,0.4682247899159664) 0%, rgba(194,207,221,0.8911939775910365) 100%);
 }
 
-.mt-n1 {
-    margin-top: -0.25rem !important;
-}
-
-
-
-/*------------------------------ Cabecera de la pagina  ---------------------------------*/
-
-
+/*--------------------------- HEADER  ---------------------------------*/
 .header {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(0, 0, 0) ;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    display: flex;
-    flex-direction: column;
 } 
 
-
-.navbar-header {
-    display: fixed;
-}
-
-/* .header-navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}  
-
-.header-navbar ul li {
-    display: inline-block; 
-    padding: 0px 05px 0px 05px;
-    margin: 2px;
-}
-
-.header ul li a {
-    text-decoration-line: none;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-} */
-
-.header ul li a:hover, .lista-secudaria li a:hover   {
-    color: #beb441;
-    font-weight: 800;
-}
-
-.logo-navbar { 
-    max-height: 3em;
-}
-
 .logo-principal {
-    width: 15%;
-    max-height: 20rem;
+    max-height: 5rem;
 }
 
+.lista-navbar li {
+min-width: max-content;
+text-align: center;
+color: rgb(255,255,255);
+padding: 0, 1em;
+margin: 0, 1em;
+}
 
-.mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-} */
+.texto-lista-navbar {  /* estilo para navbar de Bootstraps */
+    color: rgb(255,255,255);
+    /* font-size: 1.2rem; */
+    font-size: 16px;
+} 
 
-/* ----------------- Fin Cabecera de la pagina --------------------- */
+.texto-lista-navbar:hover {
+    font-weight: bold;
+    color: rgb(230, 211, 47);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    /* text-shadow:
+        0 0 5px rgb(230, 211, 47),
+        0 0 10px rgb(230, 211, 47),
+        0 0 35px rgb(228, 207, 17),
+        0 0 40px rgb(228, 207, 17); */
+    /* background-color: rgb(101, 101, 105); */
+    /* color: rgb(255, 255, 255); */
+    /* transition-delay: 0.1s; */
+}
 
-/* ---------------------- Contenido Principal -----------------------*/
+.hamburguesa {
+    border: 2px solid rgb(101, 101, 105);
+}
 
+/* ----------------- Fin HEADER--------------------- */
 
+/* ---------------------- MAIN -----------------------*/
+
+/* Index */
 
 .imagen-fondo {
-    display: none; }
+    margin-top: 1em;
+    margin-bottom: 1em;
+    grid-area: imagen-fondo;
+    display: flex;     
+    justify-content: center; 
+    align-items: center; 
+} 
 
-.principal {
-    grid-area: principal;
-    background-color: rgb(86, 86, 89);
-    /* min-height: 100vh; */
+.imagen-fondo img {
+    display: inline-block;
+    width: 75%;
+    border: 2px solid rgb(255,255,255);
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-
-.principal p {
-    font-size: 25px;
-    color: rgb(255,255,255);
+.subtitulo-imagen-fondo {
+    border-color: black ;
+    width: 80%;
+    padding: 40px;
+    position: absolute;
+    text-align: center;
+    background-color: black;
+    color: rgb(255, 255, 255);
+    font-style: italic;
+    font-size: 40px;
+    opacity: .5;
 }
+/* Fin Index */
 
+/* Contacto */
 .formulario {
     color: rgb(255,255,255);
     background-color:rgba(86, 86, 89, 0.5);
@@ -118,7 +119,7 @@
 .boton-aceptar [type="submit"]:hover, .boton-cancelar [type="reset"]:hover {
     color: rgb(255, 208, 0); 
     background-color: rgb(49, 49, 49);
-    }
+}
 
 .titulo-destacado {
     color: rgb(255, 255, 255);
@@ -127,6 +128,9 @@
     font-size: 24px;
     text-align: center ;
 }
+/* Fin Contacto */
+
+/* Productos */
 
 .section-productos {
     display: flex;
@@ -134,10 +138,7 @@
     justify-content: space-around;
     align-items: center;
     color: rgb(0, 0, 0);
-    background: rgb(97,96,145);
-    background: radial-gradient(circle, rgba(97,96,145,1) 0%, rgba(172,186,201,1) 100%);
 }
-
 
 .section-productos .card {
     margin: 0.5em;
@@ -146,6 +147,7 @@
 .card {
     width: 25em;
 }
+/* Fin Productos */
 
 
 #subtitulo-enlace {
@@ -155,8 +157,6 @@
     justify-content: center; 
     align-items: center; 
 }
-
-
 
 #subtitulo-enlace a {
     position: relative;
@@ -177,8 +177,9 @@
     color: rgb(255, 208, 0);
 }
 
-
-
+.beneficios {
+    display: none;
+}
 
 /*------------------------ Fin Contenido Principal ----------------------------*/
 
@@ -210,17 +211,22 @@
 
 /* ------------------------- Como Comprar------------------------------- */
 
+.lista-como-comprar {
+    padding-right:0;
+    padding-left:0.5em ;
+}
+
 .lista-como-comprar li {
     color: rgb(0, 0, 0);
     font-weight: 500;
     font-size: 24px;
-    margin: 0, 3em, 0, 3em;
+    padding: 10px;
 }
 
 .lista-como-comprar li:hover {
     background-color: rgb(49, 49, 49);
     color: rgb(255, 255, 255);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .lista-como-comprar a {
@@ -228,6 +234,7 @@
     color: rgb(0, 0, 0);
     font-weight: 500;
 }
+
 .lista-como-comprar a:hover {
     color: rgb(255, 208, 0);
     font-weight: 600;
@@ -243,7 +250,6 @@
     flex-flow: column wrap;
     align-items: center;
 }
-
 
 .lista-ubicacion li {
     list-style: none;
@@ -290,12 +296,7 @@
 {text-shadow: 1px 1px 2px black}
 
 
-
 /*---------------------------- Footer ------------------------------ */
-
-#beneficios {
-    display: none;
-}
 
 .footer {
     background-color:rgb(0,0,0);
@@ -308,7 +309,6 @@
 .div-navegacion {  
     display: inline-block;
 }
-
 
 .div-redes ul {
     display: flex;
@@ -335,7 +335,6 @@
     font-size: 24px;
 }
 
-
 .lista-secudaria {
     display: inline-block;
     margin-top: 5px;
@@ -350,6 +349,14 @@
     color: rgb(255, 255, 255);
     text-decoration-line: none;
     font-size: 20px;
+}
+
+.lista-secudaria li a:hover {
+    text-shadow:
+        0 0 5px rgb(230, 211, 47),
+        0 0 10px rgb(230, 211, 47),
+        0 0 35px rgb(228, 207, 17),
+        0 0 40px rgb(228, 207, 17);
 }
 
 .icono {
@@ -370,9 +377,10 @@
     font-size: 16px;
 }
 
-
 @media screen and (max-width: 599px) and (orientation: landscape){
+  
     
+
 }
 
 /* fin Diseno Mobile */
@@ -389,64 +397,28 @@
 
 
 
+
+
 /* Diseno Desktop */
 
 @media screen and (min-width: 1200px) {
 
+/* -------- Header -------- */
 
+
+/* ---------- Main ---------*/
+
+/* Index */
     body {
         background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
         background-size: 300% 300%;
     } 
 
-    .header-navbar {
-        display: contents;
-        text-align: center;
-        border-bottom: 2px solid #4182be;
-    }
-
-    .imagen-fondo {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        grid-area: imagen-fondo;
-        display: flex;     
-        justify-content: center; 
-        align-items: center; 
-    } 
-    
-    .imagen-fondo img {
-        display: inline-block;
-        width: 75%;
-        border: 2px solid rgb(255,255,255);
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    }
-
-
-    .subtitulo-imagen-fondo {
-        border-color: black ;
-        width: 80%;
-        padding: 40px;
-        position: absolute;
-        text-align: center;
-        background-color: black;
-        color: rgb(255, 255, 255);
-        font-style: italic;
-        font-size: 40px;
-        opacity: .5;
-    }
-
-    
-    .principal {
-    background-color: rgba(0, 0, 0, 0);
-    /* margin-top: 4rem; */
-    }
-
     #subtitulo-enlace a {      
         font-size: 12px;
     }
 
-    #beneficios {
-        grid-area: beneficios;
+    .beneficios {
         display: flex;
         justify-content: space-evenly;
         position: relative;
@@ -456,20 +428,62 @@
         text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
     }
 
-    #beneficios p {
-        position: relative;
+    .beneficios div {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+
+    .beneficios img {
+        width: 3em;
+        height: 3em;
+        margin: 0.5em;
+        text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    }
+
+    .beneficios p {
         display: inline-block;
         border-radius: 3px;
-        width: 200px;
         font-size: 12px;
         text-align: center ;
-        padding: 10px;
+        padding-top: 12px;
         text-decoration-line: none;
         color: rgb(255,255,255);
     }
+/* Como Comprar */
 
+    .lista-como-comprar li {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+
+/* Talles */
+    .descripcion-talles {
+        margin:0;
+        padding: 0;
+    }
+
+/* Productoos */
+    .section-productos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        background: none;
+    }
+    
+    .card {
+        width: 18em;
+    }
+/* -------- Footer ------- */
     .subtitulos-footer {
         font-size: 14px;
+    }
+
+    .lista-secudaria li a, .lista-secudaria li {
+        font-size: 12px;
     }
 
     .div-redes ul {
@@ -493,7 +507,7 @@
         margin: 0.5em;
     }
 
-    .icono:hover {
+    .icono:hover, icono {
         width: 2.2em; 
         height: 2.2em;
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
@@ -501,34 +515,8 @@
         
     .copyright {
         grid-area: copyright;
-        font-size: 10px;
+        font-size: 12px;
     }
 
-    .descripcion-talles {
-        margin:0;
-        padding: 0;
-    }
 
-    .mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
-        padding: 0;
-        margin: 0;
-        font-size: 20px;
-    }
-    
-
-    .lista-secudaria li a {
-        font-size: 10px;
-    }
-
-    .section-productos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        background: none;
-    }
-    
-    .card {
-        width: 18em;
-    }
 }

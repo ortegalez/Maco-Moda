@@ -7,73 +7,29 @@
         <link rel="stylesheet" href="../styles/styles.css"/>
         <link rel="shortcut icon" href="../images/iconomaco.ico">
     </head>
-    <body>
-
-<header>
-    <nav class="navbar navbar-expand-lg bg-light">
-        <div class="container-fluid navbar-header">
-            
-
-            <a href="../index.html"><img class="logo-principal " src="../images/maconegro_rectangulo.jpg" alt="logo Maco"></a>
-      
-            
-            <div>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./productos.html">PRODUCTOS</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./comprar.html">COMPRAR</a></li>
-                        <li class="nav-item"><a class="nav-link"href="./talles.html">TALLES</a></li>
-                        <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTACTO</a></li>
-                    </ul>
-                </div>
-            </div>
-        
-        </div>
-    </nav>
-</header>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<!-- 
-        <header class="header">        
-            <nav class="navbar navbar-expand-lg">
-                <a href="../index.html"><img class="navbar-brand logo-principal" src="../images/maconegro_rectangulo.jpg" alt="logo Maco"></a>
+    <body class="container-fluid"> 
+        <header class="row header">
+            <nav class="col navbar navbar-expand-lg navbar-dark">
                 <div class="container-fluid">
-                    <button class="navbar-toggler bg-secondary m-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <a href="../index.html"><img class="logo-principal" src="../images/maconegro_rectangulo.jpg" alt="logo Maco"></a>
+                    <button class="hamburguesa navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse header" id="navbarSupportedContent">
-                        <ul class="navbar-nav mx-auto text-center mb-2 mb-lg-0 navbar-center" >
-                            <li class="nav-item"><a class="nav-link" href="../index.html">INICIO</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./productos.html">PRODUCTOS</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./comprar.html">CÓMO COMPRAR</a></li>
-                            <li class="nav-item"><a class="nav-link"href="./talles.html">GUÍA DE TALLES</a></li>
-                            <li class="nav-item"><a class="nav-link" href="./contacto.html">CONTACTO</a></li>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="lista-navbar navbar-nav ms-auto">
+                            <li class="nav-item"><a class="texto-lista-navbar nav-link" href="../index.html">INICIO</a></li>
+                            <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./productos.html">PRODUCTOS</a></li>
+                            <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./comprar.html">CÓMO COMPRAR</a></li>
+                            <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./talles.html">GUÍA DE TALLES</a></li>
+                            <li class="nav-item"><a class="texto-lista-navbar nav-link" href="./contacto.html">CONTACTO</a></li>
                         </ul>
                     </div>
                 </div>
             </nav>
-               </header>        -->
-
-        <main> 
-            <h1 class="titulo-destacado">CÓMO COMPRAR</h1>       
-            <ol class="list-group list-group-numbered m-3 lista-como-comprar" >
+        </header>
+        <main class="row " > 
+            <h1 class="col-12 titulo-destacado">CÓMO COMPRAR</h1>       
+            <ol class="col-11 list-group list-group-numbered lista-como-comprar mx-auto" >
                 <li class="list-group-item">Elige el producto que deseas comprar en la sesion de <b><a href="./productos.html">PRODUCTOS</a></b>
                 <li class="list-group-item">Haz clic en el botón de "Agregar al carrito". Esto agregará el producto a tu carrito y te llevará al mismo.</li>
                 <li class="list-group-item">Puedes seguir agregando otros productos al carrito o sino haz clic en "Iniciar Compra".</li>
