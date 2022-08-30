@@ -1,0 +1,25 @@
+.lista-como-comprar {
+    padding-right:0;
+    padding-left:0.5em;
+    li {
+        color: rgb(0, 0, 0);
+        font-weight: 500;
+        font-size: 24px;
+        padding: 10px;
+        &:hover {
+            background-color: rgb(49, 49, 49);
+            color: rgb(255, 255, 255);
+            font-weight: bold;
+        }
+        a { 
+            text-decoration: none;
+            color: rgb(0, 0, 0);
+            font-weight: 500;
+            &:hover {
+                color: rgb(255, 208, 0);
+                font-weight: 600;
+            }
+        }
+    }
+}
+

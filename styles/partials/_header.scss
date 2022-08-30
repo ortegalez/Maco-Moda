@@ -1,0 +1,45 @@
+.header {
+    background-color: rgb(0, 0, 0) ;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+} 
+
+.logo-principal {
+    max-height: 5rem;
+}
+
+.lista-navbar {
+    li {
+    min-width: max-content;
+    text-align: center;
+    color: rgb(255,255,255);
+    padding: 0, 1em;
+    margin: 0, 1em;
+    }
+}
+
+.texto-lista-navbar {  /* estilo para navbar de Bootstraps */
+    color: rgb(255,255,255);
+    /* font-size: 1.2rem; */
+    font-size: 16px;
+} 
+
+.texto-lista-navbar {
+    &:hover {
+    font-weight: bold;
+    color: rgb(230, 211, 47);
+    border-radius: 5px;
+    border: 1px solid rgb(255, 255, 255);
+    /* text-shadow:
+        0 0 5px rgb(230, 211, 47),
+        0 0 10px rgb(230, 211, 47),
+        0 0 35px rgb(228, 207, 17),
+        0 0 40px rgb(228, 207, 17); */
+    /* background-color: rgb(101, 101, 105); */
+    /* color: rgb(255, 255, 255); */
+    /* transition-delay: 0.1s; */
+    }
+}
+
+.hamburguesa {
+    border: 2px solid rgb(101, 101, 105);
+}
