@@ -20,7 +20,7 @@
 .texto-lista-navbar { /* estilo para navbar de Bootstraps */
   color: rgb(255, 255, 255);
   /* font-size: 1.2rem; */
-  font-size: 16px;
+  font-size: 24px;
 }
 
 .texto-lista-navbar:hover {
@@ -42,20 +42,41 @@
   border: 2px solid rgb(101, 101, 105);
 }
 
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .texto-lista-navbar {
+    font-size: 16px;
+  }
+}
 .imagen-fondo {
-  margin-top: 1em;
-  margin-bottom: 1em;
-  grid-area: imagen-fondo;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .imagen-fondo img {
-  display: inline-block;
-  width: 75%;
+  display: block;
+  width: 100%;
   border: 2px solid rgb(255, 255, 255);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.bienvenida {
+  background-color: rgb(49, 49, 49);
+  border-radius: 10px;
+  padding-top: 12px;
+  margin: 10px;
+  width: auto;
+  border: 3px solid rgb(255, 255, 255);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.bienvenida p {
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  font-size: 24px;
+  color: rgb(255, 255, 255);
 }
 
 .subtitulo-imagen-fondo {
@@ -71,6 +92,54 @@
   opacity: 0.5;
 }
 
+#subtitulo-enlace {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#subtitulo-enlace a {
+  border: 1px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 119, 141);
+  border-radius: 3px;
+  font-size: 18px;
+  padding: 10px;
+  text-align: center;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  transition: 0.5s ease;
+}
+#subtitulo-enlace a:hover {
+  background-color: rgb(49, 49, 49);
+  color: rgb(255, 208, 0);
+}
+
+.beneficios {
+  background-color: rgb(49, 49, 49);
+  margin-top: 20px;
+  color: rgb(255, 255, 255);
+}
+.beneficios div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.beneficios div p {
+  font-size: 1.25rem;
+  text-align: center;
+  color: rgb(255, 255, 255);
+}
+.beneficios div img {
+  width: 6em;
+  height: 6em;
+  margin: 0.5em;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
@@ -78,46 +147,36 @@
     background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
     background-size: 300% 300%;
   }
+  .imagen-fondo {
+    margin-top: 10px;
+  }
+  .imagen-fondo img {
+    width: 75%;
+  }
   #subtitulo-enlace a {
-    font-size: 12px;
+    font-size: 0.75rem;
   }
   .beneficios {
     display: flex;
-    justify-content: space-evenly;
-    position: relative;
-    background-color: rgb(49, 49, 49);
-    margin-top: 20px;
-    color: rgb(255, 255, 255);
-    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    direction: row wrap;
   }
   .beneficios div {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    align-items: center;
+    flex-direction: column;
+  }
+  .beneficios div p {
+    text-align: center;
+    font-size: 12px;
   }
   .beneficios div img {
     width: 3em;
     height: 3em;
-    margin: 0.5em;
-    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  }
-  .beneficios p {
-    display: inline-block;
-    border-radius: 3px;
-    font-size: 12px;
-    text-align: center;
-    padding-top: 12px;
-    -webkit-text-decoration-line: none;
-            text-decoration-line: none;
-    color: rgb(255, 255, 255);
   }
 }
 .footer {
   background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-around;
-  width: 100%;
   color: rgb(255, 255, 255);
 }
 
@@ -158,15 +217,13 @@
   padding-left: 0px;
   font-weight: 700;
 }
-
 .lista-secudaria li a {
   color: rgb(255, 255, 255);
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   font-size: 20px;
 }
-
-.lista-secudaria li a:hover li a:hover {
+.lista-secudaria li a:hover {
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
@@ -196,9 +253,6 @@
     font-size: 14px;
   }
   .lista-secudaria li a {
-    font-size: 12px;
-  }
-  .lista-secudaria li {
     font-size: 12px;
   }
   .div-redes ul {
@@ -319,6 +373,8 @@
   text-shadow: 1px 1px 2px black;
 }
 
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
 .section-productos {
   display: flex;
   flex-flow: column wrap;
@@ -349,6 +405,21 @@
   text-align: center;
 }
 
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .section-productos {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    align-items: center;
+    background: none;
+  }
+  .section-productos .card {
+    width: 18em;
+  }
+}
 .lista-como-comprar {
   padding-right: 0;
   padding-left: 0.5em;
@@ -374,6 +445,17 @@
   font-weight: 600;
 }
 
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .lista-como-comprar {
+    margin-bottom: 1em;
+  }
+  .lista-como-comprar li {
+    font-size: 14px;
+    padding: 10px;
+  }
+}
 * {
   padding: 0;
   margin: 0;

@@ -22,11 +22,43 @@
         flex:display;
         justify-content: center;
         color: rgb(255, 255, 255);
-        font-size: 14px;
+        font-size: $font-size-fuente-secuendaria;
         font-weight: 600;
         text-align: center;
     }
 }
 
+/* Diseno Tablet */
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
 
 
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .section-productos {
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: space-around;
+        align-items: center;
+        background: none;
+          .card {
+        width: 18em;
+    }
+    }
+    
+  
+
+
+
+
+
+}

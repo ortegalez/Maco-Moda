@@ -3,7 +3,6 @@
     background-color:rgb(0,0,0);
     display: flex;
     justify-content: space-around;
-    width: 100%;
     color: rgb(255,255,255);
 }
 
@@ -49,21 +48,11 @@
     font-size: 10px;
     padding-left: 0px;
     font-weight: 700;
-}
-
-.lista-secudaria {
     li {
         a {
         color: rgb(255, 255, 255);
         text-decoration-line: none;
         font-size: 20px;
-        }
-    }
-}
-
-.lista-secudaria li a:hover {
-    li {
-        a {
             &:hover {
                 text-shadow:
                 0 0 5px rgb(230, 211, 47),
@@ -115,12 +104,6 @@
         }
     }
 
-    .lista-secudaria {
-         li {
-            font-size: 12px;
-         }
-    }
-
     .div-redes {
         ul {
         width: 200px;
@@ -142,12 +125,11 @@
         height: 2em;
         display: inline-block;
         margin: 0.5em;
-    }
-
-    .icono:hover {
-        width: 2.2em; 
-        height: 2.2em;
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        &:hover {
+            width: 2.2em; 
+            height: 2.2em;
+            box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        }
     }
         
     .copyright {

@@ -5,6 +5,7 @@
     <title>Maco Moda</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&family=Ubuntu:ital,wght@1,300&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./styles/styles.css" />
     <link rel="shortcut icon" href="./images/iconomaco.ico">
 </head>
@@ -28,25 +29,28 @@
             </div>
         </nav>
     </header>
-    <main class="container">
-        <div class="imagen-fondo row">
-            <p class="subtitulo-imagen-fondo col-12">Bienvenido a Maco Moda</p>
-            <img class="col-12" src="./images/fondos/buzo fondo pagina - copia (2).jpg" alt="imagen de fondo">
+    <main class="row">
+        <div class="imagen-fondo col-12">
+            <p class="subtitulo-imagen-fondo">Bienvenido a Maco Moda</p>
+            <img src="./images/fondos/buzo fondo pagina - copia (2).jpg" alt="imagen de fondo">
         </div>
-        <div id="carouselExampleFade" class="carousel slide carousel-fade " data-bs-ride="carousel">
+        <div data-aos="flip-left" class="bienvenida col-12 mx-auto">
+            <p>Maco Moda es una marca argentina con raices en el Caribe,<br> una empresa familiar dedicada a confeccionar prendas de calidad</p>
+        </div>
+        <div id="carouselExampleFade" class="carousel slide carousel-fade col-12" data-bs-ride="carousel">
             <p class="bg-secondary text-center text-white fs-3 opacity-75 fw-bold fst-italic" >DESTACADOS DE TEMPORADA</p>
             <div class="carousel-inner ">
                 <div class="carousel-item active">
-                    <img src="./images/fondos/carrusel_1.jpg" class="d-block w-60 mx-auto text-center" alt="Remeras unisex">
+                    <img src="./images/fondos/carrusel_1.jpg" class="d-block w-60 mx-auto text-center col-10" alt="Remeras unisex">
                 </div>
                 <div class="carousel-item">
-                    <img src="./images/fondos/carrusel_2.jpg" class="d-block w-60 mx-auto text-center" alt="buzos frizados">
+                    <img src="./images/fondos/carrusel_2.jpg" class="d-block w-60 mx-auto text-center col-10" alt="buzos frizados">
                 </div>
                 <div class="carousel-item ">
-                    <img src="./images/fondos/carrusel_3.jpg" class="d-block w-60 mx-auto text-center" alt="remeras y buzos">
+                    <img src="./images/fondos/carrusel_3.jpg" class="d-block w-60 mx-auto text-center col-10" alt="remeras y buzos">
                </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
                 <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                 <span class="visually-hidden">Previous</span>
             </button>
@@ -59,23 +63,22 @@
     <div id="subtitulo-enlace" class="p-3">
         <a href="./pages/productos.html">VER MÁS PRODUCTOS</a>
     </div>
-    <div  class="beneficios">
-        <div>
-            <p><b>ENVIAMOS TU CUMPRA</b><br>Entregas a todo el país</p> 
-            <img data-aos="fade-up" src="./images/iconos/icono_envio.png" alt="">
+    <div class="row beneficios">
+        <div class="col-lg-4 col-sm-12">
+            <img data-aos="fade-up" src="./images/iconos/icono_envio.png" alt="icono envios">
+            <p><b>ENVIAMOS TU COMPRA</b><br>Entregas a todo el país</p> 
         </div>
-        <div>
-            <p><b>PAGA COMO QUIERAS</b><br>Tarjetas de crédito o transferencias</p> 
-            <img data-aos="fade-up" src="./images/iconos/icono_pago.png" alt="">
+        <div class="col-lg-4 col-sm-12"> 
+            <img data-aos="fade-up" src="./images/iconos/icono_pago.png" alt="icono medios de pago">
+            <p><b>PAGA COMO QUIERAS</b><br>Tarjetas de crédito o transferencias</p>
         </div>
-        <div>
+        <div class="col-lg-4 col-sm-12">
+            <img data-aos="fade-up" src="./images/iconos/icono_seguridad.png" alt="icono seguridad">
             <p><b>COMPRA CON SEGURIDAD</b><br>Tus datos siempre protegidos</p> 
-            <img data-aos="fade-up" src="./images/iconos/icono_seguridad.png" alt="">
         </div>
     </div>
-    <footer class="container-fluid bg-dark">
-        <section class="row">
-        <div class="div-navegacion col-4 mx-auto text-center">
+    <footer class="row bg-dark">
+        <div class="div-navegacion col-lg-4 col-sm-6 text-center">
             <p class="subtitulos-footer">NAVEGACIÓN</p>
             <ul class="lista-secudaria ">
                 <li><a href="./index.html">Inicio</a></li>
@@ -85,29 +88,29 @@
                 <li><a href="./pages/contacto.html">Contacto</a></li>
             </ul>
         </div>
-        <div class="div-redes col-4 mx-auto text-center">
-            <p class="subtitulos-footer  ">REDES SOCIALES</p>
+        <div class="div-redes col-lg-4 col-sm-6 text-center">
+            <p class="subtitulos-footer">REDES SOCIALES</p>
             <ul class="mx-auto text-center ">
                 <li><a href="https://www.instagram.com/maco.teviste/" target="_blank"><img src="./images/iconos/logo_instagram.png" class="icono"></a></li>
                 <li><a href="https://www.facebook.com/profile.php?id=100073947131727" target="_blank"><img src="./images/iconos/logo_facebook.png" class="icono"></a></li>
                 <li><a href="https://www.tiktok.com/es/" target="_blank"><img src="./images/iconos/logo_tiktok.png" class="icono"></a></li>
             </ul>
         </div>
-        <div class="div-medios col-4 mx-auto text-center text-white">
+        <div class="div-medios col-lg-4 text-center text-white">
             <p class="subtitulos-footer">MEDIOS DE PAGO</p>
             <div>
-                <ul class="lista-secudaria ">
-                    <li>Tarjetas de crédito</li>
-                    <li>Efectivo</li>
-                    <li>Transferencias</li>
-                    <li>Criptomonedas</li>
+                <ul class="lista-secudaria">
+                    <li><a>Tarjetas de crédito</a></li>
+                    <li><a>Efectivo</a></li>
+                    <li><a>Transferencias</a></li>
+                    <li><a>Criptomonedas</a></li>
                 </ul>
             </div>
         </div>
-        <div class="copyright text-center text-white" >
+        
+        <div class="copyright col-12 text-center text-white">
             <p>Copyright &#169 - Todos los derechos reservados</p>
         </div>
-    </section>
     </footer>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>   
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

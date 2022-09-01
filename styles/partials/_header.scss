@@ -20,7 +20,7 @@
 .texto-lista-navbar {  /* estilo para navbar de Bootstraps */
     color: rgb(255,255,255);
     /* font-size: 1.2rem; */
-    font-size: 16px;
+    font-size: 24px;
 } 
 
 .texto-lista-navbar {
@@ -42,4 +42,24 @@
 
 .hamburguesa {
     border: 2px solid rgb(101, 101, 105);
+}
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
+
+
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .texto-lista-navbar {         
+        font-size: 16px;
+    } 
+    
 }
