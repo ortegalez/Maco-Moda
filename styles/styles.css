@@ -4,7 +4,7 @@
 }
 
 .logo-principal {
-  max-height: 5rem;
+  max-height: 4rem;
 }
 
 .lista-navbar li {
@@ -53,43 +53,54 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 1rem;
 }
-
 .imagen-fondo img {
   display: block;
   width: 100%;
-  border: 2px solid rgb(255, 255, 255);
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
-
-.bienvenida {
-  background-color: rgb(49, 49, 49);
-  border-radius: 10px;
-  padding-top: 12px;
-  margin: 10px;
-  width: auto;
-  border: 3px solid rgb(255, 255, 255);
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-}
-.bienvenida p {
-  text-align: center;
-  font-family: "Roboto", sans-serif;
-  font-family: "Ubuntu", sans-serif;
-  font-size: 24px;
-  color: rgb(255, 255, 255);
-}
-
-.subtitulo-imagen-fondo {
-  border-color: black;
+.imagen-fondo p {
   width: 80%;
   padding: 40px;
   position: absolute;
   text-align: center;
   background-color: black;
-  color: rgb(255, 255, 255);
+  opacity: 0.75;
   font-style: italic;
-  font-size: 40px;
-  opacity: 0.5;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.bienvenida {
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  border: 3px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
+  padding: 0;
+  margin: 0.75px;
+  max-width: 90%;
+}
+.bienvenida div {
+  width: 50%;
+}
+.bienvenida div p {
+  margin-top: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+  margin-bottom: 0;
+}
+.bienvenida div img {
+  visibility: hidden;
+  width: 0%;
+  border-radius: 0 0.875rem 0.875rem 0;
 }
 
 #subtitulo-enlace {
@@ -100,6 +111,7 @@
 }
 
 #subtitulo-enlace a {
+  display: block;
   border: 1px solid rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   background-color: rgb(119, 119, 141);
@@ -144,8 +156,8 @@
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
   body {
-    background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
-    background-size: 300% 300%;
+    background: rgb(49, 49, 49);
+    background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
   }
   .imagen-fondo {
     margin-top: 10px;
@@ -153,8 +165,31 @@
   .imagen-fondo img {
     width: 75%;
   }
+  .bienvenida {
+    display: flex;
+    flex-flow: row wrap;
+    background-image: url("/images/fondos/fondo-marca-Maco.jpg");
+    background-size: cover;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 0.875rem;
+    padding: 0;
+    margin: 0.75px;
+    max-width: 90%;
+  }
+  .bienvenida div {
+    width: 50%;
+  }
+  .bienvenida div p {
+    font-size: 1.5rem;
+    margin-top: 0;
+  }
+  .bienvenida div img {
+    visibility: visible;
+    width: 100%;
+    border-radius: 0 0.875rem 0.875rem 0;
+  }
   #subtitulo-enlace a {
-    font-size: 0.75rem;
+    font-size: 1rem;
   }
   .beneficios {
     display: flex;
@@ -166,7 +201,7 @@
   }
   .beneficios div p {
     text-align: center;
-    font-size: 12px;
+    font-size: 1rem;
   }
   .beneficios div img {
     width: 3em;
@@ -239,9 +274,9 @@
   width: 5em;
 }
 
-.copyright {
-  grid-area: copyright;
-  font-size: 16px;
+.copyright p {
+  font-size: 0.75rem;
+  padding: 0;
 }
 
 .div-medios {
@@ -310,14 +345,6 @@
 .boton-aceptar [type=submit]:hover, .boton-cancelar [type=reset]:hover {
   color: rgb(255, 208, 0);
   background-color: rgb(49, 49, 49);
-}
-
-.titulo-destacado {
-  color: rgb(255, 255, 255);
-  margin-top: 1em;
-  background-color: rgb(49, 49, 49);
-  font-size: 24px;
-  text-align: center;
 }
 
 .ubicacion {
@@ -462,8 +489,23 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
+.titulo-destacado {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.875rem;
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(255, 255, 255);
+  width: 95%;
+}
+.titulo-destacado:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
+
 body {
-  background-color: rgb 119, 119, 141;
-  background: rgb(38, 38, 55);
-  background: radial-gradient(circle, rgba(38, 38, 55, 0.4682247899) 0%, rgba(194, 207, 221, 0.8911939776) 100%);
+  color: white;
+  background: rgb(49, 49, 49);
+  background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
 }/*# sourceMappingURL=styles.css.map */

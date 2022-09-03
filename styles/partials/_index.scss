@@ -2,44 +2,59 @@
     display: flex;     
     justify-content: center; 
     align-items: center; 
-} 
-
-.imagen-fondo img {
-    display: block;
-    width: 100%;
-    border: 2px solid rgb(255,255,255);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    margin: 1rem;
+    img {
+        display: block;
+        width: 100%;    
+    } 
+    p {
+        width: 80%;
+        padding: 40px;
+        position: absolute;
+        text-align: center;
+        background-color: black;
+        opacity: 0.75;
+        font-style: italic;
+        font-size: 3rem;
+        font-weight: bold;
+    }
 }
 
 .bienvenida {
-    background-color: rgba(49, 49, 49);
-    border-radius: 10px;
-    padding-top: 12px;
-    margin: 10px;
-    width: auto;
-    border: 3px solid rgb(255, 255, 255);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    p {
-        text-align: center;
-        font-family: 'Roboto', sans-serif;
-        font-family: 'Ubuntu', sans-serif;
-        font-size: 24px;
-        color: rgb(255, 255, 255);
-    }
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-size: cover;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 0.875rem;
+    padding: 0;
+    margin: 0.75px;
+    max-width: 90%;
+    div {
+        width: 50%;
+        p {
+            margin-top: 1.5rem;
+            font-weight: bold;
+            text-align: center;
+            font-size: 2rem;
+            font-family: 'Roboto', sans-serif;
+            font-family: 'Ubuntu', sans-serif;
+            margin-bottom: 0;
+        }
+        img {
+            visibility: hidden;
+            width: 0%;
+            border-radius: 0 0.875rem 0.875rem 0;
+        }
+    }
 }
-.subtitulo-imagen-fondo {
-    border-color: black ;
-    width: 80%;
-    padding: 40px;
-    position: absolute;
-    text-align: center;
-    background-color: black;
-    color: rgb(255, 255, 255);
-    font-style: italic;
-    font-size: 40px;
-    opacity: 0.5;
-}
+
+
+
 
 #subtitulo-enlace {
     display: inline-block;
@@ -50,6 +65,7 @@
 
 #subtitulo-enlace {
     a {
+    display: block;
     border: 1px solid rgb(0, 0, 0);
     color: rgb(255,255,255);
     background-color:  rgb(119, 119, 141);
@@ -105,8 +121,8 @@
 @media screen and (min-width: 1200px) {
 
     body {
-        background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
-        background-size: 300% 300%;
+        background: rgb(49,49,49);
+        background: linear-gradient(0deg, rgba(49,49,49,1) 32%, rgba(0,0,0,1) 65%);
     } 
 
     .imagen-fondo {
@@ -117,9 +133,35 @@
 
     }
 
+    .bienvenida {
+        display: flex;
+        flex-flow: row wrap;
+        background-image: url("/images/fondos/fondo-marca-Maco.jpg");
+        background-size: cover;
+        border: 3px solid rgb(255, 255, 255);
+        border-radius: 0.875rem;
+        padding: 0;
+        margin: 0.75px;
+        max-width: 90%;
+        div {
+            width: 50%;
+            p {
+                font-size: 1.5rem;
+                margin-top: 0;
+            }
+            img {
+                visibility: visible;
+                width: 100%;
+                border-radius: 0 0.875rem 0.875rem 0;
+            }
+        }
+    }
+
+
+
     #subtitulo-enlace {
         a {      
-        font-size: 0.75rem;
+        font-size: 1rem;
         }
     }
     
@@ -135,7 +177,7 @@
             flex-direction: column;
             p {
             text-align: center ;
-            font-size: 12px;
+            font-size: 1rem;
             }
             img {
             width: 3em;
