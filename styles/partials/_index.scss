@@ -2,18 +2,19 @@
     display: flex;     
     justify-content: center; 
     align-items: center; 
-    margin: 1rem;
-    img {
-        display: block;
-        width: 100%;    
-    } 
+    margin: 1rem 0;
+    background-image: url("../images/fondos/maco-urbano.jpg");
+    background-size: cover;
+    border-radius: $border-radius-comun;
+    width: 100%;
+    height: 100vh;
     p {
         width: 80%;
-        padding: 40px;
-        position: absolute;
+        padding: 3rem;
         text-align: center;
-        background-color: black;
-        opacity: 0.75;
+        background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+        background-color: rgba(0, 255, 255, 0.05);
+        border-radius: $border-radius-comun;
         font-style: italic;
         font-size: 3rem;
         font-weight: bold;
@@ -25,15 +26,14 @@
     flex-flow: column wrap;
     justify-content: center;
     align-items: center;
-
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
     background-color: rgba(0, 255, 255, 0.05);
     background-size: cover;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 0.875rem;
+    border: 3px solid $borde-color-comun;
+    border-radius: $border-radius-comun;
     padding: 0;
     margin: 0.75px;
-    max-width: 90%;
+    max-width: 100%;
     div {
         width: 50%;
         p {
@@ -54,57 +54,78 @@
 }
 
 
-
-
-#subtitulo-enlace {
+.subtitulo-enlace {
     display: inline-block;
     display: flex;
     justify-content: center; 
     align-items: center; 
-}
-
-#subtitulo-enlace {
+    margin-top: 0.5em;
     a {
-    display: block;
-    border: 1px solid rgb(0, 0, 0);
-    color: rgb(255,255,255);
-    background-color:  rgb(119, 119, 141);
-    border-radius: 3px;
-    font-size: 18px;
-    padding: 10px;
-    text-align: center ;
-    text-decoration-line: none;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    transition: 0.5s ease;
-    &:hover {
-        background-color: rgb(49, 49, 49);
-        color: rgb(255, 208, 0);
-        }
+        display: block;
+        border: 1px solid rgb(0, 0, 0);
+        color: $color-fuente-secundaria;
+        background-color:  rgb(119, 119, 141);
+        border-radius: $border-radius-comun;
+        font-size: 1rem;
+        padding: 0.75rem;
+        text-decoration-line: none;
+        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        transition: 0.5s ease;
+        &:hover {
+            background-color: rgb(49, 49, 49);
+            color: rgb(230, 211, 47),
+        }                 
     }
 }
 
-.beneficios {
+.beneficios-texto {
     background-color: rgb(49, 49, 49) ;
     margin-top: 20px;
-    color: rgb(255, 255, 255); 
-    div {
+    color: $borde-color-comun;
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    p {
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: center;
+        width: 24rem;
+        height: 10rem;
+        
+        p {
         font-size: 1.25rem;
         text-align: center;
-        color: rgb(255,255,255);
-        }
-        img {
-        width: 6em;
-        height: 6em;
-        margin: 0.5em;
-        text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+        text-align: left;
         }
     }
 }
+
+
+.beneficios-iconos {
+    background-color: rgb(49, 49, 49) ;
+    color: $borde-color-comun;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    div {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: center;
+        width: 24rem;
+        height: 10rem;
+        img {
+            width: 6rem;
+            height: 6rem;
+            text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    
+        }
+    }
+}
+
 
 @media screen and (min-width: 600px) {
     
@@ -125,19 +146,11 @@
         background: linear-gradient(0deg, rgba(49,49,49,1) 32%, rgba(0,0,0,1) 65%);
     } 
 
-    .imagen-fondo {
-        margin-top: 10px;
-        img {
-            width: 75%;
-        }
-
-    }
 
     .bienvenida {
         display: flex;
         flex-flow: row wrap;
-        background-image: url("/images/fondos/fondo-marca-Maco.jpg");
-        background-size: cover;
+        width: 100%;
         div {
             p {
                 font-size: 1.5rem;
@@ -151,32 +164,57 @@
         }
     }
 
-
-
-    #subtitulo-enlace {
+    .subtitulo-enlace {
         a {      
         font-size: 1rem;
         }
     }
-    
 
-    .beneficios {
+    .beneficios-texto {
+        background-color: rgb(49, 49, 49) ;
+        margin-top: 20px;
+        color: $borde-color-comun;
         display: flex;
-        direction: row wrap;
-    }
-
-    .beneficios {
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
         div {
             display: flex;
             flex-direction: column;
+            align-items: center;
+            justify-content: start;
+            width: 24rem;
+            height: 5rem;
             p {
-            text-align: center ;
-            font-size: 1rem;
-            }
-            img {
-            width: 3em;
-            height: 3em;
+            font-size: 1.25rem;
+            text-align: center;
             }
         }
     }
+    
+    
+    .beneficios-iconos {
+        background-color: rgb(49, 49, 49) ;
+        margin-top: 20px;
+        color: $borde-color-comun;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            width: 18rem;
+            height: 6rem;
+            img {
+                width: 6rem;
+                height: 6rem;
+                text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    }
+    
+   
 }

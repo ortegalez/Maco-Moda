@@ -13,7 +13,8 @@
     border-radius: 0.875rem;
     background-color: rgb(49, 49, 49);
     border: 2px solid rgb(255, 255, 255);
-    width: 95%;
+    width: 100%;
+    
     &:hover {
         text-shadow:
         0 0 5px rgb(230, 211, 47),
@@ -30,3 +31,14 @@ body {
     background: rgb(49,49,49);
     background: linear-gradient(0deg, rgba(49,49,49,1) 32%, rgba(0,0,0,1) 65%);
 }
+
+.row, .container-fluid {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+
+// Variables
+
+$border-radius-comun: 0.875rem;
+$borde-color-comun: rgb(255,255,255);

@@ -1,3 +1,35 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.titulo-destacado {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.875rem;
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(255, 255, 255);
+  width: 100%;
+}
+.titulo-destacado:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
+
+body {
+  color: white;
+  background: rgb(49, 49, 49);
+  background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
+}
+
+.row, .container-fluid {
+  margin-right: 0;
+  margin-left: 0;
+}
+
 .header {
   background-color: rgb(0, 0, 0);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
@@ -53,19 +85,20 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 1rem;
-}
-.imagen-fondo img {
-  display: block;
+  margin: 1rem 0;
+  background-image: url("../images/fondos/maco-urbano.jpg");
+  background-size: cover;
+  border-radius: 0.875rem;
   width: 100%;
+  height: 100vh;
 }
 .imagen-fondo p {
   width: 80%;
-  padding: 40px;
-  position: absolute;
+  padding: 3rem;
   text-align: center;
-  background-color: black;
-  opacity: 0.75;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+  background-color: rgba(0, 255, 255, 0.05);
+  border-radius: 0.875rem;
   font-style: italic;
   font-size: 3rem;
   font-weight: bold;
@@ -83,7 +116,7 @@
   border-radius: 0.875rem;
   padding: 0;
   margin: 0.75px;
-  max-width: 90%;
+  max-width: 100%;
 }
 .bienvenida div {
   width: 50%;
@@ -103,52 +136,73 @@
   border-radius: 0 0.875rem 0.875rem 0;
 }
 
-#subtitulo-enlace {
+.subtitulo-enlace {
   display: inline-block;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 0.5em;
 }
-
-#subtitulo-enlace a {
+.subtitulo-enlace a {
   display: block;
   border: 1px solid rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   background-color: rgb(119, 119, 141);
-  border-radius: 3px;
-  font-size: 18px;
-  padding: 10px;
-  text-align: center;
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  padding: 0.75rem;
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   transition: 0.5s ease;
 }
-#subtitulo-enlace a:hover {
+.subtitulo-enlace a:hover {
   background-color: rgb(49, 49, 49);
-  color: rgb(255, 208, 0);
+  color: rgb(230, 211, 47);
 }
 
-.beneficios {
+.beneficios-texto {
   background-color: rgb(49, 49, 49);
   margin-top: 20px;
   color: rgb(255, 255, 255);
-}
-.beneficios div {
   display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
-.beneficios div p {
+.beneficios-texto div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  width: 24rem;
+  height: 10rem;
+}
+.beneficios-texto div p {
   font-size: 1.25rem;
   text-align: center;
-  color: rgb(255, 255, 255);
+  text-align: left;
 }
-.beneficios div img {
-  width: 6em;
-  height: 6em;
-  margin: 0.5em;
+
+.beneficios-iconos {
+  background-color: rgb(49, 49, 49);
+  color: rgb(255, 255, 255);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios-iconos div {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  width: 24rem;
+  height: 10rem;
+}
+.beneficios-iconos div img {
+  width: 6rem;
+  height: 6rem;
   text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
@@ -159,25 +213,10 @@
     background: rgb(49, 49, 49);
     background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
   }
-  .imagen-fondo {
-    margin-top: 10px;
-  }
-  .imagen-fondo img {
-    width: 75%;
-  }
   .bienvenida {
     display: flex;
     flex-flow: row wrap;
-    background-image: url("/images/fondos/fondo-marca-Maco.jpg");
-    background-size: cover;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 0.875rem;
-    padding: 0;
-    margin: 0.75px;
-    max-width: 90%;
-  }
-  .bienvenida div {
-    width: 50%;
+    width: 100%;
   }
   .bienvenida div p {
     font-size: 1.5rem;
@@ -188,24 +227,51 @@
     width: 100%;
     border-radius: 0 0.875rem 0.875rem 0;
   }
-  #subtitulo-enlace a {
+  .subtitulo-enlace a {
     font-size: 1rem;
   }
-  .beneficios {
+  .beneficios-texto {
+    background-color: rgb(49, 49, 49);
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
     display: flex;
-    direction: row wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
   }
-  .beneficios div {
+  .beneficios-texto div {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: start;
+    width: 24rem;
+    height: 5rem;
   }
-  .beneficios div p {
+  .beneficios-texto div p {
+    font-size: 1.25rem;
     text-align: center;
-    font-size: 1rem;
   }
-  .beneficios div img {
-    width: 3em;
-    height: 3em;
+  .beneficios-iconos {
+    background-color: rgb(49, 49, 49);
+    margin-top: 20px;
+    color: rgb(255, 255, 255);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .beneficios-iconos div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 18rem;
+    height: 6rem;
+  }
+  .beneficios-iconos div img {
+    width: 6rem;
+    height: 6rem;
+    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   }
 }
 .footer {
@@ -482,30 +548,4 @@
     font-size: 14px;
     padding: 10px;
   }
-}
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-.titulo-destacado {
-  font-size: 1.5rem;
-  font-weight: bold;
-  margin-top: 1rem;
-  padding: 0.5rem;
-  text-align: center;
-  border-radius: 0.875rem;
-  background-color: rgb(49, 49, 49);
-  border: 2px solid rgb(255, 255, 255);
-  width: 95%;
-}
-.titulo-destacado:hover {
-  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
-}
-
-body {
-  color: white;
-  background: rgb(49, 49, 49);
-  background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
 }/*# sourceMappingURL=styles.css.map */
