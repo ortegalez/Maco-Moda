@@ -1,8 +1,29 @@
 $color-fuente-secundaria: rgb(255, 255, 255);
-
 $font-size-fuente-secuendaria: 14px;
 
-$border-radius: 0.875rem;
+// Estilo de h1 
+$estilo-h1:(
+    font-style-h1: italic,
+    font-weight-h1: bold,
+);
 
+// card
+%text-card {
+    color: rgb(241, 217, 0);
+    font-size: 1rem;
+    font-weight: bold;
+    text-align: center;
+}
 
-
+// titulo destacado
+%titulo-destacado {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.5rem;    
+    text-align: center;
+    border-radius: 0.875rem;
+    background-color: rgb(49, 49, 49);
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+}

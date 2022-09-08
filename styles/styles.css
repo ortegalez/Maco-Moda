@@ -1,7 +1,8 @@
-* {
-  padding: 0;
-  margin: 0;
-  font-family: Arial, Helvetica, sans-serif;
+.card-text p {
+  color: rgb(241, 217, 0);
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
 }
 
 .titulo-destacado {
@@ -15,6 +16,13 @@
   border: 2px solid rgb(255, 255, 255);
   width: 100%;
 }
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 .titulo-destacado:hover {
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
@@ -25,9 +33,9 @@ body {
   background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
 }
 
-.row, .container-fluid {
-  margin-right: 0;
-  margin-left: 0;
+h1 {
+  font-weight: bold;
+  font-style: italic;
 }
 
 .header {
@@ -47,23 +55,17 @@ body {
   margin: 0 0.25rem;
   padding: 0 0.25rem;
 }
-
-.texto-lista-navbar {
+.lista-navbar li a {
   color: rgb(255, 255, 255);
-  font-size: 1.2rem;
+  font-size: 1.25rem;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
 }
-.texto-lista-navbar:hover {
+.lista-navbar li a:hover {
   color: rgb(230, 211, 47);
-  border-radius: 5px;
-  border: 1px solid rgb(255, 255, 255);
-  /* text-shadow:
-      0 0 5px rgb(230, 211, 47),
-      0 0 10px rgb(230, 211, 47),
-      0 0 35px rgb(228, 207, 17),
-      0 0 40px rgb(228, 207, 17); */
-  /* background-color: rgb(101, 101, 105); */
-  /* color: rgb(255, 255, 255); */
-  /* transition-delay: 0.1s; */
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
 }
 
 .hamburguesa {
@@ -76,20 +78,23 @@ body {
   .texto-lista-navbar {
     font-size: 1rem;
   }
+  .lista-navbar li a {
+    font-size: 1.25rem;
+  }
 }
 .imagen-fondo {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   margin: 1rem 0;
   background-image: url("../images/fondos/maco-urbano.jpg");
   background-size: cover;
   border-radius: 0.875rem;
-  width: 100%;
   height: 50vh;
 }
 .imagen-fondo p {
-  width: 80%;
   padding: 3rem;
   text-align: center;
   border-radius: 0.875rem;
@@ -100,7 +105,8 @@ body {
 
 .bienvenida {
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
@@ -109,8 +115,7 @@ body {
   border: 3px solid rgb(255, 255, 255);
   border-radius: 0.875rem;
   padding: 0;
-  margin: 0.75px;
-  max-width: 100%;
+  max-width: 95%;
 }
 .bienvenida div {
   width: 50%;
@@ -276,10 +281,9 @@ body {
   }
 }
 .footer {
-  background-color: rgb(0, 0, 0);
   display: flex;
   justify-content: space-around;
-  color: rgb(255, 255, 255);
+  background-color: rgb(0, 0, 0);
 }
 
 .div-navegacion {
@@ -288,15 +292,17 @@ body {
 
 .div-redes ul {
   display: flex;
-  flex-flow: row wrap;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-content: space-around;
+  align-items: center;
   padding-left: 0;
-  margin-top: 1em;
+  margin-top: 1rem;
 }
 
 .div-redes ul li {
   display: inline-block;
-  padding: 0.5em;
+  padding: 0.5rem;
 }
 
 .div-medios {
@@ -305,44 +311,42 @@ body {
 
 .subtitulos-footer {
   color: rgb(255, 255, 255);
-  margin-top: 8px;
-  margin-bottom: 0px;
+  margin-top: 0.5rem;
+  margin-bottom: 0;
   text-align: center;
-  font-size: 24px;
+  font-size: 1.5rem;
 }
 
 .lista-secudaria {
   display: inline-block;
   margin-top: 5px;
   list-style: none;
-  font-size: 10px;
-  padding-left: 0px;
-  font-weight: 700;
+  padding-left: 0;
 }
 .lista-secudaria li a {
+  font-weight: bold;
   color: rgb(255, 255, 255);
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
-  font-size: 20px;
+  font-size: 1.25rem;
 }
 .lista-secudaria li a:hover {
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
-
-.icono {
-  width: 3em;
-  height: 3em;
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.5em;
-  border: 1px solid rgb(255, 255, 255);
+.lista-secudaria li img {
+  width: 5rem;
 }
 
-.lista-secudaria li img {
-  width: 5em;
+.icono {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
 }
 
 .copyright p {
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   padding: 0;
 }
 
@@ -352,16 +356,13 @@ body {
 
 @media screen and (min-width: 1200px) {
   .subtitulos-footer {
-    font-size: 14px;
+    font-size: 1rem;
   }
   .lista-secudaria li a {
-    font-size: 12px;
+    font-size: 1rem;
   }
   .div-redes ul {
     width: 200px;
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-between;
     padding: 0;
     margin-top: 0;
   }
@@ -369,19 +370,19 @@ body {
     display: inline-block;
   }
   .icono {
-    width: 2em;
-    height: 2em;
+    width: 2rem;
+    height: 2rem;
     display: inline-block;
-    margin: 0.5em;
+    margin: 0.5rem;
   }
   .icono:hover {
-    width: 2.2em;
-    height: 2.2em;
+    width: 2.2rem;
+    height: 2.2rem;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   }
-  .copyright {
-    grid-area: copyright;
-    font-size: 12px;
+  .copyright p {
+    font-size: 1rem;
+    padding: 0;
   }
 }
 .formulario {
@@ -389,7 +390,7 @@ body {
   background-color: rgba(86, 86, 89, 0.5);
   border: 1px solid black;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  border-radius: 0.5em;
+  border-radius: 0.875rem;
   margin: 0.5em 0 0.5em 0;
   padding: 0.5em;
 }
@@ -433,6 +434,7 @@ body {
 
 .ubicacion iframe {
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
+  border-radius: 0.875rem;
 }
 
 .ubicacion img {
@@ -478,25 +480,23 @@ body {
 }
 
 .card {
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  border: 2px solid rgb(49, 49, 49);
-  border-radius: 0.5em;
-  width: 25em;
-  margin: 0.5em;
+  border-radius: 0.875rem;
+  width: 25rem;
+  margin: 0.5rem;
+}
+.card img {
+  width: auto;
+  padding: 0.25rem;
+  border-radius: 1rem;
 }
 
-.card-body {
-  font-weight: 600;
-  background: rgb(69, 73, 77);
-  background: linear-gradient(0deg, rgb(69, 73, 77) 9%, rgb(14, 14, 13) 100%);
+.card-text {
+  background: rgb(77, 78, 83);
+  background: radial-gradient(circle, rgb(77, 78, 83) 0%, rgb(1, 2, 8) 100%);
+  border-radius: 0 0 0.875rem 0.875rem;
 }
-.card-body p {
-  flex: display;
-  justify-content: center;
-  color: rgb(255, 255, 255);
-  font-size: 14px;
-  font-weight: 600;
-  text-align: center;
+.card-text p {
+  margin-top: 0.5rem;
 }
 
 /* Diseno Tablet */

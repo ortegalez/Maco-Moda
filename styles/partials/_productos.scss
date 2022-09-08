@@ -7,24 +7,25 @@
 }
 
 .card {
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgb(49, 49, 49);
-    border-radius: 0.5em;
-    width: 25em;
-    margin: 0.5em;
+    border-radius: $border-radius-comun;
+    width: 25rem;
+    margin: 0.5rem;
+    img {
+        width: auto;
+        padding: 0.25rem;
+        border-radius: 1rem ;
+    }
+
 }
 
-.card-body {
-    font-weight: 600;
-    background: rgb(69,73,77);
-    background: linear-gradient(0deg, rgba(69,73,77,1) 9%, rgba(14,14,13,1) 100%);
+.card-text {
+    background: rgb(77,78,83);
+    background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
+    border-radius: 0  0 $border-radius-comun $border-radius-comun;
+
     p {
-        flex:display;
-        justify-content: center;
-        color: rgb(255, 255, 255);
-        font-size: $font-size-fuente-secuendaria;
-        font-weight: 600;
-        text-align: center;
+        @extend %text-card;
+        margin-top: 0.5rem;
     }
 }
 
