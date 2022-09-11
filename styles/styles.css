@@ -1,3 +1,12 @@
+.bienvenida div p {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
 .card-text p {
   color: rgb(241, 217, 0);
   font-size: 1rem;
@@ -96,7 +105,7 @@ h1 {
   width: 100%;
 }
 .imagen-fondo p {
-  padding: 3rem;
+  padding: 1rem;
   text-align: center;
   border-radius: 0.875rem;
   font-style: italic;
@@ -110,7 +119,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://la.network/wp-content/uploads/2018/02/BUENOS-AIRES-OBELISCO-NOCHE-328282751.jpg");
   background-color: rgba(0, 255, 255, 0.05);
   background-size: cover;
   border: 3px solid rgb(255, 255, 255);
@@ -122,13 +131,8 @@ h1 {
   width: 50%;
 }
 .bienvenida div p {
-  margin-top: 1.5rem;
-  font-weight: bold;
+  font-size: 1.5rem;
   text-align: center;
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 0;
 }
 .bienvenida div img {
   visibility: hidden;
@@ -144,8 +148,7 @@ h1 {
   margin-top: 0.5em;
 }
 .subtitulo-enlace a {
-  display: block;
-  border: 1px solid rgb(0, 0, 0);
+  border: 2px solid rgb(0, 0, 0);
   color: rgb(255, 255, 255);
   background-color: rgb(119, 119, 141);
   border-radius: 0.875rem;
@@ -161,49 +164,49 @@ h1 {
   color: rgb(230, 211, 47);
 }
 
-.beneficios-texto {
-  background-color: rgb(49, 49, 49);
-  margin-top: 20px;
-  color: rgb(255, 255, 255);
+.beneficios {
+  width: 100vw;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(49, 49, 49);
+}
+.beneficios p {
+  display: inline-block;
+  width: 100%;
+}
+.beneficios .beneficios-texto {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.beneficios-texto div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 24rem;
-  height: 10rem;
+.beneficios .beneficios-texto div {
+  height: 5rem;
 }
-.beneficios-texto div p {
-  font-size: 1.25rem;
+.beneficios .beneficios-texto div p {
+  font-size: 1rem;
   text-align: center;
-  text-align: left;
+  margin-top: 0;
 }
-
-.beneficios-iconos {
-  background-color: rgb(49, 49, 49);
-  color: rgb(255, 255, 255);
+.beneficios .beneficios-iconos {
+  width: 40%;
   display: flex;
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-.beneficios-iconos div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24rem;
-  height: 10rem;
+.beneficios .beneficios-iconos div {
+  height: 5rem;
 }
-.beneficios-iconos div img {
-  width: 6rem;
-  height: 6rem;
-  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+.beneficios .beneficios-iconos div img {
+  width: 4rem;
+  height: 4rem;
 }
 
 /* Fin Diseno Tablet */
@@ -228,6 +231,7 @@ h1 {
   .bienvenida div p {
     font-size: 1.5rem;
     margin-top: 0;
+    text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
   }
   .bienvenida div img {
     visibility: visible;
@@ -237,48 +241,46 @@ h1 {
   .subtitulo-enlace a {
     font-size: 1rem;
   }
-  .beneficios-texto {
+  .beneficios {
+    width: 100vw;
+    display: flex;
+    flex-flow: column wrap;
     background-color: rgb(49, 49, 49);
-    margin-top: 20px;
-    color: rgb(255, 255, 255);
+  }
+  .beneficios p {
+    display: inline-block;
+    width: 100%;
+  }
+  .beneficios .beneficios-texto {
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  .beneficios-texto div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
+  .beneficios .beneficios-texto div {
     width: 24rem;
-    height: 5rem;
   }
-  .beneficios-texto div p {
-    font-size: 1.25rem;
+  .beneficios .beneficios-texto div p {
+    font-size: 1rem;
     text-align: center;
+    margin-top: 0;
   }
-  .beneficios-iconos {
-    background-color: rgb(49, 49, 49);
-    margin-top: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
+  .beneficios .beneficios-iconos {
+    width: 100%;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
-  .beneficios-iconos div {
+  .beneficios .beneficios-iconos div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
     justify-content: center;
-    width: 18rem;
-    height: 6rem;
+    height: 7rem;
+    width: 24rem;
   }
-  .beneficios-iconos div img {
+  .beneficios .beneficios-iconos div img {
     width: 6rem;
     height: 6rem;
-    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   }
 }
 .footer {

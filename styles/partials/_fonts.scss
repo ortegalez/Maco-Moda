@@ -1,6 +1,17 @@
 $color-fuente-secundaria: rgb(255, 255, 255);
 $font-size-fuente-secuendaria: 14px;
 
+// titlo de bienvenida
+%titulo-brillante {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    // padding: 0.5rem;
+    font-weight: bold;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
 // Estilo de h1 
 $estilo-h1:(
     font-style-h1: italic,
