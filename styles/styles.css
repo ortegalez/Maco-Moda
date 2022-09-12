@@ -27,7 +27,7 @@
   width: 100%;
 }
 
-.titulo-interno p {
+.titulo-interno h2 {
   background-color: rgb(118, 0, 0);
   font-size: 1.5rem;
   border-radius: 0 0.875rem 0.875rem 0;
@@ -505,14 +505,14 @@ h1 {
 
 .card {
   border-radius: 0.875rem;
-  max-width: 90%;
-  min-width: 80%;
+  width: 80%;
   margin: 0.5rem;
 }
 .card .card-text {
   background: rgb(77, 78, 83);
   background: radial-gradient(circle, rgb(77, 78, 83) 0%, rgb(1, 2, 8) 100%);
   border-radius: 0 0 0.875rem 0.875rem;
+  position: relative;
 }
 .card .card-text p {
   margin-top: 0.5rem;
@@ -522,7 +522,16 @@ h1 {
   font-size: 1.75rem;
 }
 .card .card-text p:nth-child(3) {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+  color: white;
+}
+.card .card-text .texto-flotante p {
+  padding: 0.5rem;
+  background-color: green;
+  border-radius: 0 0.875rem 0.875rem 0;
+  position: absolute;
+  top: -3.5rem;
+  left: 0;
   color: white;
 }
 .card img {
@@ -560,6 +569,7 @@ h1 {
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
   .section-productos {
+    margin-top: 0.5rem;
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -567,8 +577,7 @@ h1 {
     align-items: center;
   }
   .section-productos .card {
-    width: 25%;
-    min-width: 20%;
+    width: 22.5%;
   }
   .card-modelo {
     display: flex;

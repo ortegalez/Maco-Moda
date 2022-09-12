@@ -4,13 +4,14 @@
 
 .card {
     border-radius: $border-radius-comun;
-    max-width: 90%;
-    min-width: 80%;
+    width: 80%;
     margin: 0.5rem;
+ 
     .card-text {
         background: rgb(77,78,83);
         background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
         border-radius: 0  0 $border-radius-comun $border-radius-comun;
+        position: relative;
         p {
             @extend %text-card;
             margin-top: 0.5rem;
@@ -20,9 +21,21 @@
             font-size: 1.75rem;
           }
         p:nth-child(3) {
-            font-size: 1.5rem;
+            font-size: 1.25rem;
             color: white;
           }
+        .texto-flotante {
+            p {
+            padding: 0.5rem;
+            background-color: green;
+            border-radius: 0 $border-radius-comun $border-radius-comun 0;
+            position: absolute;
+            top: -3.5rem;
+            left: 0;
+            color: white;
+            }
+        }
+ 
     }
     img {
         padding: 0.25rem;
@@ -53,7 +66,7 @@
 
 .titulo-interno {
     margin-top: 0.5rem;
-        p {
+        h2 {
         @extend %titulo-interno;
           }
     }
@@ -76,10 +89,10 @@
 @media screen and (min-width: 1200px) {
 
     .section-productos {
+        margin-top: 0.5rem;
         @include flex ($direction:row, $justify:space-around, $align:center);         
         .card {
-            width: 25%;
-            min-width: 20%;
+            width: 22.5%;
         }
     }
 
