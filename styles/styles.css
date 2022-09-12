@@ -1,4 +1,4 @@
-.bienvenida div p {
+.card-modelo div p, .bienvenida div p {
   margin-top: 1.5rem;
   margin-bottom: 0;
   font-weight: bold;
@@ -7,11 +7,12 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-.card-text p {
+.card .card-text p {
   color: rgb(241, 217, 0);
-  font-size: 1rem;
-  font-weight: bold;
+  font-size: 1.25rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .titulo-destacado {
@@ -24,6 +25,15 @@
   background-color: rgb(49, 49, 49);
   border: 2px solid rgb(255, 255, 255);
   width: 100%;
+}
+
+.titulo-interno p {
+  background-color: rgb(118, 0, 0);
+  font-size: 1.5rem;
+  border-radius: 0 0.875rem 0.875rem 0;
+  width: 40%;
+  text-align: center;
+  margin-left: -1rem;
 }
 
 * {
@@ -143,9 +153,11 @@ h1 {
 .subtitulo-enlace {
   display: inline-block;
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: 0.5em;
+  margin: 0.5rem;
 }
 .subtitulo-enlace a {
   border: 2px solid rgb(0, 0, 0);
@@ -229,9 +241,9 @@ h1 {
     width: 100%;
   }
   .bienvenida div p {
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin-top: 0;
-    text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+    padding: 0 2rem;
   }
   .bienvenida div img {
     visibility: visible;
@@ -244,7 +256,10 @@ h1 {
   .beneficios {
     width: 100vw;
     display: flex;
-    flex-flow: column wrap;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(49, 49, 49);
   }
   .beneficios p {
@@ -254,6 +269,7 @@ h1 {
   .beneficios .beneficios-texto {
     width: 100%;
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
@@ -268,13 +284,18 @@ h1 {
   }
   .beneficios .beneficios-iconos {
     width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-around;
     align-items: center;
   }
   .beneficios .beneficios-iconos div {
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     height: 7rem;
     width: 24rem;
   }
@@ -476,45 +497,103 @@ h1 {
 /* Diseno Desktop */
 .section-productos {
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  color: rgb(0, 0, 0);
 }
 
 .card {
   border-radius: 0.875rem;
-  width: 25rem;
+  max-width: 90%;
+  min-width: 80%;
   margin: 0.5rem;
 }
-.card img {
-  width: auto;
-  padding: 0.25rem;
-  border-radius: 1rem;
-}
-
-.card-text {
+.card .card-text {
   background: rgb(77, 78, 83);
   background: radial-gradient(circle, rgb(77, 78, 83) 0%, rgb(1, 2, 8) 100%);
   border-radius: 0 0 0.875rem 0.875rem;
 }
-.card-text p {
+.card .card-text p {
   margin-top: 0.5rem;
 }
+.card .card-text p:nth-child(2) {
+  color: yellow;
+  font-size: 1.75rem;
+}
+.card .card-text p:nth-child(3) {
+  font-size: 1.5rem;
+  color: white;
+}
+.card img {
+  padding: 0.25rem;
+  border-radius: 1rem;
+}
 
+.card-modelo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  padding: 0;
+  width: 95%;
+}
+.card-modelo div p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.card-modelo div img {
+  visibility: visible;
+  width: 100%;
+  border-radius: 0.875rem 0 0 0.875rem;
+}
+
+.titulo-interno {
+  margin-top: 0.5rem;
+}
 /* Diseno Tablet */
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
   .section-productos {
     display: flex;
-    flex-flow: row wrap;
+    flex-wrap: wrap;
+    flex-direction: row;
     justify-content: space-around;
     align-items: center;
-    background: none;
   }
   .section-productos .card {
-    width: 18em;
+    width: 25%;
+    min-width: 20%;
+  }
+  .card-modelo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-size: cover;
+    background-position: 0 60%;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 0.875rem;
+    padding: 0;
+    width: 50%;
+  }
+  .card-modelo div {
+    width: 50%;
+  }
+  .card-modelo div img {
+    visibility: visible;
+  }
+  .card-modelo div p {
+    font-size: 1.5rem;
+    text-align: center;
   }
 }
 .lista-como-comprar {

@@ -1,33 +1,63 @@
 .section-productos {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(0, 0, 0);
+    @include flex ($direction:column, $justify:space-around, $align:center); 
 }
 
 .card {
     border-radius: $border-radius-comun;
-    width: 25rem;
+    max-width: 90%;
+    min-width: 80%;
     margin: 0.5rem;
+    .card-text {
+        background: rgb(77,78,83);
+        background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
+        border-radius: 0  0 $border-radius-comun $border-radius-comun;
+        p {
+            @extend %text-card;
+            margin-top: 0.5rem;
+        }
+        p:nth-child(2) {
+            color: yellow;
+            font-size: 1.75rem;
+          }
+        p:nth-child(3) {
+            font-size: 1.5rem;
+            color: white;
+          }
+    }
     img {
-        width: auto;
         padding: 0.25rem;
         border-radius: 1rem ;
     }
-
 }
 
-.card-text {
-    background: rgb(77,78,83);
-    background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
-    border-radius: 0  0 $border-radius-comun $border-radius-comun;
-
-    p {
-        @extend %text-card;
-        margin-top: 0.5rem;
+.card-modelo {
+    @include flex ($direction:column, $justify:center, $align:center); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-size: cover;
+    padding: 0;
+    width: 95%;
+    div {
+        p {
+            @extend %titulo-brillante;
+            font-size: 1.5rem;
+            text-align: center;    
+        }
+        img {
+            visibility: visible;
+            width: 100%;
+            border-radius: 0.875rem 0 0 0.875rem;
+        }
     }
 }
+
+.titulo-interno {
+    margin-top: 0.5rem;
+        p {
+        @extend %titulo-interno;
+          }
+    }
+
 
 /* Diseno Tablet */
 
@@ -46,20 +76,33 @@
 @media screen and (min-width: 1200px) {
 
     .section-productos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        background: none;
-          .card {
-        width: 18em;
+        @include flex ($direction:row, $justify:space-around, $align:center);         
+        .card {
+            width: 25%;
+            min-width: 20%;
+        }
     }
+
+    .card-modelo {
+        @include flex ($direction:row, $justify:center, $align:center); 
+        background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+        background-color: rgba(0, 255, 255, 0.05);
+        background-size: cover;
+        background-position: 0 60%;
+        border: $border-comun;
+        border-radius: $border-radius-comun;
+        padding: 0;
+        width:50%;
+        div {
+            width:50%;
+            img {
+                visibility: visible;
+            }
+            p {
+                @extend %titulo-brillante;
+                font-size: 1.5rem;
+                text-align: center;
+            }
+        }
     }
-    
-  
-
-
-
-
-
 }

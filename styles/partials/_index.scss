@@ -40,15 +40,10 @@
     }
 }
 
-
-
-
 .subtitulo-enlace {
     display: inline-block;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
-    margin-top: 0.5em;
+    @include flex ($direction:column, $justify:center, $align:center); 
+    margin: 0.5rem;
     a {
         border: 2px solid rgb(0, 0, 0);
         color: $color-fuente-secundaria;
@@ -128,9 +123,6 @@
             background-color: rgba(0, 255, 255, 0.05);
         }
     }
-    
-
-
 
     .bienvenida {
         display: flex;
@@ -138,13 +130,9 @@
         width: 100%;
         div {
             p {
-                font-size: 1.5rem;
+                font-size: 2rem;
                 margin-top: 0;
-                text-shadow:
-                0 0 5px rgb(230, 211, 47),
-                0 0 10px rgb(230, 211, 47),
-                0 0 35px rgb(228, 207, 17),
-                0 0 40px rgb(228, 207, 17);
+                padding: 0 2rem;
             }
             img {
                 visibility: visible;
@@ -164,8 +152,7 @@
 
     .beneficios {
         width: 100vw;
-        display: flex;
-        flex-flow: column wrap;
+        @include flex ($direction:column, $justify:center, $align:center);
         background-color: rgb(49, 49, 49);
         p {
             display: inline-block;
@@ -173,10 +160,7 @@
         }
         .beneficios-texto {
             width: 100%;
-            display: flex;
-            flex-direction: row;
-            justify-content:space-around;
-            align-items: center;
+            @include flex ($direction:row, $justify:space-around, $align:center);
             div {
                 width: 24rem;
                 p {
@@ -188,12 +172,9 @@
         }   
         .beneficios-iconos {
             width: 100%;
-            flex-direction: row;
-            justify-content:space-around;
-            align-items: center;
+            @include flex ($direction:row, $justify:space-around, $align:center);
             div {
-                display: flex;
-                justify-content: center;
+                @include flex ($direction:row, $justify:space-around, $align:center);
                 height: 7rem;
                 width: 24rem;
                 img {
