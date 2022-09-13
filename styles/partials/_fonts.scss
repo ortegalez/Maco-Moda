@@ -11,6 +11,13 @@ $font-size-fuente-secuendaria: 14px;
     font-family: 'Ubuntu', sans-serif;
 }
 
+
+$texto-brillante: 
+    0 0 5px rgb(230, 211, 47),
+    0 0 10px rgb(230, 211, 47),
+    0 0 35px rgb(228, 207, 17),
+    0 0 40px rgb(228, 207, 17);
+
 // Estilo de h1 
 $estilo-h1:(
     font-style-h1: italic,
@@ -37,6 +44,8 @@ $estilo-h1:(
     background-color: rgb(49, 49, 49);
     border: 2px solid rgb(255, 255, 255);
     width: 100%;
+    text-shadow:$texto-brillante;
+    box-shadow: $box-shadow-oscuro;
 }
 
 // titulo interno
@@ -47,5 +56,5 @@ $estilo-h1:(
     border-radius: 0 $border-radius-comun $border-radius-comun 0;
     width: 40%;
     text-align: center;
-    margin-left:-1rem ;
+    margin-left:-1rem;
 }

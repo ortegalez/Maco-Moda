@@ -25,6 +25,8 @@
   background-color: rgb(49, 49, 49);
   border: 2px solid rgb(255, 255, 255);
   width: 100%;
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .titulo-interno h2 {
@@ -260,7 +262,7 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(49, 49, 49);
+    background-color: rgb(119, 119, 141);
   }
   .beneficios p {
     display: inline-block;
@@ -415,8 +417,8 @@ h1 {
   border: 1px solid black;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 0.875rem;
-  margin: 0.5em 0 0.5em 0;
-  padding: 0.5em;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .info-comentarios {
@@ -426,7 +428,7 @@ h1 {
 }
 
 .boton-cancelar [type=reset], .boton-aceptar [type=submit] {
-  background-color: rgb(0, 0, 0);
+  background-color: rgb 0, 0, 0;
   color: rgb(255, 255, 255);
   padding: 5px;
   border-radius: 2px;
@@ -435,66 +437,117 @@ h1 {
 }
 
 .boton-aceptar [type=submit]:hover, .boton-cancelar [type=reset]:hover {
-  color: rgb(255, 208, 0);
+  color: rgb(241, 217, 0);
   background-color: rgb(49, 49, 49);
 }
 
 .ubicacion {
-  margin-right: 10px;
+  margin-right: 0.5rem;
   padding: 5px 5px 5px 5px;
   display: flex;
-  flex-flow: column wrap;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
 }
 
 .lista-ubicacion li {
-  list-style: none;
-  font-size: 14px;
-  margin-top: 10px;
-  color: rgb(255, 255, 255);
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  list-style: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: rgb(255, 255, 255);
 }
 
-.ubicacion iframe {
+.mapa iframe {
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.875rem;
+  width: 100%;
 }
 
-.ubicacion img {
-  width: 1.5em;
-  padding-right: 0.5em;
-}
-
-.icono-ubicacion {
+.ubicacion {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ubicacion .ubicacion-iconos {
+  width: 25%;
+}
+.ubicacion .ubicacion-iconos div {
+  height: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-items: start;
+}
+.ubicacion .ubicacion-iconos div img {
+  width: 2rem;
+  border: 1px solid;
+  border-radius: 4px;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.ubicacion .ubicacion-texto {
+  width: 75%;
+}
+.ubicacion .ubicacion-texto div {
+  height: 2rem;
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: start;
-  align-items: center;
-  padding: 0 0.5em 0 0;
+  align-items: start;
 }
-
-.icono-ubicacion p {
-  margin-top: 1em;
-  font-size: 14px;
+.ubicacion .ubicacion-texto div p {
+  text-align: left;
+  font-size: 1rem;
+  margin: 0.25rem 0 0 0.5rem;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
-
-.icono-ubicacion img {
-  width: 2.5em;
+.ubicacion .agradecimiento {
+  width: 100%;
+  margin-top: 1rem;
 }
-
-.agradecimiento {
+.ubicacion .agradecimiento p {
   text-align: center;
-  font-size: 3em;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
-}
-
-.agradecimiento P {
   text-shadow: 1px 1px 2px black;
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .ubicacion .ubicacion-iconos {
+    width: 10%;
+  }
+  .ubicacion .ubicacion-iconos div {
+    height: 2rem;
+  }
+  .ubicacion .ubicacion-iconos div img {
+    width: 2rem;
+  }
+  .ubicacion .ubicacion-texto {
+    width: 40%;
+  }
+  .ubicacion .ubicacion-texto div p {
+    font-size: 1rem;
+  }
+  .ubicacion .agradecimiento {
+    width: 50%;
+    margin-top: nome;
+  }
+  .ubicacion .agradecimiento p {
+    font-size: 2rem;
+  }
+}
 .section-productos {
   display: flex;
   flex-wrap: wrap;
@@ -605,39 +658,114 @@ h1 {
     text-align: center;
   }
 }
-.lista-como-comprar {
-  padding-right: 0;
-  padding-left: 0.5em;
+.fondo-secundario {
+  background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 40vh;
 }
-.lista-como-comprar li {
+
+.card-comprar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid black;
+  border-radius: 0.875rem;
+  margin: 0.25rem 0;
+}
+.card-comprar div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-comprar div img {
+  width: 3rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+  background: rgb(255, 255, 255);
+}
+.card-comprar div p {
+  margin-top: 0.8rem;
+  padding-left: 0.75rem;
   color: rgb(0, 0, 0);
-  font-weight: 500;
-  font-size: 24px;
-  padding: 10px;
+  font-size: 1.25rem;
 }
-.lista-como-comprar li:hover {
-  background-color: rgb(49, 49, 49);
+.card-comprar div p:hover {
   color: rgb(255, 255, 255);
-  font-weight: bold;
 }
-.lista-como-comprar li a {
-  text-decoration: none;
+.card-comprar div a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
   color: rgb(0, 0, 0);
-  font-weight: 500;
 }
-.lista-como-comprar li a:hover {
-  color: rgb(255, 208, 0);
-  font-weight: 600;
+.card-comprar div:nth-child(1) {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-comprar div:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0.875rem 0;
+}
+.card-comprar div:nth-child(2):hover {
+  background-color: rgb(119, 119, 141);
 }
 
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
-  .lista-como-comprar {
-    margin-bottom: 1em;
+  .fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
   }
-  .lista-como-comprar li {
-    font-size: 14px;
-    padding: 10px;
+  .card-comprar {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid black;
+    border-radius: 0.875rem;
+    margin: 0.25rem 0;
+  }
+  .card-comprar div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card-comprar div img {
+    width: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.875rem;
+    background: rgb(255, 255, 255);
+  }
+  .card-comprar div p {
+    margin-top: 0.8rem;
+    padding-left: 0.75rem;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+  }
+  .card-comprar div:nth-child(1) {
+    width: 5%;
+  }
+  .card-comprar div:nth-child(2) {
+    width: 95%;
   }
 }/*# sourceMappingURL=styles.css.map */

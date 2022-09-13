@@ -153,7 +153,7 @@
     .beneficios {
         width: 100vw;
         @include flex ($direction:column, $justify:center, $align:center);
-        background-color: rgb(49, 49, 49);
+        background-color: $bg-gris-claro;
         p {
             display: inline-block;
             width:100%

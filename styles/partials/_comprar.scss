@@ -1,27 +1,55 @@
-.lista-como-comprar {
-    padding-right:0;
-    padding-left:0.5em;
-    li {
-        color: rgb(0, 0, 0);
-        font-weight: 500;
-        font-size: 24px;
-        padding: 10px;
-        &:hover {
-            background-color: rgb(49, 49, 49);
-            color: rgb(255, 255, 255);
-            font-weight: bold;
+.fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 40vh;
+}
+
+
+
+.card-comprar {
+    @include flex (row, space-around, center);
+    border: 2px solid black;
+    border-radius: $border-radius-comun;
+    margin: 0.25rem 0;
+    div {
+        @include flex (row, space-around, center);
+        img {
+            width: 3rem;
+            border: 1px solid rgb(0, 0, 0);
+            border-radius: $border-radius-comun;
+            background: $bg-blanco;
         }
-        a { 
-            text-decoration: none;
-            color: rgb(0, 0, 0);
-            font-weight: 500;
+        p {
+            margin-top: 0.80rem;
+            padding-left: 0.75rem;
+            color: $texto-negro;
+            font-size: 1.25rem;
             &:hover {
-                color: rgb(255, 208, 0);
-                font-weight: 600;
+                color:$texto-blanco;
             }
+        }
+        a {
+            text-decoration-line: none;
+            color: $texto-negro;
+        }
+    }
+    div:nth-child(1) {
+        width: 20%;
+        @include flex (row, center, center);
+    }
+    div:nth-child(2) {
+        width: 80%;
+        @include flex (row, start, center);
+        background: $bg-blanco;
+        border-radius: 0 $border-radius-comun $border-radius-comun 0;
+        &:hover {
+            background-color: $bg-gris-claro;
         }
     }
 }
+
+
 
 @media screen and (min-width: 600px) {
     
@@ -37,20 +65,40 @@
 
 @media screen and (min-width: 1200px) {
 
+    .fondo-secundario {
+        background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 50vh;
+    }
 
-    .lista-como-comprar {
-        margin-bottom: 1em;
-        li { 
-            font-size: 14px;
-            padding: 10px;
+    .card-comprar {
+        @include flex (row, space-around, center);
+        border: 2px solid black;
+        border-radius: $border-radius-comun;
+        margin: 0.25rem 0;
+        div {
+            @include flex (row, space-around, center);
+            img {
+                width: 3rem;
+                border: 1px solid rgb(0, 0, 0);
+                border-radius: $border-radius-comun;
+                background: $bg-blanco;
+            }
+            p {
+                margin-top: 0.80rem;
+                padding-left: 0.75rem;
+                color: $texto-negro;
+                font-size: 1rem;
             }
         }
-    
-
-
-
-
+        div:nth-child(1) {
+            width: 5%;    
+        }
+        div:nth-child(2) {
+            width: 95%;
+        }
+    }
 }
-
 
 
