@@ -27,9 +27,9 @@
         p {
         padding: 0.5rem;
         background-color: $bg-azul-oscuro;
-        border-radius: $border-radius-comun 0 0 $border-radius-comun;
+        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
         position: absolute;
-        bottom: 8rem;
+        top: 0;
         right: 0;
         color: $texto-blanco;
         }
