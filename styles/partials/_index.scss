@@ -1,23 +1,22 @@
 .imagen-fondo {
-    @include flex ($direction:column, $justify:center, $align: center); 
+    @include flex (column, center, center); 
     margin: 1rem 0;
     background-image: url("../images/fondos/maco-urbano.jpg");
     background-size: cover;
     border-radius: $border-radius-comun;
     height: 50vh;
     width: 100%;
-    p {
+    h1 {
+        background-color: $bg-oscuro-trasparente; 
         padding: 1rem;
         text-align: center;
         border-radius: $border-radius-comun;
-        font-style: italic;
-        font-size: 3rem;
-        font-weight: bold;
+        @extend %texto-bienvenida;
     }
 }
 
 .bienvenida {
-    @include flex ($direction:column, $justify:center, $align:center); 
+    @include flex (column, center, center); 
     background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://la.network/wp-content/uploads/2018/02/BUENOS-AIRES-OBELISCO-NOCHE-328282751.jpg");
     background-color: rgba(0, 255, 255, 0.05);
     background-size: cover;
@@ -42,7 +41,7 @@
 
 .subtitulo-enlace {
     display: inline-block;
-    @include flex ($direction:column, $justify:center, $align:center); 
+    @include flex (column, center, center); 
     margin: 0.5rem;
     a {
         border: 2px solid rgb(0, 0, 0);
@@ -55,23 +54,18 @@
         box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
         transition: 0.5s ease;
         &:hover {
-            background-color: rgb(49, 49, 49);
-            color: rgb(230, 211, 47),
+            background-color: $bg-gris-oscuro;
+            color: $texto-amarillo
         }                 
     }
 }
 
 .beneficios {
     width: 100vw;   
-    @include flex ($direction:row, $justify:center, $align:center);     
-    background-color: rgb(49, 49, 49);
-    p {
-        display: inline-block;
-        width:100%
-    }
+    @include flex (row, center, center);       
     .beneficios-texto {
         width: 60%;
-        @include flex ($direction:column, $justify:center, $align:center);       
+        @include flex (column, center, center);       
         div {
             height: 5rem;
             p {
@@ -83,7 +77,7 @@
     }
     .beneficios-iconos {
         width: 40%;
-        @include flex ($direction:column, $justify:center, $align:center);
+        @include flex (column, center, center);
         div {
             height: 5rem;
             img {
@@ -112,7 +106,7 @@
 @media screen and (min-width: 1200px) {
 
     body {
-        background: rgb(49,49,49);
+        background: $bg-gris-oscuro;
         background: linear-gradient(0deg, rgba(49,49,49,1) 32%, rgba(0,0,0,1) 65%);
     } 
 
@@ -152,15 +146,14 @@
 
     .beneficios {
         width: 100vw;
-        @include flex ($direction:column, $justify:center, $align:center);
-        background-color: $bg-gris-claro;
+        @include flex (column, center, center);
         p {
             display: inline-block;
             width:100%
         }
         .beneficios-texto {
             width: 100%;
-            @include flex ($direction:row, $justify:space-around, $align:center);
+            @include flex (row, space-around, center);
             div {
                 width: 24rem;
                 p {
@@ -172,9 +165,9 @@
         }   
         .beneficios-iconos {
             width: 100%;
-            @include flex ($direction:row, $justify:space-around, $align:center);
+            @include flex (row, space-around, center);
             div {
-                @include flex ($direction:row, $justify:space-around, $align:center);
+                @include flex (row, space-around, center);
                 height: 7rem;
                 width: 24rem;
                 img {

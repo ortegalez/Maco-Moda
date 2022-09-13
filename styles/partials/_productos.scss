@@ -6,12 +6,40 @@
     border-radius: $border-radius-comun;
     width: 80%;
     margin: 0.5rem;
- 
+    overflow: hidden;
+    position: relative;
+    .texto-flotante {
+        p {
+        padding: 0.5rem;
+        background-color: $bg-verde;
+        border-radius: $border-radius-comun 0 $border-radius-comun 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $texto-blanco;
+        opacity: 1;
+        &:hover{
+            opacity: 0;
+        }
+        }
+    }
+        .sticker {
+        p {
+        padding: 0.5rem;
+        background-color: $bg-azul-oscuro;
+        border-radius: $border-radius-comun 0 0 $border-radius-comun;
+        position: absolute;
+        bottom: 8rem;
+        right: 0;
+        color: $texto-blanco;
+        }
+    
+    
+    }
     .card-text {
         background: rgb(77,78,83);
         background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
         border-radius: 0  0 $border-radius-comun $border-radius-comun;
-        position: relative;
         p {
             @extend %text-card;
             margin-top: 0.5rem;
@@ -23,25 +51,20 @@
         p:nth-child(3) {
             font-size: 1.25rem;
             color: white;
-          }
-        .texto-flotante {
-            p {
-            padding: 0.5rem;
-            background-color: green;
-            border-radius: 0 $border-radius-comun $border-radius-comun 0;
-            position: absolute;
-            top: -3.5rem;
-            left: 0;
-            color: white;
-            }
         }
- 
     }
     img {
         padding: 0.25rem;
-        border-radius: 1rem ;
+        border-radius: 1rem;
+        &:hover {
+            transform: scale(1.1);
+            transition: ease 0.5s;
+        }
     }
 }
+
+
+
 
 .card-modelo {
     @include flex ($direction:column, $justify:center, $align:center); 
@@ -119,3 +142,20 @@
         }
     }
 }
+
+
+.card {
+    img {
+        padding: 0.25rem;
+        border-radius: 1rem;
+        &:hover {
+            transform: scale (1.2);
+        }
+    }
+}
+
+
+
+
+
+   

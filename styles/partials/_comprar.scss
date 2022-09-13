@@ -3,6 +3,14 @@
     background-size: cover;
     background-position: 50% 50%;
     height: 40vh;
+    @include flex ($direction:column, $justify:center, $align: center); 
+    h2 {
+        background-color: $bg-oscuro-trasparente;
+        padding: 1rem;
+        text-align: center;
+        border-radius: $border-radius-comun;
+        @extend %texto-bienvenida;
+    }
 }
 
 

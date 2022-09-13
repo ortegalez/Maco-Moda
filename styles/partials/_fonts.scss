@@ -11,6 +11,13 @@ $font-size-fuente-secuendaria: 14px;
     font-family: 'Ubuntu', sans-serif;
 }
 
+// texto Bienvenida
+%texto-bienvenida {
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
 
 $texto-brillante: 
     0 0 5px rgb(230, 211, 47),
