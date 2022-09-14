@@ -45,12 +45,12 @@
             margin-top: 0.5rem;
         }
         p:nth-child(2) {
-            color: yellow;
+            color: $texto-amarillo;
             font-size: 1.75rem;
           }
         p:nth-child(3) {
+            color: $texto-blanco;
             font-size: 1.25rem;
-            color: white;
         }
     }
     img {

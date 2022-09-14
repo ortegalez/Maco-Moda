@@ -520,6 +520,14 @@ h1 {
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
+.boton label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0 20px;
+  border: 3px solid;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
@@ -592,12 +600,12 @@ h1 {
   margin-top: 0.5rem;
 }
 .card .card-text p:nth-child(2) {
-  color: yellow;
+  color: rgb(241, 217, 0);
   font-size: 1.75rem;
 }
 .card .card-text p:nth-child(3) {
+  color: rgb(255, 255, 255);
   font-size: 1.25rem;
-  color: white;
 }
 .card img {
   padding: 0.25rem;

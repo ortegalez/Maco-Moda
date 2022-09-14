@@ -96,6 +96,15 @@
     }  
 }
 
+.boton {
+    label {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 20px;
+        border: 3px solid;
+        box-shadow: $box-shadow-oscuro;
+    }
+}
 
 
 @media screen and (min-width: 600px) {
