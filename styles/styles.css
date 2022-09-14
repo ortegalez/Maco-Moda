@@ -592,20 +592,24 @@ h1 {
   color: rgb(255, 255, 255);
 }
 .card .card-text {
-  background: rgb(77, 78, 83);
-  background: radial-gradient(circle, rgb(77, 78, 83) 0%, rgb(1, 2, 8) 100%);
+  background-color: rgb(19, 22, 27);
   border-radius: 0 0 0.875rem 0.875rem;
 }
 .card .card-text p {
   margin-top: 0.5rem;
 }
+.card .card-text p:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
 .card .card-text p:nth-child(2) {
   color: rgb(241, 217, 0);
-  font-size: 1.75rem;
+  font-size: 1.5rem;
 }
 .card .card-text p:nth-child(3) {
-  color: rgb(255, 255, 255);
-  font-size: 1.25rem;
+  color: rgb(119, 119, 141);
+  font-size: 0.825rem;
+  border-top: 1px solid rgb(160, 160, 160);
 }
 .card img {
   padding: 0.25rem;

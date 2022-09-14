@@ -37,20 +37,28 @@
     
     }
     .card-text {
-        background: rgb(77,78,83);
-        background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
+        background-color: $bg-card;
+        // background: rgb(77,78,83);
+        // background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
         border-radius: 0  0 $border-radius-comun $border-radius-comun;
         p {
             @extend %text-card;
             margin-top: 0.5rem;
         }
+        p:nth-child(1) {
+            color: $texto-blanco;
+            font-size: 1rem;
+          }
         p:nth-child(2) {
             color: $texto-amarillo;
-            font-size: 1.75rem;
+            font-size: 1.5rem;
           }
         p:nth-child(3) {
-            color: $texto-blanco;
-            font-size: 1.25rem;
+            color: $texto-gris-claro;
+            font-size: 0.825rem;
+            // text-align: left;
+            // padding-left:1rem ;
+            border-top: 1px solid rgb(160, 160, 160);
         }
     }
     img {
