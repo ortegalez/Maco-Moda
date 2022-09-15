@@ -718,9 +718,11 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid black;
+  border: 2px solid rgb(0, 0, 0);
   border-radius: 0.875rem;
   margin: 0.25rem 0;
+  background-color: rgb(19, 22, 27);
+  overflow: hidden;
 }
 .card-comprar div {
   display: flex;
@@ -749,6 +751,10 @@ h1 {
           text-decoration-line: none;
   color: rgb(0, 0, 0);
 }
+.card-comprar div a:hover {
+  color: rgb(241, 217, 0);
+  font-weight: bold;
+}
 .card-comprar div:nth-child(1) {
   width: 20%;
   display: flex;
@@ -768,7 +774,7 @@ h1 {
   border-radius: 0 0.875rem 0.875rem 0;
 }
 .card-comprar div:nth-child(2):hover {
-  background-color: rgb(119, 119, 141);
+  background-color: rgb(19, 22, 27);
 }
 
 /* Fin Diseno Tablet */
@@ -779,16 +785,6 @@ h1 {
     background-size: cover;
     background-position: 50% 50%;
     height: 50vh;
-  }
-  .card-comprar {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    border: 2px solid black;
-    border-radius: 0.875rem;
-    margin: 0.25rem 0;
   }
   .card-comprar div {
     display: flex;

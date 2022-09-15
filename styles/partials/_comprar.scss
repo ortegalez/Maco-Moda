@@ -13,13 +13,13 @@
     }
 }
 
-
-
 .card-comprar {
     @include flex (row, space-around, center);
-    border: 2px solid black;
+    border: 2px solid rgb(0, 0, 0);
     border-radius: $border-radius-comun;
     margin: 0.25rem 0;
+    background-color: $bg-card;
+    overflow: hidden;
     div {
         @include flex (row, space-around, center);
         img {
@@ -40,6 +40,10 @@
         a {
             text-decoration-line: none;
             color: $texto-negro;
+            &:hover {
+                color:$texto-amarillo;
+                font-weight: bold;
+            }
         }
     }
     div:nth-child(1) {
@@ -52,7 +56,7 @@
         background: $bg-blanco;
         border-radius: 0 $border-radius-comun $border-radius-comun 0;
         &:hover {
-            background-color: $bg-gris-claro;
+            background-color: $bg-card;
         }
     }
 }
@@ -81,10 +85,6 @@
     }
 
     .card-comprar {
-        @include flex (row, space-around, center);
-        border: 2px solid black;
-        border-radius: $border-radius-comun;
-        margin: 0.25rem 0;
         div {
             @include flex (row, space-around, center);
             img {
