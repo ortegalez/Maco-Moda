@@ -1,25 +1,48 @@
-.bienvenida-remeras, .bienvenida-buzos {
-    @include flex (column, center, center);
-    width: 100%;
+.bienvenida-remeras {
+    background-image: url("../images/fondos/joven_remera.jpg");
+    background-size: cover;
+    background-position: -100%;
+    height: 50vh;
+    @include flex (column, center, end);
     div {
-        width: 100%;
-        @include flex (column, center, center);
-        font-size: 1.5rem;
+        margin: 0 1rem;
         letter-spacing: 1px;
-        margin-bottom: 0.5rem;
-        text-align: center;
-        img {
-            width: 100%;
+        h2 {
+            color: $texto-negro;
         }
-        h2{
-            padding-top:0.5rem; 
+        h3 {
+            color: $texto-negro;
         }
-        h4{
+        h4 {
+            width: max-content;
+            background-color: $bg-azul-oscuro;
             color: $texto-amarillo;
         }
     }
 }
 
+.bienvenida-buzos {
+    background-image: url("../images/fondos/joven-buzo.jpg");
+    background-size: cover;
+    background-position: -100%;
+    height: 50vh;
+    @include flex (column, center, end);
+    div {
+        margin: 0 1rem;
+        letter-spacing: 1px;
+        h2 {
+            color: $texto-negro;
+        }
+        h3 {
+            color: $texto-negro;
+        }
+        h4 {
+            width: max-content;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+        }
+    }
+}
 
 .section-productos {
     @include flex (column, space-around, center); 
@@ -90,27 +113,6 @@
     }
 }
 
-.card-modelo {
-    @include flex ($direction:column, $justify:center, $align:center); 
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
-    background-color: rgba(0, 255, 255, 0.05);
-    background-size: cover;
-    padding: 0;
-    width: 95%;
-    div {
-        p {
-            @extend %titulo-brillante;
-            font-size: 1.5rem;
-            text-align: center;    
-        }
-        img {
-            visibility: visible;
-            width: 100%;
-            border-radius: 0.875rem 0 0 0.875rem;
-        }
-    }
-}
-
 .titulo-interno {
     margin-top: 0.5rem;
         h2 {
@@ -135,41 +137,92 @@
     }
 }
 
+.bienvenida-remeras {
+    div {
+        margin: 0 2rem;
+        h2 {
+            color: $texto-negro;
+        }
+        h3 {
+            color: $texto-negro;
+        }
+        h4 {
+            width: max-content;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.bienvenida-buzos {
+    div {
+        margin: 0 2rem;
+        h2 {
+            color: $texto-negro;
+        }
+        h3 {
+            color: $texto-negro;
+        }
+        h4 {
+            width: max-content;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+            margin-top: 1rem;
+        }
+    }
+}
+
+
 /* Fin Diseno Tablet */
-
-
-
 
 
 /* Diseno Desktop */
 
 @media screen and (min-width: 1200px) {
 
-    .bienvenida-remeras, .bienvenida-buzos {
-        @include flex (row, center, center);
-        width: 100vw;
+    .bienvenida-remeras {
+        background-image: url("../images/fondos/joven_remera.jpg");
+        background-size: cover;
+        background-position: -100%;
+        height: 75vh;
+        @include flex (column, center, end);
         div {
-            height: 100%;
-            width: 50%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven_remera.jpg");
-            background-color: rgba(0, 255, 255, 0.05);
-            background-position: cover;
-            img {
-                width: 100%;
+            margin: 0 4rem;
+            h2 {
+                color: $texto-negro;
+            }
+            h3 {
+                color: $texto-negro;
+            }
+            h4 {
+                width: max-content;
+                background-color: $bg-azul-oscuro;
+                color: $texto-amarillo;
+                margin-top: 1.5rem;
             }
         }
     }
 
     .bienvenida-buzos {
-        @include flex (row, center, center);
+        background-image: url("../images/fondos/joven-buzo.jpg");
+        background-size: cover;
+        background-position: 60%;
+        height: 80vh;
+        @include flex (column, center, start);
         div {
-            height: 100%;
-            width: 50%;
-            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven-buzo.jpg");
-            background-color: rgba(0, 255, 255, 0.05);
-            background-position: cover;
-            img {
-                width: 100%;
+            margin: 0 4rem;
+            h2 {
+                color: $texto-negro;
+            }
+            h3 {
+                color: $texto-negro;
+            }
+            h4 {
+                width: max-content;
+                background-color: $bg-azul-oscuro;
+                color: $texto-amarillo;
+                margin-top: 1.5rem;
             }
         }
     }
@@ -191,7 +244,7 @@
                 font-size: 1.5rem;
               }
             p:nth-child(3) {
-                font-size: 0.825rem;
+                font-size: 1rem;
                 line-height: 1.850rem;
                 color: $texto-gris-claro;
             }

@@ -57,11 +57,12 @@ $estilo-h1:(
 
 // titulo interno
 %titulo-interno {
-    // background-color: $titulo-interno;
-    background-color: $bg-bordo;
-    font-size: 1.5rem;
+    background-color: $bg-bordo;    
     border-radius: 0 $border-radius-comun $border-radius-comun 0;
-    width: 40%;
     text-align: center;
-    margin-left:-1rem;
+    font-size: 1.5rem;
+    min-width: 40%;
+    max-width: max-content;
+    padding-right: 1rem;
+    margin-left:-0.75rem;
 }

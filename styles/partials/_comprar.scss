@@ -3,7 +3,7 @@
     background-size: cover;
     background-position: 50% 50%;
     height: 40vh;
-    @include flex ($direction:column, $justify:center, $align: center); 
+    @include flex (column, center, center); 
     h2 {
         background-color: $bg-oscuro-trasparente;
         padding: 1rem;
@@ -15,10 +15,10 @@
 
 .card-comprar {
     @include flex (row, space-around, center);
-    border: 2px solid rgb(0, 0, 0);
+    border: $border-negro;
     border-radius: $border-radius-comun;
     margin: 0.25rem 0;
-    background-color: $bg-card;
+    background-color: $bg-blanco;
     overflow: hidden;
     div {
         @include flex (row, space-around, center);
