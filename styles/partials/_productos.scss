@@ -41,19 +41,20 @@
         left: 0;
         color: $texto-blanco;
         opacity: 1;
-        &:hover{
-            opacity: 0;
-        }
+            &:hover{
+                opacity: 0;
+            }
         }
     }
-        .sticker {
-        p {
+    .sticker {
+    p {
         padding: 0.5rem;
+        color: $texto-blanco;
         background-color: $bg-azul-oscuro;
         position: absolute;
         top: 0;
         right: 0;
-        color: $texto-blanco;
+        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
         }
     }
     .card-text {
