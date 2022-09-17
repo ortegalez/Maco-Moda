@@ -1,0 +1,44 @@
+.fondo-talles {
+    background-image: url("/images/fondos/camisetas_colgadas.jpg");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
+    @include flex ($direction:column, $justify:center, $align: center); 
+    h2 {
+        background-color: $bg-oscuro-trasparente;
+        padding: 1rem;
+        text-align: center;
+        border-radius: $border-radius-comun;
+        @extend %texto-bienvenida;
+    }
+}
+
+.texto-talles {
+    background-color: $bg-card;
+    border-radius: 0  0 $border-radius-comun $border-radius-comun;
+    p {
+        @extend %text-card;
+        font-size: 1rem;
+        line-height: 3rem;
+        color: $texto-blanco;
+    }
+}
+
+
+
+/* Diseno Tablet */
+
+
+/* Fin Diseno Tablet */
+
+
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+
+}
+

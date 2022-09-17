@@ -7,13 +7,13 @@
   font-family: "Ubuntu", sans-serif;
 }
 
-.fondo-secundario h2, .imagen-fondo h1 {
+.fondo-talles h2, .fondo-secundario h2, .imagen-fondo h1 {
   font-style: italic;
   font-size: 3rem;
   font-weight: bold;
 }
 
-.card .card-text p {
+.texto-talles p, .card .card-text p {
   color: rgb(241, 217, 0);
   font-size: 1.25rem;
   text-align: center;
@@ -109,6 +109,111 @@ h1 {
     font-size: 1.25rem;
   }
 }
+.footer {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
+}
+
+.div-navegacion {
+  display: inline-block;
+}
+
+.div-redes ul {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 1rem;
+}
+
+.div-redes ul li {
+  display: inline-block;
+  padding: 0.5rem;
+}
+
+.div-medios {
+  display: none;
+}
+
+.subtitulos-footer {
+  color: rgb(255, 255, 255);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.lista-secudaria {
+  display: inline-block;
+  margin-top: 5px;
+  list-style: none;
+  padding-left: 0;
+}
+.lista-secudaria li a {
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-size: 1.25rem;
+}
+.lista-secudaria li a:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
+.lista-secudaria li img {
+  width: 5rem;
+}
+
+.icono {
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
+}
+
+.copyright p {
+  font-size: 1.25rem;
+  padding: 0;
+}
+
+.div-medios {
+  display: none;
+}
+
+@media screen and (min-width: 1200px) {
+  .subtitulos-footer {
+    font-size: 1rem;
+  }
+  .lista-secudaria li a {
+    font-size: 1rem;
+  }
+  .div-redes ul {
+    width: 200px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .div-medios {
+    display: inline-block;
+  }
+  .icono {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  .icono:hover {
+    width: 2.2rem;
+    height: 2.2rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .copyright p {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
 .imagen-fondo {
   display: flex;
   flex-wrap: wrap;
@@ -118,7 +223,7 @@ h1 {
   margin: 1rem 0;
   background-image: url("../images/fondos/maco-urbano.jpg");
   background-size: cover;
-  border-radius: 0.875rem;
+  background-position: 100% 100%;
   height: 50vh;
   width: 100%;
 }
@@ -304,111 +409,358 @@ h1 {
     height: 6rem;
   }
 }
-.footer {
+.bienvenida-remeras, .bienvenida-buzos {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.bienvenida-remeras div, .bienvenida-buzos div {
+  width: 100%;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+}
+.bienvenida-remeras div img, .bienvenida-buzos div img {
+  width: 100%;
+}
+.bienvenida-remeras div h2, .bienvenida-buzos div h2 {
+  padding-top: 0.5rem;
+}
+.bienvenida-remeras div h4, .bienvenida-buzos div h4 {
+  color: rgb(241, 217, 0);
+}
+
+.section-productos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
   justify-content: space-around;
-  background-color: rgb(0, 0, 0);
+  align-items: center;
 }
 
-.div-navegacion {
-  display: inline-block;
+.card {
+  width: 80%;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+.card .texto-flotante p {
+  padding: 0.5rem;
+  background-color: rgb(9, 182, 9);
+  border-radius: 0.875rem 0 0.875rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.card .texto-flotante p:hover {
+  opacity: 0;
+}
+.card .sticker p {
+  padding: 0.5rem;
+  background-color: rgb(0, 1, 72);
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: rgb(255, 255, 255);
+}
+.card .card-text {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card .card-text p {
+  margin-top: 0.5rem;
+}
+.card .card-text p:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+.card .card-text p:nth-child(2) {
+  color: rgb(241, 217, 0);
+  font-size: 1.5rem;
+}
+.card .card-text p:nth-child(3) {
+  font-size: 0.825rem;
+  line-height: 1.85rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(241, 217, 0);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card img {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
 }
 
-.div-redes ul {
+.card-modelo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  padding: 0;
+  width: 95%;
+}
+.card-modelo div p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.card-modelo div img {
+  visibility: visible;
+  width: 100%;
+  border-radius: 0.875rem 0 0 0.875rem;
+}
+
+.titulo-interno {
+  margin-top: 0.5rem;
+}
+/* Diseno Tablet */
+@media screen and (min-width: 600px) {
+  .section-productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card {
+    border-radius: 0.875rem;
+    width: 40%;
+    margin: 0.5rem;
+    overflow: hidden;
+  }
+}
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .bienvenida-remeras, .bienvenida-buzos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    position: relative;
+  }
+  .bienvenida-remeras div, .bienvenida-buzos div {
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+  }
+  .bienvenida-remeras div img, .bienvenida-buzos div img {
+    width: 100%;
+  }
+  .section-productos {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .section-productos .card {
+    width: 22.5%;
+  }
+  .card-modelo {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-size: cover;
+    background-position: 0 60%;
+    border: 3px solid rgb(255, 255, 255);
+    border-radius: 0.875rem;
+    padding: 0;
+    width: 50%;
+  }
+  .card-modelo div {
+    width: 50%;
+  }
+  .card-modelo div img {
+    visibility: visible;
+  }
+  .card-modelo div p {
+    font-size: 1.5rem;
+    text-align: center;
+  }
+  .card .card-text p:nth-child(1) {
+    font-size: 1rem;
+  }
+  .card .card-text p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .card .card-text p:nth-child(3) {
+    font-size: 0.825rem;
+    line-height: 1.85rem;
+    color: rgb(119, 119, 141);
+  }
+  .card:hover {
+    margin-top: 0;
+  }
+}
+.fondo-secundario {
+  background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-secundario h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.card-comprar {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  padding-left: 0;
-  margin-top: 1rem;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+  margin: 0.25rem 0;
+  background-color: rgb(19, 22, 27);
+  overflow: hidden;
 }
-
-.div-redes ul li {
-  display: inline-block;
-  padding: 0.5rem;
+.card-comprar div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
 }
-
-.div-medios {
-  display: none;
+.card-comprar div img {
+  width: 3rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+  background: rgb(255, 255, 255);
 }
-
-.subtitulos-footer {
+.card-comprar div p {
+  margin-top: 0.8rem;
+  padding-left: 0.75rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+}
+.card-comprar div p:hover {
   color: rgb(255, 255, 255);
-  margin-top: 0.5rem;
-  margin-bottom: 0;
-  text-align: center;
-  font-size: 1.5rem;
 }
-
-.lista-secudaria {
-  display: inline-block;
-  margin-top: 5px;
-  list-style: none;
-  padding-left: 0;
-}
-.lista-secudaria li a {
-  font-weight: bold;
-  color: rgb(255, 255, 255);
+.card-comprar div a {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
-  font-size: 1.25rem;
+  color: rgb(0, 0, 0);
 }
-.lista-secudaria li a:hover {
-  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+.card-comprar div a:hover {
+  color: rgb(241, 217, 0);
+  font-weight: bold;
 }
-.lista-secudaria li img {
-  width: 5rem;
+.card-comprar div:nth-child(1) {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-comprar div:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0.875rem 0;
+}
+.card-comprar div:nth-child(2):hover {
+  background-color: rgb(19, 22, 27);
 }
 
-.icono {
-  width: 3rem;
-  height: 3rem;
-  border: 1px solid rgb(255, 255, 255);
-  background-color: rgb(255, 255, 255);
-  border-radius: 0.5rem;
-}
-
-.copyright p {
-  font-size: 1.25rem;
-  padding: 0;
-}
-
-.div-medios {
-  display: none;
-}
-
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
 @media screen and (min-width: 1200px) {
-  .subtitulos-footer {
+  .fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
+  }
+  .card-comprar div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card-comprar div img {
+    width: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.875rem;
+    background: rgb(255, 255, 255);
+  }
+  .card-comprar div p {
+    margin-top: 0.8rem;
+    padding-left: 0.75rem;
+    color: rgb(0, 0, 0);
     font-size: 1rem;
   }
-  .lista-secudaria li a {
-    font-size: 1rem;
+  .card-comprar div:nth-child(1) {
+    width: 5%;
   }
-  .div-redes ul {
-    width: 200px;
-    padding: 0;
-    margin-top: 0;
-  }
-  .div-medios {
-    display: inline-block;
-  }
-  .icono {
-    width: 2rem;
-    height: 2rem;
-    display: inline-block;
-    margin: 0.5rem;
-  }
-  .icono:hover {
-    width: 2.2rem;
-    height: 2.2rem;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  }
-  .copyright p {
-    font-size: 1rem;
-    padding: 0;
+  .card-comprar div:nth-child(2) {
+    width: 95%;
   }
 }
+.fondo-talles {
+  background-image: url("/images/fondos/camisetas_colgadas.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-talles h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.texto-talles {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.texto-talles p {
+  font-size: 1rem;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
 .formulario {
   color: rgb(255, 255, 255);
   background-color: rgba(86, 86, 89, 0.5);
@@ -552,263 +904,5 @@ h1 {
   }
   .ubicacion .agradecimiento p {
     font-size: 2rem;
-  }
-}
-.section-productos {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
-}
-
-.card {
-  border-radius: 0.875rem;
-  width: 80%;
-  margin: 0.5rem;
-  overflow: hidden;
-  position: relative;
-}
-.card .texto-flotante p {
-  padding: 0.5rem;
-  background-color: rgb(9, 182, 9);
-  border-radius: 0.875rem 0 0.875rem 0;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: rgb(255, 255, 255);
-  opacity: 1;
-}
-.card .texto-flotante p:hover {
-  opacity: 0;
-}
-.card .sticker p {
-  padding: 0.5rem;
-  background-color: rgb(0, 1, 72);
-  border-radius: 0 0.875rem 0 0.875rem;
-  position: absolute;
-  top: 0;
-  right: 0;
-  color: rgb(255, 255, 255);
-}
-.card .card-text {
-  background-color: rgb(19, 22, 27);
-  border-radius: 0 0 0.875rem 0.875rem;
-}
-.card .card-text p {
-  margin-top: 0.5rem;
-}
-.card .card-text p:nth-child(1) {
-  color: rgb(255, 255, 255);
-  font-size: 1rem;
-}
-.card .card-text p:nth-child(2) {
-  color: rgb(241, 217, 0);
-  font-size: 1.5rem;
-}
-.card .card-text p:nth-child(3) {
-  color: rgb(119, 119, 141);
-  font-size: 0.825rem;
-  border-top: 1px solid rgb(160, 160, 160);
-}
-.card img {
-  padding: 0.25rem;
-  border-radius: 1rem;
-}
-.card img:hover {
-  transform: scale(1.1);
-  transition: ease 0.5s;
-}
-
-.card-modelo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
-  background-color: rgba(0, 255, 255, 0.05);
-  background-size: cover;
-  padding: 0;
-  width: 95%;
-}
-.card-modelo div p {
-  font-size: 1.5rem;
-  text-align: center;
-}
-.card-modelo div img {
-  visibility: visible;
-  width: 100%;
-  border-radius: 0.875rem 0 0 0.875rem;
-}
-
-.titulo-interno {
-  margin-top: 0.5rem;
-}
-/* Diseno Tablet */
-/* Fin Diseno Tablet */
-/* Diseno Desktop */
-@media screen and (min-width: 1200px) {
-  .section-productos {
-    margin-top: 0.5rem;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .section-productos .card {
-    width: 22.5%;
-  }
-  .card-modelo {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
-    background-color: rgba(0, 255, 255, 0.05);
-    background-size: cover;
-    background-position: 0 60%;
-    border: 3px solid rgb(255, 255, 255);
-    border-radius: 0.875rem;
-    padding: 0;
-    width: 50%;
-  }
-  .card-modelo div {
-    width: 50%;
-  }
-  .card-modelo div img {
-    visibility: visible;
-  }
-  .card-modelo div p {
-    font-size: 1.5rem;
-    text-align: center;
-  }
-}
-.card img {
-  padding: 0.25rem;
-  border-radius: 1rem;
-}
-.card img:hover {
-  transform: scale 1.2;
-}
-
-.fondo-secundario {
-  background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-  background-size: cover;
-  background-position: 50% 50%;
-  height: 40vh;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.fondo-secundario h2 {
-  background-color: rgba(15, 14, 14, 0.7);
-  padding: 1rem;
-  text-align: center;
-  border-radius: 0.875rem;
-}
-
-.card-comprar {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-  border: 2px solid rgb(0, 0, 0);
-  border-radius: 0.875rem;
-  margin: 0.25rem 0;
-  background-color: rgb(19, 22, 27);
-  overflow: hidden;
-}
-.card-comprar div {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-}
-.card-comprar div img {
-  width: 3rem;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 0.875rem;
-  background: rgb(255, 255, 255);
-}
-.card-comprar div p {
-  margin-top: 0.8rem;
-  padding-left: 0.75rem;
-  color: rgb(0, 0, 0);
-  font-size: 1.25rem;
-}
-.card-comprar div p:hover {
-  color: rgb(255, 255, 255);
-}
-.card-comprar div a {
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  color: rgb(0, 0, 0);
-}
-.card-comprar div a:hover {
-  color: rgb(241, 217, 0);
-  font-weight: bold;
-}
-.card-comprar div:nth-child(1) {
-  width: 20%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.card-comprar div:nth-child(2) {
-  width: 80%;
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: start;
-  align-items: center;
-  background: rgb(255, 255, 255);
-  border-radius: 0 0.875rem 0.875rem 0;
-}
-.card-comprar div:nth-child(2):hover {
-  background-color: rgb(19, 22, 27);
-}
-
-/* Fin Diseno Tablet */
-/* Diseno Desktop */
-@media screen and (min-width: 1200px) {
-  .fondo-secundario {
-    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
-    background-size: cover;
-    background-position: 50% 50%;
-    height: 50vh;
-  }
-  .card-comprar div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .card-comprar div img {
-    width: 3rem;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 0.875rem;
-    background: rgb(255, 255, 255);
-  }
-  .card-comprar div p {
-    margin-top: 0.8rem;
-    padding-left: 0.75rem;
-    color: rgb(0, 0, 0);
-    font-size: 1rem;
-  }
-  .card-comprar div:nth-child(1) {
-    width: 5%;
-  }
-  .card-comprar div:nth-child(2) {
-    width: 95%;
   }
 }/*# sourceMappingURL=styles.css.map */

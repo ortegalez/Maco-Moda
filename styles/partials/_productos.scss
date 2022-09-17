@@ -1,13 +1,36 @@
+.bienvenida-remeras, .bienvenida-buzos {
+    @include flex (column, center, center);
+    width: 100%;
+    div {
+        width: 100%;
+        text-align: center;
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        img {
+            width: 100%;
+        }
+        h2{
+            padding-top:0.5rem; 
+        }
+        h4{
+            color: $texto-amarillo;
+        }
+    }
+}
+
+
 .section-productos {
-    @include flex ($direction:column, $justify:space-around, $align:center); 
+    @include flex (column, space-around, center); 
 }
 
 .card {
-    border-radius: $border-radius-comun;
     width: 80%;
     margin: 0.5rem;
     overflow: hidden;
     position: relative;
+    background-color: transparent;
+    padding: 0.25rem;
+    border-radius: $border-radius-comun $border-radius-comun 0 0 ;
     .texto-flotante {
         p {
         padding: 0.5rem;
@@ -27,20 +50,15 @@
         p {
         padding: 0.5rem;
         background-color: $bg-azul-oscuro;
-        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
         position: absolute;
         top: 0;
         right: 0;
         color: $texto-blanco;
         }
-    
-    
     }
     .card-text {
         background-color: $bg-card;
-        // background: rgb(77,78,83);
-        // background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
-        border-radius: 0  0 $border-radius-comun $border-radius-comun;
+        border-radius: 0 0 $border-radius-comun $border-radius-comun;
         p {
             @extend %text-card;
             margin-top: 0.5rem;
@@ -54,25 +72,20 @@
             font-size: 1.5rem;
           }
         p:nth-child(3) {
-            color: $texto-gris-claro;
             font-size: 0.825rem;
-            // text-align: left;
-            // padding-left:1rem ;
-            border-top: 1px solid rgb(160, 160, 160);
+            line-height: 1.850rem;
+            color: $texto-negro;
+            background-color: $bg-amarillo;
+            border-radius: 0 0 $border-radius-comun $border-radius-comun;
         }
     }
     img {
+        background-color: $bg-blanco;
+        overflow: hidden;
         padding: 0.25rem;
-        border-radius: 1rem;
-        &:hover {
-            transform: scale(1.1);
-            transition: ease 0.5s;
-        }
+        border-radius: $border-radius-comun $border-radius-comun 0 0 ;
     }
 }
-
-
-
 
 .card-modelo {
     @include flex ($direction:column, $justify:center, $align:center); 
@@ -107,6 +120,16 @@
 
 @media screen and (min-width: 600px) {
     
+    .section-productos {
+        @include flex (row, space-around, center); 
+    }
+
+    .card {
+        border-radius: $border-radius-comun;
+        width: 40%;
+        margin: 0.5rem;
+        overflow: hidden;
+    }
 }
 
 /* Fin Diseno Tablet */
@@ -118,6 +141,20 @@
 /* Diseno Desktop */
 
 @media screen and (min-width: 1200px) {
+
+    .bienvenida-remeras, .bienvenida-buzos {
+        @include flex (row, center, center);
+        width: 100%;
+        position: relative;
+        div {
+            width: 50%;
+            text-align: center;
+            font-size: 1.5rem;
+            img {
+                width: 100%;
+            }
+        }
+    }
 
     .section-productos {
         margin-top: 0.5rem;
@@ -149,18 +186,30 @@
             }
         }
     }
-}
-
-
-.card {
-    img {
-        padding: 0.25rem;
-        border-radius: 1rem;
-        &:hover {
-            transform: scale (1.2);
+    
+    .card {
+        .card-text {
+            p:nth-child(1) {
+                font-size: 1rem;
+              }
+            p:nth-child(2) {
+                font-size: 1.5rem;
+              }
+            p:nth-child(3) {
+                font-size: 0.825rem;
+                line-height: 1.850rem;
+                color: $texto-gris-claro;
+            }
+        }
+        &:hover{
+            margin-top:0;
         }
     }
+
 }
+
+
+
 
 
 
