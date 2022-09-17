@@ -422,6 +422,7 @@ h1 {
   text-align: center;
   font-size: 1.5rem;
   letter-spacing: 1px;
+  margin-bottom: 0.5rem;
 }
 .bienvenida-remeras div img, .bienvenida-buzos div img {
   width: 100%;
@@ -431,6 +432,10 @@ h1 {
 }
 .bienvenida-remeras div h4, .bienvenida-buzos div h4 {
   color: rgb(241, 217, 0);
+}
+.bienvenida-remeras div h5, .bienvenida-buzos div h5 {
+  border-bottom: 2px solid red;
+  padding-bottom: 1rem;
 }
 
 .section-productos {
@@ -551,8 +556,6 @@ h1 {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    position: relative;
   }
   .bienvenida-remeras div, .bienvenida-buzos div {
     width: 50%;
@@ -561,6 +564,10 @@ h1 {
   }
   .bienvenida-remeras div img, .bienvenida-buzos div img {
     width: 100%;
+  }
+  .bienvenida-remeras div h5, .bienvenida-buzos div h5 {
+    border-bottom: none;
+    padding-bottom: none;
   }
   .section-productos {
     margin-top: 0.5rem;

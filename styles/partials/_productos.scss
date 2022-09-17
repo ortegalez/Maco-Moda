@@ -6,6 +6,7 @@
         text-align: center;
         font-size: 1.5rem;
         letter-spacing: 1px;
+        margin-bottom: 0.5rem;
         img {
             width: 100%;
         }
@@ -14,6 +15,10 @@
         }
         h4{
             color: $texto-amarillo;
+        }
+        h5 {
+            border-bottom: 2px solid red;
+            padding-bottom: 1rem;
         }
     }
 }
@@ -145,8 +150,6 @@
 
     .bienvenida-remeras, .bienvenida-buzos {
         @include flex (row, center, center);
-        width: 100%;
-        position: relative;
         div {
             width: 50%;
             text-align: center;
@@ -154,12 +157,17 @@
             img {
                 width: 100%;
             }
+            h5 { 
+                border-bottom: none;
+                padding-bottom: none;
+            }
+
         }
     }
 
     .section-productos {
         margin-top: 0.5rem;
-        @include flex ($direction:row, $justify:space-around, $align:center);         
+        @include flex ($direction:row, $justify:space-around, $align:center);   
         .card {
             width: 22.5%;
         }
