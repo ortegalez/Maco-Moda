@@ -15,14 +15,13 @@
 
 .card-comprar {
     @include flex (row, space-around, center);
-    border: $border-negro;
+    border: $border-blanco;
     border-radius: $border-radius-comun;
     margin: 0.5rem 0;
     background-color: $bg-blanco;
     overflow: hidden;
     div {
         @include flex (row, center, center);
-        background-color: $bg-blanco;
         img {
             width: 3rem;
             position: relative;
@@ -46,8 +45,9 @@
         @include flex (row, start, center);
         background: $bg-blanco;
         border-radius: 0 $border-radius-comun $border-radius-comun 0;
+        transition: 0.2s;
         &:hover{
-            background-color: $bg-oscuro-trasparente;
+            background-color: $bg-card;
         }
         &:hover p {
             color:$texto-blanco;

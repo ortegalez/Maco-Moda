@@ -709,7 +709,7 @@ h1 {
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  border: 2px solid rgb(0, 0, 0);
+  border: 2px solid rgb(255, 255, 255);
   border-radius: 0.875rem;
   margin: 0.5rem 0;
   background-color: rgb(255, 255, 255);
@@ -721,7 +721,6 @@ h1 {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: rgb(255, 255, 255);
 }
 .card-comprar div img {
   width: 3rem;
@@ -754,9 +753,10 @@ h1 {
   align-items: center;
   background: rgb(255, 255, 255);
   border-radius: 0 0.875rem 0.875rem 0;
+  transition: 0.2s;
 }
 .card-comprar div:nth-child(2):hover {
-  background-color: rgba(15, 14, 14, 0.7);
+  background-color: rgb(19, 22, 27);
 }
 .card-comprar div:nth-child(2):hover p {
   color: rgb(255, 255, 255);
