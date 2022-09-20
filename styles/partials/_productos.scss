@@ -12,13 +12,12 @@
             color: $texto-negro;
         }
         h3 {
-            color: $texto-negro;
+            color: $texto-blanco;
         }
         p {
             display: inline-block;
             background-color: $bg-azul-oscuro;
             color: $texto-amarillo;
-
         }
     }
 }
@@ -141,13 +140,17 @@
 }
 
 .bienvenida-remeras {
+    
     div {
-        margin: 0 1rem;
+        margin-top: 1rem;
+        text-align: start;
         h2 {
-            color: $texto-negro;
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
         }
         h3 {
-            color: $texto-negro;
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
         }
         h4 {
             width: max-content;
@@ -160,22 +163,25 @@
 
 .bienvenida-buzos {
     div {
-        margin: 0 2rem;
+        margin-top: 1rem;
+        text-align: start;
         h2 {
-            color: $texto-negro;
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
         }
         h3 {
-            color: $texto-negro;
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
         }
         h4 {
+            margin-top: 1rem;
             width: max-content;
             background-color: $bg-azul-oscuro;
             color: $texto-amarillo;
-            margin-top: 1rem;
+            
         }
     }
 }
-
 
 /* Fin Diseno Tablet */
 

@@ -1,6 +1,6 @@
 .header {
-    background-color: rgb(0, 0, 0) ;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+    background-color: $bg-negro;
+    box-shadow: $box-shadow-oscuro;
 } 
 
 .logo-principal {
@@ -16,15 +16,11 @@
     a {
         color: $color-navbar;
         font-size: 1.25rem;
-        border: 2px solid rgb(0, 0, 0);
+        border: $border-negro;
         border-radius: $border-radius-comun;
         &:hover {
-            color: rgb(230, 211, 47);
-            text-shadow:
-                0 0 5px rgb(230, 211, 47),
-                0 0 10px rgb(230, 211, 47),
-                0 0 35px rgb(228, 207, 17),
-                0 0 40px rgb(228, 207, 17);
+            color: $texto-amarillo;
+            text-shadow:$texto-brillante;
             border: $border-blanco;
             border-radius: $border-radius-comun;
             }

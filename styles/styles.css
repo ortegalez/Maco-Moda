@@ -7,6 +7,10 @@
   font-family: "Ubuntu", sans-serif;
 }
 
+.titulo-destacado:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
+
 .fondo-talles h2, .fondo-secundario h2, .imagen-fondo h1 {
   font-style: italic;
   font-size: 3rem;
@@ -49,10 +53,7 @@
   padding: 0;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
-}
-
-.titulo-destacado:hover {
-  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  box-sizing: border-box;
 }
 
 body {
@@ -90,7 +91,7 @@ h1 {
   border-radius: 0.875rem;
 }
 .lista-navbar li a:hover {
-  color: rgb(230, 211, 47);
+  color: rgba(241, 217, 0, 0.722);
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
   border: 2px solid rgb(255, 255, 255);
   border-radius: 0.875rem;
@@ -145,7 +146,7 @@ h1 {
 
 .lista-secudaria {
   display: inline-block;
-  margin-top: 5px;
+  margin-top: 0.25rem;
   list-style: none;
   padding-left: 0;
 }
@@ -432,7 +433,7 @@ h1 {
   color: rgb(0, 0, 0);
 }
 .bienvenida-remeras div h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
 }
 .bienvenida-remeras div p {
   display: inline-block;
@@ -557,13 +558,16 @@ h1 {
   }
 }
 .bienvenida-remeras div {
-  margin: 0 1rem;
+  margin-top: 1rem;
+  text-align: start;
 }
 .bienvenida-remeras div h2 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 .bienvenida-remeras div h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 .bienvenida-remeras div h4 {
   width: -webkit-max-content;
@@ -575,21 +579,24 @@ h1 {
 }
 
 .bienvenida-buzos div {
-  margin: 0 2rem;
+  margin-top: 1rem;
+  text-align: start;
 }
 .bienvenida-buzos div h2 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 .bienvenida-buzos div h3 {
-  color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
 }
 .bienvenida-buzos div h4 {
+  margin-top: 1rem;
   width: -webkit-max-content;
   width: -moz-max-content;
   width: max-content;
   background-color: rgb(0, 1, 72);
   color: rgba(241, 217, 0, 0.722);
-  margin-top: 1rem;
 }
 
 /* Fin Diseno Tablet */
@@ -819,8 +826,8 @@ h1 {
 /* Diseno Desktop */
 .formulario {
   color: rgb(255, 255, 255);
-  background-color: rgba(86, 86, 89, 0.5);
-  border: 1px solid rgb(0, 0, 0);
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(0, 0, 0);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 0.875rem;
   margin: 0.5rem 0 0.5rem 0;
@@ -829,22 +836,17 @@ h1 {
 
 .info-comentarios {
   resize: none;
-  margin: 5px;
-  min-height: 5em;
+  margin: 0.25rem;
+  min-height: 5rem;
 }
 
 .boton-cancelar [type=reset], .boton-aceptar [type=submit] {
   background-color: rgb(0, 0, 0);
   color: rgb(255, 255, 255);
-  padding: 5px;
+  padding: 0.25rem;
   border-radius: 2px;
-  border: 1px solid rgb(255, 255, 255);
+  border: 2px solid rgb(255, 255, 255);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-}
-
-.boton-aceptar [type=submit]:hover, .boton-cancelar [type=reset]:hover {
-  color: rgba(241, 217, 0, 0.722);
-  background-color: rgb(49, 49, 49);
 }
 
 .lista-ubicacion li {
@@ -923,14 +925,14 @@ h1 {
   text-align: center;
   font-size: 2rem;
   color: rgb(255, 255, 255);
-  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
   text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
 .boton label {
   font-size: 1rem;
   font-weight: bold;
-  margin: 0 20px;
+  margin: 0.25rem 1.25rem;
   border: 3px solid;
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }

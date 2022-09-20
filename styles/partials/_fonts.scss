@@ -8,6 +8,19 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+// titulo destacado
+.titulo-destacado {
+    @extend %titulo-destacado;
+    &:hover {
+        text-shadow:
+        0 0 5px rgb(230, 211, 47),
+        0 0 10px rgb(230, 211, 47),
+        0 0 35px rgb(228, 207, 17),
+        0 0 40px rgb(228, 207, 17);
+    }
+}
+
+
 // texto Bienvenida
 %texto-bienvenida {
     font-style: italic;
