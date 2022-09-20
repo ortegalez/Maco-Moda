@@ -36,16 +36,13 @@
 }
 
 .titulo-interno h2 {
+  display: inline-block;
   background-color: rgb(118, 0, 0);
   border-radius: 0 0.875rem 0.875rem 0;
-  text-align: center;
+  text-align: start;
   font-size: 1.5rem;
-  min-width: 40%;
-  max-width: -webkit-max-content;
-  max-width: -moz-max-content;
-  max-width: max-content;
-  padding-right: 1rem;
-  margin-left: -0.75rem;
+  padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+  margin-left: -1.5rem;
 }
 
 * {
@@ -110,7 +107,7 @@ h1 {
     font-size: 1rem;
   }
   .lista-navbar li a {
-    font-size: 1.25rem;
+    font-size: 1rem;
   }
 }
 .footer {
@@ -418,17 +415,18 @@ h1 {
 .bienvenida-remeras {
   background-image: url("../images/fondos/joven_remera.jpg");
   background-size: cover;
-  background-position: -100%;
+  background-position: 0px 0px;
   height: 50vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 .bienvenida-remeras div {
   margin: 0 1rem;
   letter-spacing: 1px;
+  text-align: end;
 }
 .bienvenida-remeras div h2 {
   color: rgb(0, 0, 0);
@@ -436,10 +434,8 @@ h1 {
 .bienvenida-remeras div h3 {
   color: rgb(0, 0, 0);
 }
-.bienvenida-remeras div h4 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.bienvenida-remeras div p {
+  display: inline-block;
   background-color: rgb(0, 1, 72);
   color: rgba(241, 217, 0, 0.722);
 }
@@ -447,13 +443,13 @@ h1 {
 .bienvenida-buzos {
   background-image: url("../images/fondos/joven-buzo.jpg");
   background-size: cover;
-  background-position: -100%;
+  background-position: 0px 0px;
   height: 50vh;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   justify-content: center;
-  align-items: end;
+  align-items: center;
 }
 .bienvenida-buzos div {
   margin: 0 1rem;
@@ -465,10 +461,8 @@ h1 {
 .bienvenida-buzos div h3 {
   color: rgb(0, 0, 0);
 }
-.bienvenida-buzos div h4 {
-  width: -webkit-max-content;
-  width: -moz-max-content;
-  width: max-content;
+.bienvenida-buzos div p {
+  display: inline-block;
   background-color: rgb(0, 1, 72);
   color: rgba(241, 217, 0, 0.722);
 }
@@ -491,26 +485,28 @@ h1 {
   border-radius: 0.875rem 0.875rem 0 0;
 }
 .card .texto-flotante p {
+  font-size: 0.75rem;
   padding: 0.5rem;
+  color: rgb(255, 255, 255);
   background-color: rgb(9, 182, 9);
   border-radius: 0.875rem 0 0.875rem 0;
   position: absolute;
   top: 0;
   left: 0;
-  color: rgb(255, 255, 255);
   opacity: 1;
 }
 .card .texto-flotante p:hover {
   opacity: 0;
 }
 .card .sticker p {
+  font-size: 0.75rem;
   padding: 0.5rem;
   color: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0 0.875rem;
   background-color: rgb(0, 1, 72);
   position: absolute;
   top: 0;
   right: 0;
-  border-radius: 0 0.875rem 0 0.875rem;
 }
 .card .card-text {
   background-color: rgb(19, 22, 27);
@@ -561,7 +557,7 @@ h1 {
   }
 }
 .bienvenida-remeras div {
-  margin: 0 2rem;
+  margin: 0 1rem;
 }
 .bienvenida-remeras div h2 {
   color: rgb(0, 0, 0);
@@ -612,25 +608,29 @@ h1 {
   }
   .bienvenida-remeras div {
     margin: 0 4rem;
+    text-align: start;
   }
   .bienvenida-remeras div h2 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
   }
   .bienvenida-remeras div h3 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
   }
-  .bienvenida-remeras div h4 {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .bienvenida-remeras div p {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
     background-color: rgb(0, 1, 72);
     color: rgba(241, 217, 0, 0.722);
-    margin-top: 1.5rem;
   }
   .bienvenida-buzos {
     background-image: url("../images/fondos/joven-buzo.jpg");
     background-size: cover;
-    background-position: 60%;
+    background-position: 100% 60%;
     height: 80vh;
     display: flex;
     flex-wrap: wrap;
@@ -640,20 +640,24 @@ h1 {
   }
   .bienvenida-buzos div {
     margin: 0 4rem;
+    text-align: start;
   }
   .bienvenida-buzos div h2 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
   }
   .bienvenida-buzos div h3 {
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
   }
-  .bienvenida-buzos div h4 {
-    width: -webkit-max-content;
-    width: -moz-max-content;
-    width: max-content;
+  .bienvenida-buzos div p {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
     background-color: rgb(0, 1, 72);
     color: rgba(241, 217, 0, 0.722);
-    margin-top: 1.5rem;
   }
   .section-productos {
     margin-top: 0.5rem;

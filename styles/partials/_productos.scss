@@ -1,20 +1,21 @@
 .bienvenida-remeras {
     background-image: url("../images/fondos/joven_remera.jpg");
     background-size: cover;
-    background-position: -100%;
+    background-position: 0px 0px;
     height: 50vh;
-    @include flex (column, center, end);
+    @include flex (column, center, center);
     div {
         margin: 0 1rem;
         letter-spacing: 1px;
+        text-align: end;
         h2 {
             color: $texto-negro;
         }
         h3 {
             color: $texto-negro;
         }
-        h4 {
-            width: max-content;
+        p {
+            display: inline-block;
             background-color: $bg-azul-oscuro;
             color: $texto-amarillo;
         }
@@ -24,9 +25,9 @@
 .bienvenida-buzos {
     background-image: url("../images/fondos/joven-buzo.jpg");
     background-size: cover;
-    background-position: -100%;
+    background-position: 0px 0px;
     height: 50vh;
-    @include flex (column, center, end);
+    @include flex (column, center, center);
     div {
         margin: 0 1rem;
         letter-spacing: 1px;
@@ -36,8 +37,8 @@
         h3 {
             color: $texto-negro;
         }
-        h4 {
-            width: max-content;
+        p {
+            display: inline-block;
             background-color: $bg-azul-oscuro;
             color: $texto-amarillo;
         }
@@ -58,13 +59,14 @@
     border-radius: $border-radius-comun $border-radius-comun 0 0 ;
     .texto-flotante {
         p {
+        font-size: 0.75rem;
         padding: 0.5rem;
+        color: $texto-blanco;
         background-color: $bg-verde;
         border-radius: $border-radius-comun 0 $border-radius-comun 0;
         position: absolute;
         top: 0;
         left: 0;
-        color: $texto-blanco;
         opacity: 1;
             &:hover{
                 opacity: 0;
@@ -73,13 +75,14 @@
     }
     .sticker {
     p {
+        font-size: 0.75rem;
         padding: 0.5rem;
         color: $texto-blanco;
+        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
         background-color: $bg-azul-oscuro;
         position: absolute;
         top: 0;
         right: 0;
-        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
         }
     }
     .card-text {
@@ -139,7 +142,7 @@
 
 .bienvenida-remeras {
     div {
-        margin: 0 2rem;
+        margin: 0 1rem;
         h2 {
             color: $texto-negro;
         }
@@ -189,17 +192,23 @@
         @include flex (column, center, end);
         div {
             margin: 0 4rem;
+            text-align: start;
             h2 {
-                color: $texto-negro;
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 3rem;
             }
             h3 {
-                color: $texto-negro;
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 2.5rem;
             }
-            h4 {
-                width: max-content;
+            p {
+                display: inline-block;
+                font-size: 2rem;
+                margin-top: 1rem;
                 background-color: $bg-azul-oscuro;
                 color: $texto-amarillo;
-                margin-top: 1.5rem;
             }
         }
     }
@@ -207,22 +216,28 @@
     .bienvenida-buzos {
         background-image: url("../images/fondos/joven-buzo.jpg");
         background-size: cover;
-        background-position: 60%;
+        background-position: 100% 60%;
         height: 80vh;
         @include flex (column, center, start);
         div {
             margin: 0 4rem;
+            text-align: start;
             h2 {
-                color: $texto-negro;
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 3rem;
             }
             h3 {
-                color: $texto-negro;
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 2.5rem;
             }
-            h4 {
-                width: max-content;
+            p {
+                display: inline-block;
+                font-size: 2rem;
+                margin-top: 1rem;
                 background-color: $bg-azul-oscuro;
                 color: $texto-amarillo;
-                margin-top: 1.5rem;
             }
         }
     }

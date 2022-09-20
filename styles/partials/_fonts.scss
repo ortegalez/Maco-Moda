@@ -1,5 +1,6 @@
 $color-fuente-secundaria: rgb(255, 255, 255);
 $font-size-fuente-secuendaria: 14px;
+$text-shadow-comun: 2px 2px 2px rgb(0, 0, 0,0.7);
 
 // titlo de bienvenida
 %titulo-brillante {
@@ -57,12 +58,11 @@ $estilo-h1:(
 
 // titulo interno
 %titulo-interno {
+    display: inline-block;
     background-color: $bg-bordo;    
     border-radius: 0 $border-radius-comun $border-radius-comun 0;
-    text-align: center;
+    text-align: start;
     font-size: 1.5rem;
-    min-width: 40%;
-    max-width: max-content;
-    padding-right: 1rem;
-    margin-left:-0.75rem;
+    padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+    margin-left:-1.5rem;
 }
