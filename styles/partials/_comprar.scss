@@ -17,33 +17,24 @@
     @include flex (row, space-around, center);
     border: $border-negro;
     border-radius: $border-radius-comun;
-    margin: 0.25rem 0;
+    margin: 0.5rem 0;
     background-color: $bg-blanco;
     overflow: hidden;
     div {
-        @include flex (row, space-around, center);
+        @include flex (row, center, center);
+        background-color: $bg-blanco;
         img {
             width: 3rem;
-            border: 1px solid rgb(0, 0, 0);
-            border-radius: $border-radius-comun;
-            background: $bg-blanco;
+            position: relative;
         }
         p {
-            margin-top: 0.80rem;
-            padding-left: 0.75rem;
             color: $texto-negro;
+            padding: 0.75rem 0.75rem 0.25rem 0.75rem;
             font-size: 1.25rem;
-            &:hover {
-                color:$texto-blanco;
-            }
         }
         a {
             text-decoration-line: none;
             color: $texto-negro;
-            &:hover {
-                color:$texto-amarillo;
-                font-weight: bold;
-            }
         }
     }
     div:nth-child(1) {
@@ -55,8 +46,15 @@
         @include flex (row, start, center);
         background: $bg-blanco;
         border-radius: 0 $border-radius-comun $border-radius-comun 0;
-        &:hover {
-            background-color: $bg-card;
+        &:hover{
+            background-color: $bg-oscuro-trasparente;
+        }
+        &:hover p {
+            color:$texto-blanco;
+        }
+        &:hover a{
+            color:$texto-amarillo;
+            font-weight: bold;
         }
     }
 }
@@ -86,18 +84,9 @@
 
     .card-comprar {
         div {
-            @include flex (row, space-around, center);
-            img {
-                width: 3rem;
-                border: 1px solid rgb(0, 0, 0);
-                border-radius: $border-radius-comun;
-                background: $bg-blanco;
-            }
             p {
-                margin-top: 0.80rem;
-                padding-left: 0.75rem;
-                color: $texto-negro;
                 font-size: 1rem;
+                padding: 1rem 1rem 0.25rem 1rem;
             }
         }
         div:nth-child(1) {

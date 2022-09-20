@@ -711,7 +711,7 @@ h1 {
   align-items: center;
   border: 2px solid rgb(0, 0, 0);
   border-radius: 0.875rem;
-  margin: 0.25rem 0;
+  margin: 0.5rem 0;
   background-color: rgb(255, 255, 255);
   overflow: hidden;
 }
@@ -719,32 +719,23 @@ h1 {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
+  background-color: rgb(255, 255, 255);
 }
 .card-comprar div img {
   width: 3rem;
-  border: 1px solid rgb(0, 0, 0);
-  border-radius: 0.875rem;
-  background: rgb(255, 255, 255);
+  position: relative;
 }
 .card-comprar div p {
-  margin-top: 0.8rem;
-  padding-left: 0.75rem;
   color: rgb(0, 0, 0);
+  padding: 0.75rem 0.75rem 0.25rem 0.75rem;
   font-size: 1.25rem;
-}
-.card-comprar div p:hover {
-  color: rgb(255, 255, 255);
 }
 .card-comprar div a {
   -webkit-text-decoration-line: none;
           text-decoration-line: none;
   color: rgb(0, 0, 0);
-}
-.card-comprar div a:hover {
-  color: rgba(241, 217, 0, 0.722);
-  font-weight: bold;
 }
 .card-comprar div:nth-child(1) {
   width: 20%;
@@ -765,7 +756,14 @@ h1 {
   border-radius: 0 0.875rem 0.875rem 0;
 }
 .card-comprar div:nth-child(2):hover {
-  background-color: rgb(19, 22, 27);
+  background-color: rgba(15, 14, 14, 0.7);
+}
+.card-comprar div:nth-child(2):hover p {
+  color: rgb(255, 255, 255);
+}
+.card-comprar div:nth-child(2):hover a {
+  color: rgba(241, 217, 0, 0.722);
+  font-weight: bold;
 }
 
 /* Fin Diseno Tablet */
@@ -777,24 +775,9 @@ h1 {
     background-position: 50% 50%;
     height: 50vh;
   }
-  .card-comprar div {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .card-comprar div img {
-    width: 3rem;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 0.875rem;
-    background: rgb(255, 255, 255);
-  }
   .card-comprar div p {
-    margin-top: 0.8rem;
-    padding-left: 0.75rem;
-    color: rgb(0, 0, 0);
     font-size: 1rem;
+    padding: 1rem 1rem 0.25rem 1rem;
   }
   .card-comprar div:nth-child(1) {
     width: 5%;
