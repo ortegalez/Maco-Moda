@@ -1,8 +1,24 @@
-.card-text p {
-  color: rgb(241, 217, 0);
-  font-size: 1rem;
+.card-modelo div p, .bienvenida div h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
   font-weight: bold;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
+}
+
+.fondo-talles h2, .fondo-secundario h2, .imagen-fondo h1 {
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.texto-talles p, .card .card-text p {
+  color: rgb(241, 217, 0);
+  font-size: 1.25rem;
   text-align: center;
+  margin: 0;
+  padding: 0;
 }
 
 .titulo-destacado {
@@ -15,6 +31,17 @@
   background-color: rgb(49, 49, 49);
   border: 2px solid rgb(255, 255, 255);
   width: 100%;
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.titulo-interno h2 {
+  background-color: rgb(118, 0, 0);
+  font-size: 1.5rem;
+  border-radius: 0 0.875rem 0.875rem 0;
+  width: 40%;
+  text-align: center;
+  margin-left: -1rem;
 }
 
 * {
@@ -28,7 +55,7 @@
 }
 
 body {
-  color: white;
+  color: rgb(255, 255, 255);
   background: rgb(49, 49, 49);
   background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
 }
@@ -80,205 +107,6 @@ h1 {
   }
   .lista-navbar li a {
     font-size: 1.25rem;
-  }
-}
-.imagen-fondo {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin: 1rem 0;
-  background-image: url("../images/fondos/maco-urbano.jpg");
-  background-size: cover;
-  border-radius: 0.875rem;
-  height: 50vh;
-  width: 100%;
-}
-.imagen-fondo p {
-  padding: 3rem;
-  text-align: center;
-  border-radius: 0.875rem;
-  font-style: italic;
-  font-size: 3rem;
-  font-weight: bold;
-}
-
-.bienvenida {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/bahia-noche.jpg");
-  background-color: rgba(0, 255, 255, 0.05);
-  background-size: cover;
-  border: 3px solid rgb(255, 255, 255);
-  border-radius: 0.875rem;
-  padding: 0;
-  max-width: 95%;
-}
-.bienvenida div {
-  width: 50%;
-}
-.bienvenida div p {
-  margin-top: 1.5rem;
-  font-weight: bold;
-  text-align: center;
-  font-size: 2rem;
-  font-family: "Roboto", sans-serif;
-  font-family: "Ubuntu", sans-serif;
-  margin-bottom: 0;
-}
-.bienvenida div img {
-  visibility: hidden;
-  width: 0%;
-  border-radius: 0 0.875rem 0.875rem 0;
-}
-
-.subtitulo-enlace {
-  display: inline-block;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 0.5em;
-}
-.subtitulo-enlace a {
-  display: block;
-  border: 1px solid rgb(0, 0, 0);
-  color: rgb(255, 255, 255);
-  background-color: rgb(119, 119, 141);
-  border-radius: 0.875rem;
-  font-size: 1rem;
-  padding: 0.75rem;
-  -webkit-text-decoration-line: none;
-          text-decoration-line: none;
-  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-  transition: 0.5s ease;
-}
-.subtitulo-enlace a:hover {
-  background-color: rgb(49, 49, 49);
-  color: rgb(230, 211, 47);
-}
-
-.beneficios-texto {
-  background-color: rgb(49, 49, 49);
-  margin-top: 20px;
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.beneficios-texto div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  justify-content: center;
-  width: 24rem;
-  height: 10rem;
-}
-.beneficios-texto div p {
-  font-size: 1.25rem;
-  text-align: center;
-  text-align: left;
-}
-
-.beneficios-iconos {
-  background-color: rgb(49, 49, 49);
-  color: rgb(255, 255, 255);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-.beneficios-iconos div {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
-  justify-content: center;
-  width: 24rem;
-  height: 10rem;
-}
-.beneficios-iconos div img {
-  width: 6rem;
-  height: 6rem;
-  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* Fin Diseno Tablet */
-/* Diseno Desktop */
-@media screen and (min-width: 1200px) {
-  body {
-    background: rgb(49, 49, 49);
-    background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
-  }
-  .imagen-fondo {
-    height: 100vh;
-  }
-  .imagen-fondo p {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
-    background-color: rgba(0, 255, 255, 0.05);
-  }
-  .bienvenida {
-    display: flex;
-    flex-flow: row wrap;
-    width: 100%;
-  }
-  .bienvenida div p {
-    font-size: 1.5rem;
-    margin-top: 0;
-  }
-  .bienvenida div img {
-    visibility: visible;
-    width: 100%;
-    border-radius: 0 0.875rem 0.875rem 0;
-  }
-  .subtitulo-enlace a {
-    font-size: 1rem;
-  }
-  .beneficios-texto {
-    background-color: rgb(49, 49, 49);
-    margin-top: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .beneficios-texto div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: start;
-    width: 24rem;
-    height: 5rem;
-  }
-  .beneficios-texto div p {
-    font-size: 1.25rem;
-    text-align: center;
-  }
-  .beneficios-iconos {
-    background-color: rgb(49, 49, 49);
-    margin-top: 20px;
-    color: rgb(255, 255, 255);
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-  }
-  .beneficios-iconos div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 18rem;
-    height: 6rem;
-  }
-  .beneficios-iconos div img {
-    width: 6rem;
-    height: 6rem;
-    text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   }
 }
 .footer {
@@ -386,14 +214,567 @@ h1 {
     padding: 0;
   }
 }
+.imagen-fondo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/fondos/maco-urbano.jpg");
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 50vh;
+  width: 100%;
+  margin: 1rem 0;
+}
+.imagen-fondo h1 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://la.network/wp-content/uploads/2018/02/BUENOS-AIRES-OBELISCO-NOCHE-328282751.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
+  padding: 0;
+  max-width: 95%;
+}
+.bienvenida div {
+  width: 90%;
+}
+.bienvenida div h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.bienvenida div img {
+  visibility: hidden;
+  width: 0%;
+  border-radius: 0 0.875rem 0.875rem 0;
+}
+
+.subtitulo-enlace {
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.subtitulo-enlace a {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 119, 141);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  padding: 0.75rem;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  transition: 0.5s ease;
+}
+.subtitulo-enlace a:hover {
+  background-color: rgb(49, 49, 49);
+  color: rgb(241, 217, 0);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.beneficios {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-texto {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-texto div {
+  height: 5rem;
+}
+.beneficios .beneficios-texto div p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+.beneficios .beneficios-iconos {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-iconos div {
+  height: 5rem;
+}
+.beneficios .beneficios-iconos div img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  body {
+    background: rgb(49, 49, 49);
+    background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
+  }
+  .imagen-fondo {
+    height: 100vh;
+  }
+  .imagen-fondo p {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    background-color: rgba(0, 255, 255, 0.05);
+  }
+  .bienvenida {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+  .bienvenida div {
+    width: 50%;
+  }
+  .bienvenida div h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+  }
+  .bienvenida div img {
+    visibility: visible;
+    width: 100%;
+    border-radius: 0 0.875rem 0.875rem 0;
+  }
+  .subtitulo-enlace a {
+    font-size: 1rem;
+  }
+  .beneficios {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .beneficios p {
+    display: inline-block;
+    width: 100%;
+  }
+  .beneficios .beneficios-texto {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .beneficios .beneficios-texto div {
+    width: 24rem;
+  }
+  .beneficios .beneficios-texto div p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+  }
+  .beneficios .beneficios-iconos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .beneficios .beneficios-iconos div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+    width: 24rem;
+  }
+  .beneficios .beneficios-iconos div img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.bienvenida-remeras, .bienvenida-buzos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.bienvenida-remeras div, .bienvenida-buzos div {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+  text-align: center;
+}
+.bienvenida-remeras div img, .bienvenida-buzos div img {
+  width: 100%;
+}
+.bienvenida-remeras div h2, .bienvenida-buzos div h2 {
+  padding-top: 0.5rem;
+}
+.bienvenida-remeras div h4, .bienvenida-buzos div h4 {
+  color: rgb(241, 217, 0);
+}
+
+.section-productos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 80%;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+.card .texto-flotante p {
+  padding: 0.5rem;
+  background-color: rgb(9, 182, 9);
+  border-radius: 0.875rem 0 0.875rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: rgb(255, 255, 255);
+  opacity: 1;
+}
+.card .texto-flotante p:hover {
+  opacity: 0;
+}
+.card .sticker p {
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(0, 1, 72);
+  position: absolute;
+  top: 0;
+  right: 0;
+  border-radius: 0 0.875rem 0 0.875rem;
+}
+.card .card-text {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card .card-text p {
+  margin-top: 0.5rem;
+}
+.card .card-text p:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+.card .card-text p:nth-child(2) {
+  color: rgb(241, 217, 0);
+  font-size: 1.5rem;
+}
+.card .card-text p:nth-child(3) {
+  font-size: 0.825rem;
+  line-height: 1.85rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(241, 217, 0);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card img {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+
+.card-modelo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  padding: 0;
+  width: 95%;
+}
+.card-modelo div p {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.card-modelo div img {
+  visibility: visible;
+  width: 100%;
+  border-radius: 0.875rem 0 0 0.875rem;
+}
+
+.titulo-interno {
+  margin-top: 0.5rem;
+}
+/* Diseno Tablet */
+@media screen and (min-width: 600px) {
+  .section-productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card {
+    border-radius: 0.875rem;
+    width: 40%;
+    margin: 0.5rem;
+    overflow: hidden;
+  }
+}
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .bienvenida-remeras, .bienvenida-buzos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+  }
+  .bienvenida-remeras div, .bienvenida-buzos div {
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven_remera.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-position: cover;
+  }
+  .bienvenida-remeras div img, .bienvenida-buzos div img {
+    width: 100%;
+  }
+  .bienvenida-buzos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+  .bienvenida-buzos div {
+    height: 100%;
+    width: 50%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven-buzo.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-position: cover;
+  }
+  .bienvenida-buzos div img {
+    width: 100%;
+  }
+  .section-productos {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .section-productos .card {
+    width: 22.5%;
+  }
+  .card .card-text p:nth-child(1) {
+    font-size: 1rem;
+  }
+  .card .card-text p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .card .card-text p:nth-child(3) {
+    font-size: 0.825rem;
+    line-height: 1.85rem;
+    color: rgb(119, 119, 141);
+  }
+  .card:hover {
+    margin-top: 0;
+  }
+}
+.fondo-secundario {
+  background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-secundario h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.card-comprar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+  margin: 0.25rem 0;
+  background-color: rgb(19, 22, 27);
+  overflow: hidden;
+}
+.card-comprar div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.card-comprar div img {
+  width: 3rem;
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+  background: rgb(255, 255, 255);
+}
+.card-comprar div p {
+  margin-top: 0.8rem;
+  padding-left: 0.75rem;
+  color: rgb(0, 0, 0);
+  font-size: 1.25rem;
+}
+.card-comprar div p:hover {
+  color: rgb(255, 255, 255);
+}
+.card-comprar div a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: rgb(0, 0, 0);
+}
+.card-comprar div a:hover {
+  color: rgb(241, 217, 0);
+  font-weight: bold;
+}
+.card-comprar div:nth-child(1) {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-comprar div:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0.875rem 0;
+}
+.card-comprar div:nth-child(2):hover {
+  background-color: rgb(19, 22, 27);
+}
+
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
+  }
+  .card-comprar div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card-comprar div img {
+    width: 3rem;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 0.875rem;
+    background: rgb(255, 255, 255);
+  }
+  .card-comprar div p {
+    margin-top: 0.8rem;
+    padding-left: 0.75rem;
+    color: rgb(0, 0, 0);
+    font-size: 1rem;
+  }
+  .card-comprar div:nth-child(1) {
+    width: 5%;
+  }
+  .card-comprar div:nth-child(2) {
+    width: 95%;
+  }
+}
+.fondo-talles {
+  background-image: url("/images/fondos/camisetas_colgadas.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-talles h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.texto-talles {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.texto-talles p {
+  font-size: 1rem;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
 .formulario {
   color: rgb(255, 255, 255);
   background-color: rgba(86, 86, 89, 0.5);
-  border: 1px solid black;
+  border: 1px solid rgb(0, 0, 0);
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
   border-radius: 0.875rem;
-  margin: 0.5em 0 0.5em 0;
-  padding: 0.5em;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem;
 }
 
 .info-comentarios {
@@ -412,142 +793,121 @@ h1 {
 }
 
 .boton-aceptar [type=submit]:hover, .boton-cancelar [type=reset]:hover {
-  color: rgb(255, 208, 0);
+  color: rgb(241, 217, 0);
   background-color: rgb(49, 49, 49);
-}
-
-.ubicacion {
-  margin-right: 10px;
-  padding: 5px 5px 5px 5px;
-  display: flex;
-  flex-flow: column wrap;
-  align-items: center;
 }
 
 .lista-ubicacion li {
-  list-style: none;
-  font-size: 14px;
-  margin-top: 10px;
-  color: rgb(255, 255, 255);
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  font-size: 1rem;
+  margin-top: 0.5rem;
+  color: rgb(255, 255, 255);
+}
+
+.mapa {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
   align-items: center;
 }
-
-.ubicacion iframe {
+.mapa iframe {
   box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
   border-radius: 0.875rem;
+  width: 90%;
 }
 
-.ubicacion img {
-  width: 1.5em;
-  padding-right: 0.5em;
-}
-
-.icono-ubicacion {
+.ubicacion {
   display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ubicacion .ubicacion-iconos {
+  width: 25%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.ubicacion .ubicacion-iconos div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: 2rem;
+  margin-top: 0.625rem;
+}
+.ubicacion .ubicacion-iconos div img {
+  width: 2rem;
+}
+.ubicacion .ubicacion-texto {
+  width: 75%;
+}
+.ubicacion .ubicacion-texto div {
+  display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: start;
   align-items: center;
-  padding: 0 0.5em 0 0;
+  height: 2rem;
+  margin-top: 0.625rem;
 }
-
-.icono-ubicacion p {
-  margin-top: 1em;
-  font-size: 14px;
+.ubicacion .ubicacion-texto div p {
+  text-align: left;
+  font-size: 1rem;
+  margin: 0.25rem 0 0 0.5rem;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
-
-.icono-ubicacion img {
-  width: 2.5em;
+.ubicacion .agradecimiento {
+  width: 100%;
+  margin-top: 1rem;
 }
-
-.agradecimiento {
+.ubicacion .agradecimiento p {
   text-align: center;
-  font-size: 3em;
+  font-size: 2rem;
   color: rgb(255, 255, 255);
+  text-shadow: 1px 1px 2px rgb(0, 0, 0);
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
-.agradecimiento P {
-  text-shadow: 1px 1px 2px black;
-}
-
-/* Fin Diseno Tablet */
-/* Diseno Desktop */
-.section-productos {
-  display: flex;
-  flex-flow: column wrap;
-  justify-content: space-around;
-  align-items: center;
-  color: rgb(0, 0, 0);
-}
-
-.card {
-  border-radius: 0.875rem;
-  width: 25rem;
-  margin: 0.5rem;
-}
-.card img {
-  width: auto;
-  padding: 0.25rem;
-  border-radius: 1rem;
-}
-
-.card-text {
-  background: rgb(77, 78, 83);
-  background: radial-gradient(circle, rgb(77, 78, 83) 0%, rgb(1, 2, 8) 100%);
-  border-radius: 0 0 0.875rem 0.875rem;
-}
-.card-text p {
-  margin-top: 0.5rem;
-}
-
-/* Diseno Tablet */
-/* Fin Diseno Tablet */
-/* Diseno Desktop */
-@media screen and (min-width: 1200px) {
-  .section-productos {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    align-items: center;
-    background: none;
-  }
-  .section-productos .card {
-    width: 18em;
-  }
-}
-.lista-como-comprar {
-  padding-right: 0;
-  padding-left: 0.5em;
-}
-.lista-como-comprar li {
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-  font-size: 24px;
-  padding: 10px;
-}
-.lista-como-comprar li:hover {
-  background-color: rgb(49, 49, 49);
-  color: rgb(255, 255, 255);
+.boton label {
+  font-size: 1rem;
   font-weight: bold;
-}
-.lista-como-comprar li a {
-  text-decoration: none;
-  color: rgb(0, 0, 0);
-  font-weight: 500;
-}
-.lista-como-comprar li a:hover {
-  color: rgb(255, 208, 0);
-  font-weight: 600;
+  margin: 0 20px;
+  border: 3px solid;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Fin Diseno Tablet */
 /* Diseno Desktop */
 @media screen and (min-width: 1200px) {
-  .lista-como-comprar {
-    margin-bottom: 1em;
+  .ubicacion .ubicacion-iconos {
+    width: 10%;
   }
-  .lista-como-comprar li {
-    font-size: 14px;
-    padding: 10px;
+  .ubicacion .ubicacion-iconos div {
+    height: 2rem;
+  }
+  .ubicacion .ubicacion-iconos div img {
+    width: 2rem;
+  }
+  .ubicacion .ubicacion-texto {
+    width: 40%;
+  }
+  .ubicacion .ubicacion-texto div p {
+    font-size: 1rem;
+  }
+  .ubicacion .agradecimiento {
+    width: 50%;
+    margin-top: nome;
+  }
+  .ubicacion .agradecimiento p {
+    font-size: 2rem;
   }
 }/*# sourceMappingURL=styles.css.map */

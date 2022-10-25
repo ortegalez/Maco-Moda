@@ -1,11 +1,11 @@
 .formulario {
-    color: rgb(255,255,255);
+    color: $texto-blanco;
     background-color:rgba(86, 86, 89, 0.5);
-    border: 1px solid black;
+    border: 1px solid $bg-negro;
     box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
     border-radius: $border-radius-comun;
-    margin: 0.5em 0 0.5em 0;
-    padding: 0.5em;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem;
     }
 
 .info-comentarios { 
@@ -15,8 +15,8 @@
 }
 
 .boton-cancelar [type="reset"], .boton-aceptar [type="submit"] {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
+    background-color: $bg-negro;
+    color: $texto-blanco;
     padding: 5px;
     border-radius: 2px;
     border: 1px solid rgb(255, 255, 255);
@@ -25,76 +25,83 @@
 
 .boton-aceptar [type="submit"], .boton-cancelar [type="reset"] {
     &:hover {
-    color: rgb(255, 208, 0); 
-    background-color: rgb(49, 49, 49);
+    color: $texto-amarillo; 
+    background-color: $bg-gris-oscuro;
     }
 }
 
-.ubicacion {
-    margin-right: 10px;
-    padding: 5px 5px 5px 5px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
 
 .lista-ubicacion {
     li {
+    @include flex (column, center, center);
     list-style: none;
-    font-size: 14px;
-    margin-top: 10px;
-    color: rgb(255,255,255);
-    display:flex;
-    align-items: center ;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: $texto-blanco;
+
     }
 }
 
-.ubicacion iframe {
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
-    border-radius: $border-radius-comun;
+.mapa {
+    @include flex (row, center, center);
+    iframe {
+        box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
+        border-radius: $border-radius-comun;
+        width: 90%;
+        }
+    }
 
-}
 
 .ubicacion {
-    img {
-    width: 1.5em;
-    padding-right: 0.5em;
+    @include flex (row, center, center);
+    .ubicacion-iconos {
+        width: 25%;
+        height: max-content;
+        div {
+            @include flex (row, end, center);
+            height: 2rem;
+            margin-top: 0.625rem;
+            img { 
+                width: 2rem;
+            }
+        } 
+    }
+    .ubicacion-texto {
+        width: 75%;
+        div {
+            @include flex (row, start, center);
+            height: 2rem;
+            margin-top: 0.625rem;
+            p {
+                text-align: left;
+                font-size: 1rem;
+                margin: 0.25rem 0 0 0.5rem;
+                text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    } 
+    .agradecimiento {
+        width: 100%;
+        margin-top: 1rem;
+        p {
+        text-align: center;
+        font-size: 2rem;
+        color: $texto-blanco; 
+        text-shadow: 1px 1px 2px $bg-negro;
+        text-shadow: $texto-brillante;
+        }
+    }  
+}
+
+.boton {
+    label {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0 20px;
+        border: 3px solid;
+        box-shadow: $box-shadow-oscuro;
     }
 }
-
-.icono-ubicacion {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    padding: 0 0.5em 0 0;
-}
-
-.icono-ubicacion {
-    p {
-    margin-top: 1em ;
-    font-size: 14px;
-    }
-}
-
-.icono-ubicacion {
-    img {
-    width: 2.5em;
-    }
-}
-
-.agradecimiento {
-    text-align: center;
-    font-size: 3em;
-    color: rgb(255, 255, 255); 
-}
-
-.agradecimiento {
-    P {
-    text-shadow: 1px 1px 2px black
-    }
-}
-
 
 
 @media screen and (min-width: 600px) {
@@ -110,4 +117,35 @@
 /* Diseno Desktop */
 
 @media screen and (min-width: 1200px) {
+
+    .ubicacion {
+        .ubicacion-iconos {
+            width: 10%;
+            div {
+                height: 2rem;
+
+                img {
+                    width: 2rem;
+                }
+            } 
+        }
+        .ubicacion-texto {
+            width: 40%;
+            div {
+                p {
+                    font-size: 1rem;
+                }
+            }
+        } 
+        .agradecimiento {
+            width: 50%;
+            margin-top: nome;
+            p {
+            font-size: 2rem;
+            }
+        }  
+    }
+    
+
 }
+

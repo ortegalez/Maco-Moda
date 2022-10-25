@@ -1,38 +1,138 @@
+.bienvenida-remeras, .bienvenida-buzos {
+    @include flex (column, center, center);
+    width: 100%;
+    div {
+        width: 100%;
+        @include flex (column, center, center);
+        font-size: 1.5rem;
+        letter-spacing: 1px;
+        margin-bottom: 0.5rem;
+        text-align: center;
+        img {
+            width: 100%;
+        }
+        h2{
+            padding-top:0.5rem; 
+        }
+        h4{
+            color: $texto-amarillo;
+        }
+    }
+}
+
+
 .section-productos {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(0, 0, 0);
+    @include flex (column, space-around, center); 
 }
 
 .card {
-    border-radius: $border-radius-comun;
-    width: 25rem;
+    width: 80%;
     margin: 0.5rem;
-    img {
-        width: auto;
-        padding: 0.25rem;
-        border-radius: 1rem ;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    padding: 0.25rem;
+    border-radius: $border-radius-comun $border-radius-comun 0 0 ;
+    .texto-flotante {
+        p {
+        padding: 0.5rem;
+        background-color: $bg-verde;
+        border-radius: $border-radius-comun 0 $border-radius-comun 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        color: $texto-blanco;
+        opacity: 1;
+            &:hover{
+                opacity: 0;
+            }
+        }
     }
-
-}
-
-.card-text {
-    background: rgb(77,78,83);
-    background: radial-gradient(circle, rgba(77,78,83,1) 0%, rgba(1,2,8,1) 100%);
-    border-radius: 0  0 $border-radius-comun $border-radius-comun;
-
+    .sticker {
     p {
-        @extend %text-card;
-        margin-top: 0.5rem;
+        padding: 0.5rem;
+        color: $texto-blanco;
+        background-color: $bg-azul-oscuro;
+        position: absolute;
+        top: 0;
+        right: 0;
+        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
+        }
+    }
+    .card-text {
+        background-color: $bg-card;
+        border-radius: 0 0 $border-radius-comun $border-radius-comun;
+        p {
+            @extend %text-card;
+            margin-top: 0.5rem;
+        }
+        p:nth-child(1) {
+            color: $texto-blanco;
+            font-size: 1rem;
+          }
+        p:nth-child(2) {
+            color: $texto-amarillo;
+            font-size: 1.5rem;
+          }
+        p:nth-child(3) {
+            font-size: 0.825rem;
+            line-height: 1.850rem;
+            color: $texto-negro;
+            background-color: $bg-amarillo;
+            border-radius: 0 0 $border-radius-comun $border-radius-comun;
+        }
+    }
+    img {
+        background-color: $bg-blanco;
+        overflow: hidden;
+        padding: 0.25rem;
+        border-radius: $border-radius-comun $border-radius-comun 0 0 ;
     }
 }
+
+.card-modelo {
+    @include flex ($direction:column, $justify:center, $align:center); 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/modelo remera.jpg");
+    background-color: rgba(0, 255, 255, 0.05);
+    background-size: cover;
+    padding: 0;
+    width: 95%;
+    div {
+        p {
+            @extend %titulo-brillante;
+            font-size: 1.5rem;
+            text-align: center;    
+        }
+        img {
+            visibility: visible;
+            width: 100%;
+            border-radius: 0.875rem 0 0 0.875rem;
+        }
+    }
+}
+
+.titulo-interno {
+    margin-top: 0.5rem;
+        h2 {
+        @extend %titulo-interno;
+          }
+    }
+
 
 /* Diseno Tablet */
 
 @media screen and (min-width: 600px) {
     
+    .section-productos {
+        @include flex (row, space-around, center); 
+    }
+
+    .card {
+        border-radius: $border-radius-comun;
+        width: 40%;
+        margin: 0.5rem;
+        overflow: hidden;
+    }
 }
 
 /* Fin Diseno Tablet */
@@ -45,21 +145,69 @@
 
 @media screen and (min-width: 1200px) {
 
-    .section-productos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        background: none;
-          .card {
-        width: 18em;
+    .bienvenida-remeras, .bienvenida-buzos {
+        @include flex (row, center, center);
+        width: 100vw;
+        div {
+            height: 100%;
+            width: 50%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven_remera.jpg");
+            background-color: rgba(0, 255, 255, 0.05);
+            background-position: cover;
+            img {
+                width: 100%;
+            }
+        }
     }
+
+    .bienvenida-buzos {
+        @include flex (row, center, center);
+        div {
+            height: 100%;
+            width: 50%;
+            background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("../images/fondos/joven-buzo.jpg");
+            background-color: rgba(0, 255, 255, 0.05);
+            background-position: cover;
+            img {
+                width: 100%;
+            }
+        }
+    }
+
+    .section-productos {
+        margin-top: 0.5rem;
+        @include flex (row, space-around, center);   
+        .card {
+            width: 22.5%;
+        }
     }
     
-  
-
-
-
-
+    .card {
+        .card-text {
+            p:nth-child(1) {
+                font-size: 1rem;
+              }
+            p:nth-child(2) {
+                font-size: 1.5rem;
+              }
+            p:nth-child(3) {
+                font-size: 0.825rem;
+                line-height: 1.850rem;
+                color: $texto-gris-claro;
+            }
+        }
+        &:hover{
+            margin-top:0;
+        }
+    }
 
 }
+
+
+
+
+
+
+
+
+   
