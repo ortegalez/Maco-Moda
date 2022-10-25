@@ -1,0 +1,126 @@
+.footer {
+    display: flex;
+    justify-content: space-around;
+    background-color:$bg-footer;
+}
+
+.div-navegacion {  
+    display: inline-block;
+}
+
+.div-redes {
+    ul {
+    @include flex (row, space-around, center); 
+    padding-left: 0;
+    margin-top: 1rem;    
+    }
+}
+
+.div-redes { 
+     ul {
+        li {
+            display: inline-block;
+            padding: 0.5rem;
+        }
+    }
+}
+
+// .div-medios {
+//     display:none;
+// }
+
+.subtitulos-footer {
+    color: $color-subtitulo-footer;
+    margin-top: 0.5rem;
+    margin-bottom: 0;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.lista-secudaria {
+    display: inline-block;
+    margin-top: 0.25rem;
+    list-style: none;
+    padding-left: 0;
+    li {
+        a {
+        font-weight: bold;
+        color: $color-lista-secundaria;
+        text-decoration-line: none;
+        font-size: 1.25rem;
+            &:hover {
+                text-shadow: $texto-brillante;
+            }
+        }
+        img {
+            width: 5rem; 
+        }
+    }
+}
+
+.icono {
+    width: 3rem; 
+    height: 3rem;
+    border: 1px solid rgb(255, 255, 255);
+    background-color: $bg-blanco;
+    border-radius: 0.5rem;
+}
+
+.copyright {
+    p {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+}
+
+.div-medios {
+    display:none;
+}
+
+
+@media screen and (min-width: 1200px) {
+
+    .subtitulos-footer {
+        font-size: 1rem;
+    }
+
+    .lista-secudaria {
+        li {
+            a {
+                font-size: 1rem;
+            }
+        }
+    }
+
+    .div-redes {
+        ul {
+            width: 200px;
+            padding: 0;
+            margin-top: 0;
+            }
+        }
+
+    .div-medios {
+        display: inline-block;
+
+    }
+
+    .icono {
+        width: 2rem;
+        height: 2rem;
+        display: inline-block;
+        margin: 0.5rem;
+        &:hover {
+            width: 2.2rem; 
+            height: 2.2rem;
+            box-shadow: $box-shadow-oscuro;
+        }
+    }
+        
+    .copyright {
+        p {
+            font-size: 1rem;
+            padding: 0;
+        }
+    }
+}

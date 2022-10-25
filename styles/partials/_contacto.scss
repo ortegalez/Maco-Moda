@@ -1,0 +1,139 @@
+.formulario {
+    color: $texto-blanco;
+    background-color: $bg-gris-oscuro;
+    border: $border-negro;
+    box-shadow: $box-shadow-oscuro;
+    border-radius: $border-radius-comun;
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem;
+    }
+
+.info-comentarios { 
+    resize: none;
+    margin: 0.25rem;
+    min-height: 5rem;
+}
+
+.boton-cancelar [type="reset"], .boton-aceptar [type="submit"] {
+    background-color: $bg-negro;
+    color: $texto-blanco;
+    padding: 0.25rem;
+    border-radius: 2px;
+    border: $border-blanco;
+    box-shadow: $box-shadow-oscuro;
+    } 
+
+.lista-ubicacion {
+    li {
+    @include flex (column, center, center);
+    list-style: none;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    color: $texto-blanco;
+    }
+}
+
+.mapa {
+    @include flex (row, center, center);
+    iframe {
+        box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
+        border-radius: $border-radius-comun;
+        width: 90%;
+        }
+    }
+
+.ubicacion {
+    @include flex (row, center, center);
+    .ubicacion-iconos {
+        width: 25%;
+        height: max-content;
+        div {
+            @include flex (row, end, center);
+            height: 2rem;
+            margin-top: 0.625rem;
+            img { 
+                width: 2rem;
+            }
+        } 
+    }
+    .ubicacion-texto {
+        width: 75%;
+        div {
+            @include flex (row, start, center);
+            height: 2rem;
+            margin-top: 0.625rem;
+            p {
+                text-align: left;
+                font-size: 1rem;
+                margin: 0.25rem 0 0 0.5rem;
+                text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+            }
+        }
+    } 
+    .agradecimiento {
+        width: 100%;
+        margin-top: 1rem;
+        p {
+        text-align: center;
+        font-size: 2rem;
+        color: $texto-blanco; 
+        text-shadow: $text-shadow-comun;
+        text-shadow: $texto-brillante;
+        }
+    }  
+}
+
+.boton {
+    label {
+        font-size: 1rem;
+        font-weight: bold;
+        margin: 0.25rem 1.25rem;
+        border: 3px solid;
+        box-shadow: $box-shadow-oscuro;
+    }
+}
+
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
+
+
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .ubicacion {
+        margin-top: 1rem;
+        .ubicacion-iconos {
+            width: 10%;
+            div {
+                height: 2rem;
+                img {
+                    width: 2rem;
+                }
+            } 
+        }
+        .ubicacion-texto {
+            width: 40%;
+            div {
+                p {
+                    font-size: 1rem;
+                }
+            }
+        } 
+        .agradecimiento {
+            width: 50%;
+            margin-top: nome;
+            p {
+            font-size: 2rem;
+            }
+        }  
+    }
+}
+

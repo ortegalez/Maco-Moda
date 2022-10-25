@@ -1,0 +1,61 @@
+.header {
+    background-color: $bg-negro;
+    box-shadow: $box-shadow-oscuro;
+} 
+
+.logo-principal {
+    max-height: 4rem;
+}
+
+.lista-navbar {
+    li {
+    min-width: max-content;
+    text-align: center;
+    margin: 0 0.25rem;
+    padding: 0 0.25rem;
+    a {
+        color: $color-navbar;
+        font-size: 1.25rem;
+        border: $border-negro;
+        border-radius: $border-radius-comun;
+        &:hover {
+            color: $texto-amarillo;
+            text-shadow:$texto-brillante;
+            border: $border-blanco;
+            border-radius: $border-radius-comun;
+            }
+        }
+    }
+}
+
+.hamburguesa {
+    border: 2px solid rgb(101, 101, 105);
+}
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
+
+
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .texto-lista-navbar {         
+        font-size: 1rem;
+    } 
+    
+    .lista-navbar {
+    li {
+        a {
+            font-size: 1rem;
+            }
+        }
+    }
+    
+}

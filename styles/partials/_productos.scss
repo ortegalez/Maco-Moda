@@ -1,0 +1,287 @@
+.bienvenida-remeras {
+    background-image: url("../images/fondos/joven_remera.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    height: 50vh;
+    @include flex (column, center, center);
+    div {
+        margin: 0 1rem;
+        letter-spacing: 1px;
+        text-align: end;
+        h2 {
+            color: $texto-negro;
+        }
+        h3 {
+            color: $texto-blanco;
+        }
+        p {
+            display: inline-block;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+        }
+    }
+}
+
+.bienvenida-buzos {
+    background-image: url("../images/fondos/joven-buzo.jpg");
+    background-size: cover;
+    background-position: 0px 0px;
+    height: 50vh;
+    @include flex (column, center, center);
+    div {
+        margin: 0 1rem;
+        letter-spacing: 1px;
+        h2 {
+            color: $texto-negro;
+        }
+        h3 {
+            color: $texto-negro;
+        }
+        p {
+            display: inline-block;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+        }
+    }
+}
+
+.section-productos {
+    @include flex (column, space-around, center); 
+}
+
+.card {
+    width: 80%;
+    margin: 0.5rem;
+    overflow: hidden;
+    position: relative;
+    background-color: transparent;
+    padding: 0.25rem;
+    border-radius: $border-radius-comun $border-radius-comun 0 0 ;
+    .texto-flotante {
+        p {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        color: $texto-blanco;
+        background-color: $bg-verde;
+        border-radius: $border-radius-comun 0 $border-radius-comun 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 1;
+            &:hover{
+                opacity: 0;
+            }
+        }
+    }
+    .sticker {
+    p {
+        font-size: 0.75rem;
+        padding: 0.5rem;
+        color: $texto-blanco;
+        border-radius: 0 $border-radius-comun 0 $border-radius-comun;
+        background-color: $bg-azul-oscuro;
+        position: absolute;
+        top: 0;
+        right: 0;
+        }
+    }
+    .card-text {
+        background-color: $bg-card;
+        border-radius: 0 0 $border-radius-comun $border-radius-comun;
+        p {
+            @extend %text-card;
+            margin-top: 0.5rem;
+        }
+        p:nth-child(1) {
+            color: $texto-blanco;
+            font-size: 1rem;
+          }
+        p:nth-child(2) {
+            color: $texto-amarillo;
+            font-size: 1.5rem;
+          }
+        p:nth-child(3) {
+            font-size: 0.825rem;
+            line-height: 1.850rem;
+            color: $texto-negro;
+            background-color: $bg-amarillo;
+            border-radius: 0 0 $border-radius-comun $border-radius-comun;
+        }
+    }
+    img {
+        background-color: $bg-blanco;
+        overflow: hidden;
+        padding: 0.25rem;
+        border-radius: $border-radius-comun $border-radius-comun 0 0 ;
+    }
+}
+
+.titulo-interno {
+    margin-top: 0.5rem;
+        h2 {
+        @extend %titulo-interno;
+          }
+    }
+
+/* Diseno Tablet */
+
+@media screen and (min-width: 600px) {
+    
+    .section-productos {
+        @include flex (row, space-around, center); 
+    }
+
+    .card {
+        border-radius: $border-radius-comun;
+        width: 40%;
+        margin: 0.5rem;
+        overflow: hidden;
+    }
+}
+
+.bienvenida-remeras {
+    
+    div {
+        margin-top: 1rem;
+        text-align: start;
+        h2 {
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
+        }
+        h3 {
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
+        }
+        h4 {
+            width: max-content;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+            margin-top: 1rem;
+        }
+    }
+}
+
+.bienvenida-buzos {
+    div {
+        margin-top: 1rem;
+        text-align: start;
+        h2 {
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
+        }
+        h3 {
+            color: $texto-blanco;
+            text-shadow: $text-shadow-comun;
+        }
+        h4 {
+            margin-top: 1rem;
+            width: max-content;
+            background-color: $bg-azul-oscuro;
+            color: $texto-amarillo;
+            
+        }
+    }
+}
+
+/* Fin Diseno Tablet */
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .bienvenida-remeras {
+        background-image: url("../images/fondos/joven_remera.jpg");
+        background-size: cover;
+        background-position: -100%;
+        height: 75vh;
+        @include flex (column, center, end);
+        div {
+            margin: 0 4rem;
+            text-align: start;
+            h2 {
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 3rem;
+            }
+            h3 {
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 2.5rem;
+            }
+            p {
+                display: inline-block;
+                font-size: 2rem;
+                margin-top: 1rem;
+                background-color: $bg-azul-oscuro;
+                color: $texto-amarillo;
+            }
+        }
+    }
+
+    .bienvenida-buzos {
+        background-image: url("../images/fondos/joven-buzo.jpg");
+        background-size: cover;
+        background-position: 100% 60%;
+        height: 80vh;
+        @include flex (column, center, start);
+        div {
+            margin: 0 4rem;
+            text-align: start;
+            h2 {
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 3rem;
+            }
+            h3 {
+                color: $texto-blanco;
+                text-shadow: $text-shadow-comun;
+                font-size: 2.5rem;
+            }
+            p {
+                display: inline-block;
+                font-size: 2rem;
+                margin-top: 1rem;
+                background-color: $bg-azul-oscuro;
+                color: $texto-amarillo;
+            }
+        }
+    }
+
+    .section-productos {
+        margin-top: 0.5rem;
+        @include flex (row, space-around, center);   
+        .card {
+            width: 22.5%;
+        }
+    }
+    
+    .card {
+        .card-text {
+            p:nth-child(1) {
+                font-size: 1rem;
+              }
+            p:nth-child(2) {
+                font-size: 1.5rem;
+              }
+            p:nth-child(3) {
+                font-size: 1rem;
+                line-height: 1.850rem;
+                color: $texto-gris-claro;
+            }
+        }
+        &:hover{
+            margin-top:0;
+        }
+    }
+
+}
+
+
+
+
+
+
+
+
+   

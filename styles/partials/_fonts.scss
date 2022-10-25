@@ -1,0 +1,78 @@
+// titlo de bienvenida
+%titulo-brillante {
+    margin-top: 1.5rem;
+    margin-bottom: 0;
+    font-weight: bold;
+    text-align: justify;
+    font-family: 'Roboto', sans-serif;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+// titulo destacado
+.titulo-destacado {
+    @extend %titulo-destacado;
+    &:hover {
+        text-shadow:
+        0 0 5px rgb(230, 211, 47),
+        0 0 10px rgb(230, 211, 47),
+        0 0 35px rgb(228, 207, 17),
+        0 0 40px rgb(228, 207, 17);
+    }
+}
+
+
+// texto Bienvenida
+%texto-bienvenida {
+    font-style: italic;
+    font-size: 3rem;
+    font-weight: bold;
+}
+
+$text-shadow-comun: 2px 2px 2px rgb(0, 0, 0,0.7);
+
+$texto-brillante: 
+    0 0 5px rgb(230, 211, 47),
+    0 0 10px rgb(230, 211, 47),
+    0 0 35px rgb(228, 207, 17),
+    0 0 40px rgb(228, 207, 17);
+
+// Estilo de h1 
+$estilo-h1:(
+    font-style-h1: italic,
+    font-weight-h1: bold,
+);
+
+// card
+%text-card {
+    color: rgb(241, 217, 0);
+    font-size: 1.25rem;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+// titulo destacado
+%titulo-destacado {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    padding: 0.5rem;    
+    text-align: center;
+    border-radius: 0.875rem;
+    background-color: rgb(49, 49, 49);
+    border: 2px solid rgb(255, 255, 255);
+    width: 100%;
+    text-shadow:$texto-brillante;
+    box-shadow: $box-shadow-oscuro;
+}
+
+// titulo interno
+%titulo-interno {
+    display: inline-block;
+    background-color: $bg-bordo;    
+    border-radius: 0 $border-radius-comun $border-radius-comun 0;
+    text-align: start;
+    font-size: 1.5rem;
+    padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+    margin-left:-1.5rem;
+}

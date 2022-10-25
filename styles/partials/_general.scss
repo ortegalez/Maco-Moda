@@ -1,0 +1,19 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    color: $texto-blanco;
+    background: rgb(49,49,49);
+    background: linear-gradient(0deg, rgba(49,49,49,1) 32%, rgba(0,0,0,1) 65%);
+}
+
+h1 {
+font-weight: map-get($estilo-h1,font-weight-h1);
+font-style: map-get($estilo-h1,font-style-h1);
+
+
+}

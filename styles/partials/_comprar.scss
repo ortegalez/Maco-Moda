@@ -1,0 +1,99 @@
+.fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 40vh;
+    @include flex (column, center, center); 
+    h2 {
+        background-color: $bg-oscuro-trasparente;
+        padding: 1rem;
+        text-align: center;
+        border-radius: $border-radius-comun;
+        @extend %texto-bienvenida;
+    }
+}
+
+.card-comprar {
+    @include flex (row, space-around, center);
+    border: $border-blanco;
+    border-radius: $border-radius-comun;
+    margin: 0.5rem 0;
+    background-color: $bg-blanco;
+    overflow: hidden;
+    div {
+        @include flex (row, center, center);
+        img {
+            width: 3rem;
+            position: relative;
+        }
+        p {
+            color: $texto-negro;
+            padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+            font-size: 1.25rem;
+        }
+        a {
+            text-decoration-line: none;
+            color: $texto-negro;
+        }
+    }
+    div:nth-child(1) {
+        width: 20%;
+        @include flex (row, center, center);
+    }
+    div:nth-child(2) {
+        width: 80%;
+        @include flex (row, start, center);
+        background: $bg-blanco;
+        border-radius: 0 $border-radius-comun $border-radius-comun 0;
+        transition: 0.2s;
+        &:hover{
+            background-color: $bg-card;
+        }
+        &:hover p {
+            color:$texto-blanco;
+        }
+        &:hover a{
+            color:$texto-amarillo;
+            font-weight: bold;
+        }
+    }
+}
+
+@media screen and (min-width: 600px) {
+    
+}
+
+/* Fin Diseno Tablet */
+
+
+
+
+
+/* Diseno Desktop */
+
+@media screen and (min-width: 1200px) {
+
+    .fondo-secundario {
+        background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+        background-size: cover;
+        background-position: 50% 50%;
+        height: 50vh;
+    }
+
+    .card-comprar {
+        div {
+            p {
+                font-size: 1rem;
+                padding: 1rem 1rem 0.25rem 1rem;
+            }
+        }
+        div:nth-child(1) {
+            width: 5%;    
+        }
+        div:nth-child(2) {
+            width: 95%;
+        }
+    }
+}
+
+

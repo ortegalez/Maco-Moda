@@ -1,585 +1,942 @@
-/* DISENO MOBILE  */
-*{
-    padding: 0;
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+.bienvenida div h2 {
+  margin-top: 1.5rem;
+  margin-bottom: 0;
+  font-weight: bold;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-family: "Ubuntu", sans-serif;
 }
 
-.body {
-    background-color: rgb (119, 119, 141);
+.titulo-destacado:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
 }
 
-.mt-n1 {
-    margin-top: -0.25rem !important;
+.fondo-talles h2, .fondo-secundario h2, .imagen-fondo h1 {
+  font-style: italic;
+  font-size: 3rem;
+  font-weight: bold;
 }
 
-
-
-/*------------------------------ Cabecera de la pagina  ---------------------------------*/
-.header {
-    width: 100%;
-    left: 0;
-    top: 0;
-    background-color: rgb(0, 0, 0);
-    text-align: center;
-    z-index: 100;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+.texto-talles p, .card .card-text p {
+  color: rgb(241, 217, 0);
+  font-size: 1.25rem;
+  text-align: center;
+  margin: 0;
+  padding: 0;
 }
-
-.header-navbar {
-    display: none;
-}
-
-.header-navbar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}  
-
-.header-navbar ul li {
-    display: inline-block; 
-    padding: 0px 05px 0px 05px;
-    margin: 2px;
-}
-
-.header ul li a {
-    text-decoration-line: none;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-}
-
-.header ul li a:hover, .lista-secudaria li a:hover   {
-    color: #beb441;
-    font-weight: 800;
-}
-
-.logo-principal { 
-    width: 25%; 
-}
-
-.mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
-    padding: 0;
-    margin: 0;
-    font-size: 14px;
-}
-
-/* ----------------- Fin Cabecera de la pagina --------------------- */
-
-/* ---------------------- Contenido Principal -----------------------*/
-
-
-
-.imagen-fondo {
-    display: none; }
-
-.principal {
-    grid-area: principal;
-    background-color: rgb(86, 86, 89);
-    /* min-height: 100vh; */
-}
-
-
-.principal p {
-    font-size: 25px;
-    color: rgb(255,255,255);
-}
-
-.formulario {
-    color: rgb(255,255,255);
-    background-color:rgba(86, 86, 89, 0.5);
-    border: 1px solid black;
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    border-radius: 0.5em;
-    margin: 0.5em 0 0.5em 0;
-    padding: 0.5em;
-    }
-
-
-.list-group-numbered li {
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-}
-
-.list-group-numbered li:hover {
-    background-color: rgb(49, 49, 49);
-    color: rgb(255, 255, 255);
-    font-weight: 600;
-}
-
-.list-group-numbered a {
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-    font-weight: 500;
-}
-.list-group-numbered a:hover {
-    color: rgb(255, 208, 0);
-    font-weight: 600;
-}
- .prueba a {
-    font-size: 24px;
- }
-
-
-.info-comentarios { grid-area: info-comentarios; 
-    resize: none;
-    margin: 5px;
-    min-height: 5em;
-}
-
-.boton-cancelar [type="reset"], .boton-aceptar [type="submit"] {
-    background-color: rgb(0, 0, 0);
-    color: rgb(255, 255, 255);
-    padding: 5px;
-    border-radius: 2px;
-    border: 1px solid rgb(255, 255, 255);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    } 
-
-.boton-aceptar [type="submit"]:hover, .boton-cancelar [type="reset"]:hover {
-    color: rgb(255, 208, 0); 
-    background-color: rgb(49, 49, 49);
-    }
 
 .titulo-destacado {
-    color: rgb(255, 255, 255);
-    margin-top: 1em;    
-    background-color: rgb(49, 49, 49);
-    font-size: 24px;
-    text-align: center ;
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-top: 1rem;
+  padding: 0.5rem;
+  text-align: center;
+  border-radius: 0.875rem;
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(255, 255, 255);
+  width: 100%;
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.section-productos {
-    display: flex;
-    flex-flow: column wrap;
-    justify-content: space-around;
-    align-items: center;
-    color: rgb(0, 0, 0);
-    background: rgb(97,96,145);
-    background: radial-gradient(circle, rgba(97,96,145,1) 0%, rgba(172,186,201,1) 100%);
+.titulo-interno h2 {
+  display: inline-block;
+  background-color: rgb(118, 0, 0);
+  border-radius: 0 0.875rem 0.875rem 0;
+  text-align: start;
+  font-size: 1.5rem;
+  padding: 0.25rem 0.75rem 0.25rem 1.5rem;
+  margin-left: -1.5rem;
 }
 
-
-.section-productos .card {
-    margin: 0.5em;
+* {
+  padding: 0;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
 }
 
-.card {
-    width: 25em;
+body {
+  color: rgb(255, 255, 255);
+  background: rgb(49, 49, 49);
+  background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
 }
 
-
-#subtitulo-enlace {
-    grid-area: subtitulo-enlace;
-    display: inline-block;
-    display: flex;
-    justify-content: center; 
-    align-items: center; 
+h1 {
+  font-weight: bold;
+  font-style: italic;
 }
 
-
-
-#subtitulo-enlace a {
-    position: relative;
-    display: inline-block;
-    border: 1px solid rgb(0, 0, 0);
-    border-radius: 3px;
-    background-color:  rgb(119, 119, 141);
-    font-size: 18px;
-    text-align: center ;
-    padding: 10px;
-    text-decoration-line: none;
-    color: rgb(255,255,255);
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+.header {
+  background-color: rgb(0, 0, 0);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-#subtitulo-enlace a:hover {
-    background-color: rgb(49, 49, 49);
-    color: rgb(255, 208, 0);
+.logo-principal {
+  max-height: 4rem;
 }
 
-
-
-
-/*------------------------ Fin Contenido Principal ----------------------------*/
-
-/*---------------------------- Productos  ----------------------------------*/
-
-.card {
-    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    border: 2px solid rgb(49, 49, 49);
-    border-radius: 0.5em;
+.lista-navbar li {
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+  text-align: center;
+  margin: 0 0.25rem;
+  padding: 0 0.25rem;
+}
+.lista-navbar li a {
+  color: rgb(255, 255, 255);
+  font-size: 1.25rem;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 0.875rem;
+}
+.lista-navbar li a:hover {
+  color: rgba(241, 217, 0, 0.722);
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
 }
 
-
-.card-body {
-    font-weight: 600;
-    background: rgb(69,73,77);
-    background: linear-gradient(0deg, rgba(69,73,77,1) 9%, rgba(14,14,13,1) 100%);
+.hamburguesa {
+  border: 2px solid rgb(101, 101, 105);
 }
 
-.card-body p {
-    flex:display;
-    justify-content: center;
-    color: rgb(255, 255, 255);
-    font-size: 14px;
-    font-weight: 600;
-    text-align: center;
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .texto-lista-navbar {
+    font-size: 1rem;
+  }
+  .lista-navbar li a {
+    font-size: 1rem;
+  }
 }
-
-/* --------------------------- Fin Productos ----------------------------- */
-
-<<<<<<< HEAD
-/*--------------------------------Contacto--------------------------------- */
-
-.ubicacion {
-    grid-area: ubicacion;
-    margin-right: 10px;
-    padding: 5px 5px 5px 5px;
-    background-color:rgb(86, 86, 89);
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-}
-
-
-.lista-ubicacion li {
-    list-style: none;
-    font-size: 16px;
-    margin-top: 10px;
-    color: rgb(255,255,255);
-    display:flex;
-    align-items: center ;
-}
-
-.ubicacion iframe {
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
-}
-
-.ubicacion img {
-    width: 1.5em;
-    padding-right: 0.5em;
-}
-
-
-/* --------------------------- imagenenes ----------------------------------*/
-.fotos-talles, .descripcion-productos img {
-    width: 300px; 
-    height: 300px;
-=======
-/* ---------------- Contacto ------------------------- */
-.ubicacion {
-    margin-right: 10px;
-    padding: 5px 5px 5px 5px;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
->>>>>>> MacoBootstraps-1
-}
-
-
-.lista-ubicacion li {
-    list-style: none;
-    font-size: 14px;
-    margin-top: 10px;
-    color: rgb(255,255,255);
-    display:flex;
-    align-items: center ;
-}
-
-.ubicacion iframe {
-    box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2); 
-}
-
-.ubicacion img {
-    width: 1.5em;
-    padding-right: 0.5em;
-}
-
-.icono-ubicacion {
-    display: flex;
-    flex-direction: row;
-    justify-content: start;
-    align-items: center;
-    padding: 0 0.5em 0 0;
-}
-
-.icono-ubicacion p {
-    margin-top: 1em ;
-    font-size: 14px;
-}
-
-.icono-ubicacion img {
-    width: 2.5em;
-}
-
-
-.agradecimiento {
-    text-align: center;
-    font-size: 3em;
-    color: rgb(255, 255, 255); 
-}
-
-.agradecimiento p
-{text-shadow: 1px 1px 2px black}
-
-
-
-/*---------------------------- Footer ------------------------------ */
-
-#beneficios {
-    display: none;
-}
-
 .footer {
-    background-color:rgb(0,0,0);
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-    color: rgb(255,255,255);
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(0, 0, 0);
 }
 
-.div-navegacion {  
-    display: inline-block;
+.div-navegacion {
+  display: inline-block;
 }
-
 
 .div-redes ul {
-    display: flex;
-    flex-flow: row wrap;
-    justify-content: space-around;
-    padding-left: 0;
-    margin-top: 1em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+  margin-top: 1rem;
 }
 
-.div-redes ul li{
-    display: inline-block;
-    padding: 0.5em;
-}
-
-.div-medios {
-    display:none;
+.div-redes ul li {
+  display: inline-block;
+  padding: 0.5rem;
 }
 
 .subtitulos-footer {
-    color: rgb(255, 255, 255);
-    margin-top: 8px;
-    margin-bottom: 0px;
-    text-align: center;
-    font-size: 24px;
+  color: rgb(255, 255, 255);
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+  text-align: center;
+  font-size: 1.5rem;
 }
-
 
 .lista-secudaria {
-    display: inline-block;
-    margin-top: 5px;
-    list-style: none;
-    font-size: 10px;
-    padding-left: 0px;
-    font-weight: 700;
-
+  display: inline-block;
+  margin-top: 0.25rem;
+  list-style: none;
+  padding-left: 0;
 }
-
 .lista-secudaria li a {
-    color: rgb(255, 255, 255);
-    text-decoration-line: none;
-    font-size: 20px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  font-size: 1.25rem;
+}
+.lista-secudaria li a:hover {
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
+.lista-secudaria li img {
+  width: 5rem;
 }
 
 .icono {
-    width: 3em; 
-    height: 3em;
-    background-color: rgb(255, 255, 255);
-    border-radius: 0.5em;
-    border: 1px solid rgb(255, 255, 255);
+  width: 3rem;
+  height: 3rem;
+  border: 1px solid rgb(255, 255, 255);
+  background-color: rgb(255, 255, 255);
+  border-radius: 0.5rem;
 }
 
-.lista-secudaria li img {
-    width: 5em; 
-    /* height: 2em; */
+.div-medios {
+  display: none;
 }
 
-.copyright {
-    grid-area: copyright;
-    font-size: 16px;
+@media screen and (min-width: 1200px) {
+  .subtitulos-footer {
+    font-size: 1rem;
+  }
+  .lista-secudaria li a {
+    font-size: 1rem;
+  }
+  .div-redes ul {
+    width: 200px;
+    padding: 0;
+    margin-top: 0;
+  }
+  .div-medios {
+    display: inline-block;
+  }
+  .icono {
+    width: 2rem;
+    height: 2rem;
+    display: inline-block;
+    margin: 0.5rem;
+  }
+  .icono:hover {
+    width: 2.2rem;
+    height: 2.2rem;
+    box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  }
+  .copyright p {
+    font-size: 1rem;
+    padding: 0;
+  }
+}
+.imagen-fondo {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/fondos/maco-urbano.jpg");
+  background-size: cover;
+  background-position: 100% 100%;
+  height: 50vh;
+  width: 100%;
+  margin: 1rem 0;
+}
+.imagen-fondo h1 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
 }
 
-<<<<<<< HEAD
-/* Pagin */
+.bienvenida {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url("https://la.network/wp-content/uploads/2018/02/BUENOS-AIRES-OBELISCO-NOCHE-328282751.jpg");
+  background-color: rgba(0, 255, 255, 0.05);
+  background-size: cover;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
+  padding: 0;
+  max-width: 95%;
+}
+.bienvenida div {
+  width: 90%;
+}
+.bienvenida div h2 {
+  font-size: 1.5rem;
+  text-align: center;
+}
+.bienvenida div img {
+  visibility: hidden;
+  width: 0%;
+  border-radius: 0 0.875rem 0.875rem 0;
+}
 
-=======
->>>>>>> MacoBootstraps-1
+.subtitulo-enlace {
+  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+}
+.subtitulo-enlace a {
+  border: 2px solid rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  background-color: rgb(119, 119, 141);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.875rem;
+  font-size: 1rem;
+  padding: 0.75rem;
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  transition: 0.5s ease;
+}
+.subtitulo-enlace a:hover {
+  background-color: rgb(49, 49, 49);
+  color: rgba(241, 217, 0, 0.722);
+  border: 2px solid rgb(255, 255, 255);
+}
+
+.beneficios {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-texto {
+  width: 60%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-texto div {
+  height: 5rem;
+}
+.beneficios .beneficios-texto div p {
+  font-size: 1rem;
+  text-align: center;
+  margin-top: 0;
+}
+.beneficios .beneficios-iconos {
+  width: 40%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.beneficios .beneficios-iconos div {
+  height: 5rem;
+}
+.beneficios .beneficios-iconos div img {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  body {
+    background: rgb(49, 49, 49);
+    background: linear-gradient(0deg, rgb(49, 49, 49) 32%, rgb(0, 0, 0) 65%);
+  }
+  .imagen-fondo {
+    height: 100vh;
+  }
+  .imagen-fondo p {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.8));
+    background-color: rgba(0, 255, 255, 0.05);
+  }
+  .bienvenida {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+  }
+  .bienvenida div {
+    width: 50%;
+  }
+  .bienvenida div h2 {
+    font-size: 2rem;
+    margin-top: 0;
+    padding: 1rem 2rem;
+    letter-spacing: 2px;
+  }
+  .bienvenida div img {
+    visibility: visible;
+    width: 100%;
+    border-radius: 0 0.875rem 0.875rem 0;
+  }
+  .subtitulo-enlace a {
+    font-size: 1rem;
+  }
+  .beneficios {
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .beneficios p {
+    display: inline-block;
+    width: 100%;
+  }
+  .beneficios .beneficios-texto {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .beneficios .beneficios-texto div {
+    width: 24rem;
+  }
+  .beneficios .beneficios-texto div p {
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 0;
+  }
+  .beneficios .beneficios-iconos {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .beneficios .beneficios-iconos div {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 7rem;
+    width: 24rem;
+  }
+  .beneficios .beneficios-iconos div img {
+    width: 6rem;
+    height: 6rem;
+  }
+}
+.bienvenida-remeras {
+  background-image: url("../images/fondos/joven_remera.jpg");
+  background-size: cover;
+  background-position: 0px 0px;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bienvenida-remeras div {
+  margin: 0 1rem;
+  letter-spacing: 1px;
+  text-align: end;
+}
+.bienvenida-remeras div h2 {
+  color: rgb(0, 0, 0);
+}
+.bienvenida-remeras div h3 {
+  color: rgb(255, 255, 255);
+}
+.bienvenida-remeras div p {
+  display: inline-block;
+  background-color: rgb(0, 1, 72);
+  color: rgba(241, 217, 0, 0.722);
+}
+
+.bienvenida-buzos {
+  background-image: url("../images/fondos/joven-buzo.jpg");
+  background-size: cover;
+  background-position: 0px 0px;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.bienvenida-buzos div {
+  margin: 0 1rem;
+  letter-spacing: 1px;
+}
+.bienvenida-buzos div h2 {
+  color: rgb(0, 0, 0);
+}
+.bienvenida-buzos div h3 {
+  color: rgb(0, 0, 0);
+}
+.bienvenida-buzos div p {
+  display: inline-block;
+  background-color: rgb(0, 1, 72);
+  color: rgba(241, 217, 0, 0.722);
+}
+
+.section-productos {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.card {
+  width: 80%;
+  margin: 0.5rem;
+  overflow: hidden;
+  position: relative;
+  background-color: transparent;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+.card .texto-flotante p {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  background-color: rgb(9, 182, 9);
+  border-radius: 0.875rem 0 0.875rem 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 1;
+}
+.card .texto-flotante p:hover {
+  opacity: 0;
+}
+.card .sticker p {
+  font-size: 0.75rem;
+  padding: 0.5rem;
+  color: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0 0.875rem;
+  background-color: rgb(0, 1, 72);
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.card .card-text {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card .card-text p {
+  margin-top: 0.5rem;
+}
+.card .card-text p:nth-child(1) {
+  color: rgb(255, 255, 255);
+  font-size: 1rem;
+}
+.card .card-text p:nth-child(2) {
+  color: rgba(241, 217, 0, 0.722);
+  font-size: 1.5rem;
+}
+.card .card-text p:nth-child(3) {
+  font-size: 0.825rem;
+  line-height: 1.85rem;
+  color: rgb(0, 0, 0);
+  background-color: rgb(241, 217, 0);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.card img {
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 0.25rem;
+  border-radius: 0.875rem 0.875rem 0 0;
+}
+
+.titulo-interno {
+  margin-top: 0.5rem;
+}
+/* Diseno Tablet */
+@media screen and (min-width: 600px) {
+  .section-productos {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .card {
+    border-radius: 0.875rem;
+    width: 40%;
+    margin: 0.5rem;
+    overflow: hidden;
+  }
+}
+.bienvenida-remeras div {
+  margin-top: 1rem;
+  text-align: start;
+}
+.bienvenida-remeras div h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.bienvenida-remeras div h3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.bienvenida-remeras div h4 {
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(0, 1, 72);
+  color: rgba(241, 217, 0, 0.722);
+  margin-top: 1rem;
+}
+
+.bienvenida-buzos div {
+  margin-top: 1rem;
+  text-align: start;
+}
+.bienvenida-buzos div h2 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.bienvenida-buzos div h3 {
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+}
+.bienvenida-buzos div h4 {
+  margin-top: 1rem;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  background-color: rgb(0, 1, 72);
+  color: rgba(241, 217, 0, 0.722);
+}
+
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .bienvenida-remeras {
+    background-image: url("../images/fondos/joven_remera.jpg");
+    background-size: cover;
+    background-position: -100%;
+    height: 75vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: end;
+  }
+  .bienvenida-remeras div {
+    margin: 0 4rem;
+    text-align: start;
+  }
+  .bienvenida-remeras div h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+  }
+  .bienvenida-remeras div h3 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+  }
+  .bienvenida-remeras div p {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(0, 1, 72);
+    color: rgba(241, 217, 0, 0.722);
+  }
+  .bienvenida-buzos {
+    background-image: url("../images/fondos/joven-buzo.jpg");
+    background-size: cover;
+    background-position: 100% 60%;
+    height: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+  }
+  .bienvenida-buzos div {
+    margin: 0 4rem;
+    text-align: start;
+  }
+  .bienvenida-buzos div h2 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 3rem;
+  }
+  .bienvenida-buzos div h3 {
+    color: rgb(255, 255, 255);
+    text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    font-size: 2.5rem;
+  }
+  .bienvenida-buzos div p {
+    display: inline-block;
+    font-size: 2rem;
+    margin-top: 1rem;
+    background-color: rgb(0, 1, 72);
+    color: rgba(241, 217, 0, 0.722);
+  }
+  .section-productos {
+    margin-top: 0.5rem;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .section-productos .card {
+    width: 22.5%;
+  }
+  .card .card-text p:nth-child(1) {
+    font-size: 1rem;
+  }
+  .card .card-text p:nth-child(2) {
+    font-size: 1.5rem;
+  }
+  .card .card-text p:nth-child(3) {
+    font-size: 1rem;
+    line-height: 1.85rem;
+    color: rgb(119, 119, 141);
+  }
+  .card:hover {
+    margin-top: 0;
+  }
+}
+.fondo-secundario {
+  background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 40vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-secundario h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.card-comprar {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  border: 2px solid rgb(255, 255, 255);
+  border-radius: 0.875rem;
+  margin: 0.5rem 0;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+}
+.card-comprar div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-comprar div img {
+  width: 3rem;
+  position: relative;
+}
+.card-comprar div p {
+  color: rgb(0, 0, 0);
+  padding: 0.75rem 0.75rem 0.25rem 0.75rem;
+  font-size: 1.25rem;
+}
+.card-comprar div a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: rgb(0, 0, 0);
+}
+.card-comprar div:nth-child(1) {
+  width: 20%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.card-comprar div:nth-child(2) {
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  border-radius: 0 0.875rem 0.875rem 0;
+  transition: 0.2s;
+}
+.card-comprar div:nth-child(2):hover {
+  background-color: rgb(19, 22, 27);
+}
+.card-comprar div:nth-child(2):hover p {
+  color: rgb(255, 255, 255);
+}
+.card-comprar div:nth-child(2):hover a {
+  color: rgba(241, 217, 0, 0.722);
+  font-weight: bold;
+}
+
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+@media screen and (min-width: 1200px) {
+  .fondo-secundario {
+    background-image: url("https://images.unsplash.com/photo-1502164991821-03d3e78d9bde?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80");
+    background-size: cover;
+    background-position: 50% 50%;
+    height: 50vh;
+  }
+  .card-comprar div p {
+    font-size: 1rem;
+    padding: 1rem 1rem 0.25rem 1rem;
+  }
+  .card-comprar div:nth-child(1) {
+    width: 5%;
+  }
+  .card-comprar div:nth-child(2) {
+    width: 95%;
+  }
+}
+.fondo-talles {
+  background-image: url("/images/fondos/camisetas_colgadas.jpg");
+  background-size: cover;
+  background-position: 50% 50%;
+  height: 50vh;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.fondo-talles h2 {
+  background-color: rgba(15, 14, 14, 0.7);
+  padding: 1rem;
+  text-align: center;
+  border-radius: 0.875rem;
+}
+
+.texto-talles {
+  background-color: rgb(19, 22, 27);
+  border-radius: 0 0 0.875rem 0.875rem;
+}
+.texto-talles p {
+  font-size: 1rem;
+  line-height: 3rem;
+  color: rgb(255, 255, 255);
+}
+
+/* Diseno Tablet */
+/* Fin Diseno Tablet */
+/* Diseno Desktop */
+.formulario {
+  color: rgb(255, 255, 255);
+  background-color: rgb(49, 49, 49);
+  border: 2px solid rgb(0, 0, 0);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+  border-radius: 0.875rem;
+  margin: 0.5rem 0 0.5rem 0;
+  padding: 0.5rem;
+}
+
+.info-comentarios {
+  resize: none;
+  margin: 0.25rem;
+  min-height: 5rem;
+}
+
+.boton-cancelar [type=reset], .boton-aceptar [type=submit] {
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  padding: 0.25rem;
+  border-radius: 2px;
+  border: 2px solid rgb(255, 255, 255);
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
 
 @media screen and (max-width: 599px) and (orientation: landscape){
     
 }
 
-/* fin Diseno Mobile */
+.ubicacion {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.ubicacion .ubicacion-iconos {
+  width: 25%;
+  height: -webkit-max-content;
+  height: -moz-max-content;
+  height: max-content;
+}
+.ubicacion .ubicacion-iconos div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: end;
+  align-items: center;
+  height: 2rem;
+  margin-top: 0.625rem;
+}
+.ubicacion .ubicacion-iconos div img {
+  width: 2rem;
+}
+.ubicacion .ubicacion-texto {
+  width: 75%;
+}
+.ubicacion .ubicacion-texto div {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  height: 2rem;
+  margin-top: 0.625rem;
+}
+.ubicacion .ubicacion-texto div p {
+  text-align: left;
+  font-size: 1rem;
+  margin: 0.25rem 0 0 0.5rem;
+  text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
+}
+.ubicacion .agradecimiento {
+  width: 100%;
+  margin-top: 1rem;
+}
+.ubicacion .agradecimiento p {
+  text-align: center;
+  font-size: 2rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+  text-shadow: 0 0 5px rgb(230, 211, 47), 0 0 10px rgb(230, 211, 47), 0 0 35px rgb(228, 207, 17), 0 0 40px rgb(228, 207, 17);
+}
 
-
-/* Diseno Tablet */
-
-@media screen and (min-width: 600px) {
-    
+.boton label {
+  font-size: 1rem;
+  font-weight: bold;
+  margin: 0.25rem 1.25rem;
+  border: 3px solid;
+  box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 /* Fin Diseno Tablet */
-
-
-
-
 /* Diseno Desktop */
-
 @media screen and (min-width: 1200px) {
-
-
-    body {
-        background-image: url(../images/fondos/buzo\ fondo\ pagina\ -\ copia\ \(2\).jpg);
-        background-size: 300% 300%;
-    } 
-
-    .header-navbar {
-        display: contents;
-        text-align: center;
-        border-bottom: 2px solid #4182be;
-    }
-
-    .imagen-fondo {
-        margin-top: 1em;
-        margin-bottom: 1em;
-        grid-area: imagen-fondo;
-        display: flex;     
-        justify-content: center; 
-        align-items: center; 
-    } 
-    
-    .imagen-fondo img {
-        display: inline-block;
-        width: 75%;
-        border: 2px solid rgb(255,255,255);
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    }
-    
-    .logo-principal { 
-        width: 10%; 
-    }    
-
-    .subtitulo-imagen-fondo {
-        border-color: black ;
-        width: 80%;
-        padding: 40px;
-        position: absolute;
-        text-align: center;
-        background-color: black;
-        color: rgb(255, 255, 255);
-        font-style: italic;
-        font-size: 40px;
-        opacity: .5;
-    }
-
-    
-    .principal {
-    background-color: rgba(0, 0, 0, 0);
-    /* margin-top: 4rem; */
-    }
-
-    #subtitulo-enlace a {      
-        font-size: 12px;
-    }
-
-    #beneficios {
-        grid-area: beneficios;
-        display: flex;
-        justify-content: space-evenly;
-        position: relative;
-        background-color: rgb(49, 49, 49) ;
-        margin-top: 20px;
-        color: rgb(255, 255, 255); 
-        text-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    }
-
-    #beneficios p {
-        position: relative;
-        display: inline-block;
-        border-radius: 3px;
-        width: 200px;
-        font-size: 12px;
-        text-align: center ;
-        padding: 10px;
-        text-decoration-line: none;
-        color: rgb(255,255,255);
-    }
-
-    .subtitulos-footer {
-        font-size: 14px;
-    }
-
-    .div-redes ul {
-        width: 200px;
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-between;
-        padding: 0;
-        margin-top: 0;
-    }
-
-    .div-medios {
-        display: inline-block;
-        grid-area: div-medios;
-
-    }
-
-    .icono {
-        width: 2em;
-        height: 2em;
-        display: inline-block;
-        margin: 0.5em;
-    }
-
-    .icono:hover {
-        width: 2.2em; 
-        height: 2.2em;
-        box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
-    }
-        
-    .copyright {
-        grid-area: copyright;
-        font-size: 10px;
-    }
-
-    .descripcion-talles {
-        margin:0;
-        padding: 0;
-    }
-
-    .mitexto-bs-navbar {  /* estilo para navbar de Bootstraps */
-        padding: 0;
-        margin: 0;
-        font-size: 20px;
-    }
-    
-
-    .lista-secudaria li a {
-        font-size: 10px;
-    }
-
-    .section-productos {
-        display: flex;
-        flex-flow: row wrap;
-        justify-content: space-around;
-        align-items: center;
-        background: none;
-    }
-    
-    .card {
-        width: 18em;
-    }
-    
-
-}
-/* Fin Diseno Desktop  */
-
-/* Para el de aceptar:
-form input [type=“submit”] 
-
-Para el de cancelar:
-form input [type=“reset”] */
+  .ubicacion {
+    margin-top: 1rem;
+  }
+  .ubicacion .ubicacion-iconos {
+    width: 10%;
+  }
+  .ubicacion .ubicacion-iconos div {
+    height: 2rem;
+  }
+  .ubicacion .ubicacion-iconos div img {
+    width: 2rem;
+  }
+  .ubicacion .ubicacion-texto {
+    width: 40%;
+  }
+  .ubicacion .ubicacion-texto div p {
+    font-size: 1rem;
+  }
+  .ubicacion .agradecimiento {
+    width: 50%;
+    margin-top: nome;
+  }
+  .ubicacion .agradecimiento p {
+    font-size: 2rem;
+  }
+}/*# sourceMappingURL=styles.css.map */
