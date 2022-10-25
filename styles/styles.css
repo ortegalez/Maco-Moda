@@ -172,11 +172,6 @@ h1 {
   border-radius: 0.5rem;
 }
 
-.copyright p {
-  font-size: 1.25rem;
-  padding: 0;
-}
-
 .div-medios {
   display: none;
 }
@@ -849,29 +844,8 @@ h1 {
   box-shadow: 10px 5px 5px rgba(0, 0, 0, 0.5);
 }
 
-.lista-ubicacion li {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  list-style: none;
-  font-size: 1rem;
-  margin-top: 0.5rem;
-  color: rgb(255, 255, 255);
-}
-
-.mapa {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-}
-.mapa iframe {
-  box-shadow: 1px 1px 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 0.875rem;
-  width: 90%;
+@media screen and (max-width: 599px) and (orientation: landscape){
+    
 }
 
 .ubicacion {
